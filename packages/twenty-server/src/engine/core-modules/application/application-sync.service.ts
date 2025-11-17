@@ -2,7 +2,6 @@ import { Injectable, Logger } from '@nestjs/common';
 
 import { parse } from 'path';
 
-import { ALL_METADATA_NAME, AllMetadataName } from 'twenty-shared/metadata';
 import { isDefined } from 'twenty-shared/utils';
 
 import { ApplicationEntity } from 'src/engine/core-modules/application/application.entity';
@@ -220,7 +219,7 @@ export class ApplicationSyncService {
     );
 
     for (const fieldToDelete of fieldsToDelete) {
-      await this.fieldMetadataServiceV2.updateOne({
+      await this.fieldMetadataServiceV2.updateOneField({
         updateFieldInput: {
           id: fieldToDelete.id,
           isActive: false,
@@ -257,7 +256,7 @@ export class ApplicationSyncService {
         isNullable: fieldToSync.isNullable ?? true,
       };
 
-      await this.fieldMetadataServiceV2.updateOne({
+      await this.fieldMetadataServiceV2.updateOneField({
         updateFieldInput,
         workspaceId,
       });
@@ -282,7 +281,7 @@ export class ApplicationSyncService {
         workspaceId,
       };
 
-      await this.fieldMetadataServiceV2.createOne({
+      await this.fieldMetadataServiceV2.createOneField({
         createFieldInput,
         workspaceId,
       });
@@ -342,7 +341,7 @@ export class ApplicationSyncService {
     );
 
     for (const objectToDelete of objectsToDelete) {
-      await this.objectMetadataServiceV2.deleteOne({
+      await this.objectMetadataServiceV2.deleteOneObject({
         deleteObjectInput: { id: objectToDelete.id },
         workspaceId,
         isSystemBuild: true,
@@ -373,7 +372,7 @@ export class ApplicationSyncService {
         },
       };
 
-      await this.objectMetadataServiceV2.updateOne({
+      await this.objectMetadataServiceV2.updateOneObject({
         updateObjectInput,
         workspaceId,
       });
@@ -405,7 +404,7 @@ export class ApplicationSyncService {
         applicationId,
       };
 
-      const createdObject = await this.objectMetadataServiceV2.createOne({
+      const createdObject = await this.objectMetadataServiceV2.createOneObject({
         createObjectInput,
         workspaceId,
       });
@@ -1012,15 +1011,7 @@ export class ApplicationSyncService {
         workspaceId,
         buildOptions: {
           isSystemBuild: true,
-          inferDeletionFromMissingEntities: {
-            ...Object.values(ALL_METADATA_NAME).reduce(
-              (acc, metadataName) => ({
-                ...acc,
-                [metadataName]: true,
-              }),
-              {} as Partial<Record<AllMetadataName, boolean>>,
-            ),
-          },
+          inferDeletionFromMissingEntities: true,
         },
       },
     );
