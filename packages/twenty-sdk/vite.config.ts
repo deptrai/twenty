@@ -8,9 +8,9 @@ const moduleEntries = Object.keys((packageJson as any).exports || {})
   .filter(
     (key) => key !== './style.css' && key !== '.' && !key.startsWith('./src/'),
   )
-  .map((module) => `src/${module.replace(/^\.\//, '')}/index.ts`);
+  .map((module) => `src/sdk/${module.replace(/^\.\//, '')}/index.ts`);
 
-const entries = ['src/index.ts', ...moduleEntries];
+const entries = ['src/sdk/index.ts', ...moduleEntries];
 
 const entryFileNames = (chunk: any, extension: 'cjs' | 'mjs') => {
   if (!chunk.isEntry) {
@@ -27,7 +27,7 @@ const entryFileNames = (chunk: any, extension: 'cjs' | 'mjs') => {
   }
 
   const moduleDirectory = splitFaceModuleId[splitFaceModuleId?.length - 2];
-  if (moduleDirectory === 'src') {
+  if (moduleDirectory === 'src' || moduleDirectory === 'sdk') {
     return `${chunk.name}.${extension}`;
   }
   return `${moduleDirectory}.${extension}`;
@@ -42,7 +42,7 @@ export default defineConfig(() => {
       tsconfigPaths({
         root: __dirname,
       }),
-      dts({ entryRoot: './src', tsconfigPath: tsConfigPath }),
+      dts({ entryRoot: './src/sdk', tsconfigPath: tsConfigPath }),
     ],
     build: {
       outDir: 'dist',

@@ -15,7 +15,7 @@ const INDEX_FILENAME = 'index';
 const PACKAGE_JSON_FILENAME = 'package.json';
 const NX_PROJECT_CONFIGURATION_FILENAME = 'project.json';
 const PACKAGE_PATH = path.resolve('packages/twenty-sdk');
-const SRC_PATH = path.resolve(`${PACKAGE_PATH}/src`);
+const SRC_PATH = path.resolve(`${PACKAGE_PATH}/src/sdk`);
 const PACKAGE_JSON_PATH = path.join(PACKAGE_PATH, PACKAGE_JSON_FILENAME);
 const NX_PROJECT_CONFIGURATION_PATH = path.join(
   PACKAGE_PATH,

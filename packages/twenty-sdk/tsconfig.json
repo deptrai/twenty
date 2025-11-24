@@ -4,7 +4,7 @@
     "sourceMap": true,
     "declaration": true,
     "outDir": "./dist",
-    "rootDir": "src",
+    "rootDir": "src/sdk",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -21,8 +21,8 @@
     "skipDefaultLibCheck": true,
     "resolveJsonModule": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/sdk/*"]
     }
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/sdk/**/*.ts"]
 }

@@ -1,7 +1,7 @@
 {
   "name": "twenty-sdk",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/twenty-sdk/src",
+  "sourceRoot": "packages/twenty-sdk/src/sdk",
   "projectType": "library",
   "tags": [
     "scope:sdk"
@@ -26,8 +26,8 @@
         "{projectRoot}/scripts/generateBarrels.ts"
       ],
       "outputs": [
-        "{projectRoot}/src/index.ts",
-        "{projectRoot}/src/*/index.ts",
+        "{projectRoot}/src/sdk/index.ts",
+        "{projectRoot}/src/sdk/*/index.ts",
         "{projectRoot}/package.json"
       ],
       "options": {
