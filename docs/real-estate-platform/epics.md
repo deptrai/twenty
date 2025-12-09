@@ -1,0 +1,191 @@
+## Nền tảng Phân phối Bất động sản - Epic Breakdown
+
+**Tác giả:** Luis (Dev Team) + Mary (Business Analyst)
+**Ngày:** 06/12/2025
+**Cấp độ dự án:** Enterprise
+**Quy mô mục tiêu:** 1000+ người dùng
+**Dựa trên:** PRD v1.3 (FINAL)
+
+---
+
+## Tổng quan
+
+Tài liệu này mô tả đầy đủ cấu trúc Epic và Story cho Nền tảng Phân phối Bất động sản, chuyển hóa các yêu cầu trong [PRD v1.3](./prd-v1.3.md) thành các stories có thể triển khai cho đội dev.
+
+## Tóm tắt Epic & Thứ tự thực hiện
+
+### Triển khai theo Phase
+
+**MVP (Phase 1)** - 5 tuần:
+- Epic 1: Nền tảng & Khởi tạo hệ thống (Foundation & Setup)
+- Epic 2: Quản lý Tồn kho Bất động sản (Property Inventory Management)
+- Epic 3: Quản lý Khách hàng & Giao dịch (Customer & Deal Management)
+- Epic 4: Công cụ cho Sales Agent (Sales Agent Tools)
+- Epic 5: Quản lý Hoa hồng (Commission Management)
+
+**Phase 2** - 2 tuần:
+- Epic 6: Phân phối Lead & Tự động hóa (Lead Distribution & Automation)
+
+**Phase 3** - 2 tuần:
+- Epic 7: Vận hành & Mở rộng (Operations & Scale)
+
+---
+
+## Cấu trúc Epic (7 Epics, ~38 Stories)
+
+### Epic 1: Nền tảng & Khởi tạo hệ thống 🏗️
+**Giá trị:** Thiết lập nền tảng kỹ thuật và validate khả năng của Twenty CRM
+
+**Phạm vi:**
+- Kiểm chứng kỹ thuật Twenty CRM (Phase 0 POC)
+- Thiết lập cấu trúc project và monorepo
+- Xây nền schema database (metadata system của Twenty)
+- Thiết lập CI/CD pipeline (Docker + Dokploy)
+- Cấu hình xác thực & phân quyền (Authentication & RBAC)
+
+**Số lượng story:** 5 stories
+**Phụ thuộc:** Không (epic đầu tiên)
+**Kết quả:** Có hạ tầng chạy được, sẵn sàng để build các tính năng phía trên
+
+---
+
+### Epic 2: Quản lý Tồn kho Bất động sản 📦
+**Giá trị:** Cho phép theo dõi real-time tồn kho lô đất trên tất cả dự án
+
+**Phạm vi:**
+- Module Projects (CRUD + quản lý file gallery)
+- Module Properties (CRUD + workflow trạng thái)
+- Hệ thống giữ chỗ (reservation) với tự động release sau 24h
+- Phòng tránh double-booking (ràng buộc DB + locking giao dịch)
+- Dashboard real-time về trạng thái tồn kho
+
+**Số lượng story:** 7 stories
+**Phụ thuộc:** Epic 1 (nền tảng phải xong trước)
+**Kết quả:** Admin có thể quản lý dự án/lô đất, theo dõi tồn kho theo thời gian thực
+
+---
+
+### Epic 3: Quản lý Khách hàng & Giao dịch 🤝
+**Giá trị:** Theo dõi vòng đời khách hàng và pipeline giao dịch từ lead đến chốt deal
+
+**Phạm vi:**
+- Module Contact/Customer (CRUD + bảo mật dữ liệu cá nhân)
+- Module Deal/Transaction (tự tạo khi khách đặt cọc)
+- Workflow đồng bộ trạng thái Property–Deal
+- Màn hình pipeline deal (Kanban theo trạng thái)
+- Trigger tạo hoa hồng khi Deal ở trạng thái Won
+
+**Số lượng story:** 5 stories
+**Phụ thuộc:** Epic 2 (phải có Properties để gắn Deal)
+**Kết quả:** Sales agent có thể theo dõi khách hàng và giao dịch end-to-end
+
+---
+
+### Epic 4: Công cụ cho Sales Agent 👨‍💼
+**Giá trị:** Trao quyền cho sales với các công cụ tự phục vụ và nhìn thấy hiệu suất cá nhân
+
+**Phạm vi:**
+- Mở rộng đối tượng User (các trường dành riêng cho sales)
+- Dashboard hiệu suất cho từng sales (personal view)
+- Các widget hiệu suất (tổng số deal, tổng hoa hồng, leaderboard)
+- Widget "Lô đất tôi đang giữ chỗ" (My Reserved Properties)
+- Theo dõi hoa hồng (view-only cho sales)
+
+**Số lượng story:** 6 stories
+**Phụ thuộc:** Epic 2 (Properties), Epic 3 (Deals), Epic 5 (Commission)
+**Kết quả:** Sales agent tự xem được tồn kho, pipeline của mình, và hoa hồng tương ứng
+
+---
+
+### Epic 5: Quản lý Hoa hồng 💰
+**Giá trị:** Tự động hóa tính toán hoa hồng và đơn giản hóa quy trình chi trả
+
+**Phạm vi:**
+- Tự động tính hoa hồng (khi Deal chuyển sang trạng thái Won)
+- Workflow phê duyệt hoa hồng (Admin review + approve)
+- Export batch thanh toán (file CSV cho chuyển khoản hàng loạt)
+- Báo cáo hoa hồng (theo sales, theo giai đoạn)
+- Giao diện Finance để quản lý trạng thái thanh toán
+
+**Số lượng story:** 5 stories
+**Phụ thuộc:** Epic 3 (Deals phải tạo được commission)
+**Kết quả:** Bộ phận Kế toán/Finance xử lý hoa hồng chính xác, minh bạch và tiết kiệm thời gian
+
+---
+
+### Epic 6: Phân phối Lead & Tự động hóa 🎯
+**Giá trị:** Phân phối lead công bằng và tự động cho sales
+
+**Phạm vi:**
+- Mở rộng đối tượng Lead (assignedSales, trường SLA, v.v.)
+- Thuật toán auto-assignment (round-robin, có xét sức chứa/capacity)
+- Theo dõi SLA (thời gian phản hồi, nhắc nhở follow-up)
+- Hệ thống thông báo (Email + tích hợp Zalo nếu khả thi)
+- Dashboard phân phối lead (admin có thể override)
+
+**Số lượng story:** 6 stories
+**Phụ thuộc:** Epic 4 (User phải có các trường phục vụ tính capacity)
+**Kết quả:** Lead được phân phối công bằng, có theo dõi SLA, giảm lead bị bỏ quên
+
+**Lưu ý:** Đây là Phase 2, KHÔNG thuộc MVP.
+
+---
+
+### Epic 7: Vận hành & Mở rộng 📊
+**Giá trị:** Tăng trải nghiệm người dùng và đảm bảo hệ thống scale tốt cho 1000+ users
+
+**Phạm vi:**
+- Bản đồ lô đất tương tác (interactive plot map) dùng SVG overlay trên masterPlanImage
+- Báo cáo & analytics nâng cao (doanh số theo dự án, xu hướng hiệu suất sales)
+- Công cụ hỗ trợ vận hành (admin impersonation, system health dashboard)
+- Playbook triển khai pilot (rollout cho 200 sales agents)
+
+**Số lượng story:** 4 stories
+**Phụ thuộc:** Tất cả các epic trước (tính chất nâng cao/tối ưu)
+**Kết quả:** Hệ thống sẵn sàng production cho 1000+ users, rollout pilot được quản lý tốt
+
+**Lưu ý:** Đây là Phase 3, bao gồm phần hỗ trợ Pilot Program.
+
+---
+
+## Vì sao cấu trúc này hợp lý?
+
+### Thứ tự theo Giá trị (Value-Based Sequencing) ✅
+- Mỗi epic mang lại **giá trị kinh doanh độc lập**
+- Không group theo layer kỹ thuật (không có epic kiểu "Backend" hay "Frontend")
+- Đặt tên theo **khả năng/giá trị cho người dùng**, không phải chi tiết implementation
+
+### Triển khai Gia tăng (Incremental Delivery) ✅
+- Epic 1 xây nền tảng → các epic sau build chồng lên
+- Epic 2–5 = MVP → Đã đủ để vận hành quản lý tồn kho và hoa hồng
+- Epic 6 = Phase 2 → Thêm tự động hóa cho lead
+- Epic 7 = Phase 3 → Nâng cao UX và khả năng scale
+
+### Phụ thuộc Rõ ràng ✅
+- Chuỗi tuyến tính: 1 → 2 → 3 → 4 & 5 (có thể song song) → 6 → 7
+- Epic 4 và 5 có thể phát triển song song (overlap ít)
+- Không có phụ thuộc ngược (mỗi story chỉ phụ thuộc vào story/epic trước đó)
+
+### Kích thước Story Hợp lý ✅
+- Tổng ~38 stories cho 7 epics
+- Trung bình 5–6 stories/epic (scope vừa phải)
+- Mỗi story đủ nhỏ để 1 dev làm trong 1 phiên tập trung (4–8 tiếng)
+
+### Khớp với Phasing trong PRD ✅
+- MVP (Epic 1–5) = PRD Phase 1 (5 tuần)
+- Epic 6 = PRD Phase 2 (2 tuần)
+- Epic 7 = PRD Phase 3 (2 tuần)
+- Pilot program (Epic 7, 1 story riêng) = PRD Section 16.1.5
+
+---
+
+## Bước tiếp theo
+
+Sau khi bạn đồng ý cấu trúc epic:
+1. **Decompose Story:** Bẻ nhỏ từng epic thành stories chi tiết với acceptance criteria dạng BDD
+2. **Architecture Planning:** Viết tech spec cho Epic 1 (foundation & setup)
+3. **Sprint Planning:** Map stories vào các sprint 2 tuần
+
+---
+
+_Nếu bạn OK với cấu trúc epic này, chúng ta sẽ chuyển sang bước chi tiết hóa từng story._
