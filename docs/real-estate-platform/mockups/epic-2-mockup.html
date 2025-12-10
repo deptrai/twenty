@@ -1,0 +1,2950 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Platform - Epic 2 Mockups</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'twenty-primary': '#1a1a1a',
+                        'twenty-sidebar': '#141414',
+                        'twenty-surface': '#1e1e1e',
+                        'twenty-border': '#333333',
+                        'twenty-text': '#ffffff',
+                        'twenty-muted': '#888888',
+                        'status-available': '#22C55E',
+                        'status-reserved': '#EAB308',
+                        'status-deposit': '#3B82F6',
+                        'status-sold': '#8B5CF6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        .tab-active { border-bottom: 2px solid #3B82F6; color: #3B82F6; }
+    </style>
+</head>
+<body class="bg-twenty-primary text-twenty-text">
+    <!-- Navigation Tabs -->
+    <div class="sticky top-0 bg-twenty-surface border-b border-twenty-border z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex gap-4 py-2 overflow-x-auto">
+                <div class="flex gap-1 border-r border-twenty-border pr-4">
+                    <span class="text-xs text-twenty-muted self-center mr-2">Epic 2:</span>
+                    <button onclick="showView('projects-list')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">📋 Projects</button>
+                    <button onclick="showView('project-detail')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">🏢 Project</button>
+                    <button onclick="showView('property-detail')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">🏠 Property</button>
+                    <button onclick="showView('dashboard')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">📊 Dashboard</button>
+                </div>
+                <div class="flex gap-1 border-r border-twenty-border pr-4">
+                    <span class="text-xs text-twenty-muted self-center mr-2">Epic 3:</span>
+                    <button onclick="showView('person-form')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">👤 Customer</button>
+                    <button onclick="showView('deal-detail')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">🎯 Deal</button>
+                    <button onclick="showView('deal-kanban')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">📈 Kanban</button>
+                </div>
+                <div class="flex gap-1 border-r border-twenty-border pr-4">
+                    <span class="text-xs text-twenty-muted self-center mr-2">Epic 4:</span>
+                    <button onclick="showView('sales-dashboard')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">📊 Sales</button>
+                    <button onclick="showView('property-filter')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">🔍 Search</button>
+                    <button onclick="showView('commissions')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">💰 Commissions</button>
+                    <button onclick="showView('leads')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">📝 Leads</button>
+                </div>
+                <div class="flex gap-1 border-r border-twenty-border pr-4">
+                    <span class="text-xs text-twenty-muted self-center mr-2">Epic 5:</span>
+                    <button onclick="showView('approval-queue')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">✅ Approvals</button>
+                    <button onclick="showView('comm-reports')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">📊 Reports</button>
+                </div>
+                <div class="flex gap-1 border-r border-twenty-border pr-4">
+                    <span class="text-xs text-twenty-muted self-center mr-2">Epic 6:</span>
+                    <button onclick="showView('assignment-dash')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">📊 Assign</button>
+                    <button onclick="showView('assign-rules')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">⚙️ Rules</button>
+                </div>
+                <div class="flex gap-1">
+                    <span class="text-xs text-twenty-muted self-center mr-2">Epic 7:</span>
+                    <button onclick="showView('plot-map')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">🗺️ Map</button>
+                    <button onclick="showView('exec-dashboard')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">📈 Executive</button>
+                    <button onclick="showView('report-builder')" class="tab-btn px-3 py-2 rounded hover:bg-twenty-border transition text-sm">📊 Builder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-twenty-sidebar border-r border-twenty-border p-4 flex-shrink-0">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold">L</div>
+                <div>
+                    <div class="font-semibold">Luis Phan</div>
+                    <div class="text-sm text-twenty-muted">Admin</div>
+                </div>
+            </div>
+
+            <nav class="space-y-1">
+                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded text-twenty-muted hover:bg-twenty-border hover:text-white transition">
+                    <i class="ti ti-users text-lg"></i> People
+                </a>
+                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded text-twenty-muted hover:bg-twenty-border hover:text-white transition">
+                    <i class="ti ti-building text-lg"></i> Companies
+                </a>
+                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded text-twenty-muted hover:bg-twenty-border hover:text-white transition">
+                    <i class="ti ti-target text-lg"></i> Opportunities
+                </a>
+                <div class="pt-4 pb-2">
+                    <div class="text-xs text-twenty-muted uppercase tracking-wider px-3">Real Estate</div>
+                </div>
+                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded bg-blue-500/20 text-blue-400">
+                    <i class="ti ti-building-skyscraper text-lg"></i> Projects
+                </a>
+                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded text-twenty-muted hover:bg-twenty-border hover:text-white transition">
+                    <i class="ti ti-home text-lg"></i> Properties
+                </a>
+                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded text-twenty-muted hover:bg-twenty-border hover:text-white transition">
+                    <i class="ti ti-chart-bar text-lg"></i> Dashboard
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Projects List View -->
+            <div id="projects-list" class="view">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-building-skyscraper text-2xl text-blue-400"></i>
+                        <h1 class="text-2xl font-semibold">Projects</h1>
+                        <span class="text-twenty-muted ml-2">5 projects</span>
+                    </div>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                        <i class="ti ti-plus"></i> New Project
+                    </button>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="relative flex-1 max-w-md">
+                        <i class="ti ti-search absolute left-3 top-1/2 -translate-y-1/2 text-twenty-muted"></i>
+                        <input type="text" placeholder="Search projects..." class="w-full bg-twenty-surface border border-twenty-border rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                        <option>All Status</option>
+                        <option>Planning</option>
+                        <option>Active</option>
+                        <option>Completed</option>
+                    </select>
+                    <div class="flex border border-twenty-border rounded-lg">
+                        <button class="px-3 py-2 hover:bg-twenty-border rounded-l-lg"><i class="ti ti-table"></i></button>
+                        <button class="px-3 py-2 bg-twenty-border"><i class="ti ti-layout-grid"></i></button>
+                    </div>
+                </div>
+
+                <!-- Projects Table -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-twenty-sidebar border-b border-twenty-border">
+                            <tr>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Name</th>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Location</th>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Status</th>
+                                <th class="text-right px-6 py-4 text-sm font-medium text-twenty-muted">Total</th>
+                                <th class="text-right px-6 py-4 text-sm font-medium text-twenty-muted">Available</th>
+                                <th class="text-right px-6 py-4 text-sm font-medium text-twenty-muted">Price From</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-twenty-border">
+                            <tr class="hover:bg-twenty-border/50 cursor-pointer" onclick="showView('project-detail')">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-lg overflow-hidden">
+                                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&h=100&fit=crop" alt="Sunrise City" class="w-full h-full object-cover">
+                                        </div>
+                                        <div>
+                                            <div class="font-medium">Sunrise City</div>
+                                            <div class="text-sm text-twenty-muted">ABC Developer</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">District 9, HCM</td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-status-available/20 text-status-available text-sm">
+                                        <span class="w-2 h-2 rounded-full bg-status-available"></span> Active
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-right">500</td>
+                                <td class="px-6 py-4 text-right text-status-available font-medium">245</td>
+                                <td class="px-6 py-4 text-right font-medium">2.5B VND</td>
+                            </tr>
+                            <tr class="hover:bg-twenty-border/50 cursor-pointer">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-lg overflow-hidden">
+                                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=100&h=100&fit=crop" alt="Green Hill" class="w-full h-full object-cover">
+                                        </div>
+                                        <div>
+                                            <div class="font-medium">Green Hill Garden</div>
+                                            <div class="text-sm text-twenty-muted">XYZ Properties</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">District 2, HCM</td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-status-available/20 text-status-available text-sm">
+                                        <span class="w-2 h-2 rounded-full bg-status-available"></span> Active
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-right">200</td>
+                                <td class="px-6 py-4 text-right text-status-available font-medium">89</td>
+                                <td class="px-6 py-4 text-right font-medium">3.8B VND</td>
+                            </tr>
+                            <tr class="hover:bg-twenty-border/50 cursor-pointer">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-lg overflow-hidden">
+                                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=100&h=100&fit=crop" alt="Ocean View" class="w-full h-full object-cover">
+                                        </div>
+                                        <div>
+                                            <div class="font-medium">Ocean View Resort</div>
+                                            <div class="text-sm text-twenty-muted">DEF Group</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">Vung Tau</td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-status-reserved/20 text-status-reserved text-sm">
+                                        <span class="w-2 h-2 rounded-full bg-status-reserved"></span> Planning
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-right">300</td>
+                                <td class="px-6 py-4 text-right text-status-available font-medium">300</td>
+                                <td class="px-6 py-4 text-right font-medium">1.8B VND</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Project Detail View -->
+            <div id="project-detail" class="view hidden">
+                <!-- Hero Banner -->
+                <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=400&fit=crop" alt="Sunrise City" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-twenty-primary/80 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <!-- Breadcrumb -->
+                        <div class="flex items-center gap-2 text-sm text-twenty-muted mb-2">
+                            <a href="#" onclick="showView('projects-list')" class="hover:text-white">Projects</a>
+                            <i class="ti ti-chevron-right text-xs"></i>
+                            <span class="text-white">Sunrise City</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h1 class="text-3xl font-bold">Sunrise City</h1>
+                                <div class="text-twenty-muted flex items-center gap-4 mt-1">
+                                    <span><i class="ti ti-map-pin mr-1"></i> District 9, Ho Chi Minh</span>
+                                    <span><i class="ti ti-building mr-1"></i> ABC Developer</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button class="px-4 py-2 bg-white/20 backdrop-blur border border-white/30 rounded-lg hover:bg-white/30 transition">
+                                    <i class="ti ti-pencil mr-2"></i> Edit
+                                </button>
+                                <button class="px-4 py-2 bg-white/20 backdrop-blur border border-white/30 rounded-lg hover:bg-white/30 transition">
+                                    <i class="ti ti-dots-vertical"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-4 gap-4 mb-6">
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Total Properties</div>
+                        <div class="text-2xl font-bold">500</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Available</div>
+                        <div class="text-2xl font-bold text-status-available">245</div>
+                        <div class="text-sm text-twenty-muted">49%</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Reserved</div>
+                        <div class="text-2xl font-bold text-status-reserved">35</div>
+                        <div class="text-sm text-twenty-muted">7%</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Sold</div>
+                        <div class="text-2xl font-bold text-status-sold">220</div>
+                        <div class="text-sm text-twenty-muted">44%</div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="border-b border-twenty-border mb-6">
+                    <div class="flex gap-6">
+                        <button onclick="showProjectTab('overview')" class="project-tab pb-3 tab-active" id="tab-overview">Overview</button>
+                        <button onclick="showProjectTab('properties')" class="project-tab pb-3 text-twenty-muted hover:text-white" id="tab-properties">Properties (500)</button>
+                        <button onclick="showProjectTab('masterplan')" class="project-tab pb-3 text-twenty-muted hover:text-white" id="tab-masterplan">Master Plan</button>
+                        <button onclick="showProjectTab('files')" class="project-tab pb-3 text-twenty-muted hover:text-white" id="tab-files">Files</button>
+                        <button onclick="showProjectTab('activities')" class="project-tab pb-3 text-twenty-muted hover:text-white" id="tab-activities">Activities</button>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Overview -->
+                <div id="content-overview" class="tab-content">
+                    <!-- Properties Table -->
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold">Properties (Recent)</h2>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                        <i class="ti ti-plus"></i> Add Property
+                    </button>
+                </div>
+
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-twenty-sidebar border-b border-twenty-border">
+                            <tr>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Plot</th>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Block</th>
+                                <th class="text-right px-6 py-4 text-sm font-medium text-twenty-muted">Area</th>
+                                <th class="text-right px-6 py-4 text-sm font-medium text-twenty-muted">Price</th>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Status</th>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Reserved By</th>
+                                <th class="text-center px-6 py-4 text-sm font-medium text-twenty-muted">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-twenty-border">
+                            <tr class="hover:bg-twenty-border/50 cursor-pointer" onclick="showView('property-detail')">
+                                <td class="px-6 py-4 font-medium">A-001</td>
+                                <td class="px-6 py-4 text-twenty-muted">A</td>
+                                <td class="px-6 py-4 text-right">120 m²</td>
+                                <td class="px-6 py-4 text-right font-medium">2.5B VND</td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-status-available/20 text-status-available text-sm">
+                                        <span class="w-2 h-2 rounded-full bg-status-available"></span> Available
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">-</td>
+                                <td class="px-6 py-4 text-center">
+                                    <button onclick="event.stopPropagation(); openModal()" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm transition">
+                                        Reserve
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-twenty-border/50 cursor-pointer">
+                                <td class="px-6 py-4 font-medium">A-002</td>
+                                <td class="px-6 py-4 text-twenty-muted">A</td>
+                                <td class="px-6 py-4 text-right">150 m²</td>
+                                <td class="px-6 py-4 text-right font-medium">3.0B VND</td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-status-reserved/20 text-status-reserved text-sm">
+                                        <span class="w-2 h-2 rounded-full bg-status-reserved"></span> Reserved
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-xs">L</div>
+                                        <div>
+                                            <div class="text-sm">Luis</div>
+                                            <div class="text-xs text-status-reserved"><i class="ti ti-clock mr-1"></i>2h left</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <button class="text-twenty-muted hover:text-white px-3 py-1 rounded border border-twenty-border text-sm">
+                                        Release
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-twenty-border/50 cursor-pointer">
+                                <td class="px-6 py-4 font-medium">A-003</td>
+                                <td class="px-6 py-4 text-twenty-muted">A</td>
+                                <td class="px-6 py-4 text-right">120 m²</td>
+                                <td class="px-6 py-4 text-right font-medium">2.5B VND</td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-status-deposit/20 text-status-deposit text-sm">
+                                        <span class="w-2 h-2 rounded-full bg-status-deposit"></span> Deposit Paid
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">Customer X</td>
+                                <td class="px-6 py-4 text-center">
+                                    <button class="text-twenty-muted px-3 py-1 rounded text-sm cursor-not-allowed opacity-50">
+                                        Reserved
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-twenty-border/50 cursor-pointer">
+                                <td class="px-6 py-4 font-medium">A-004</td>
+                                <td class="px-6 py-4 text-twenty-muted">A</td>
+                                <td class="px-6 py-4 text-right">180 m²</td>
+                                <td class="px-6 py-4 text-right font-medium">4.0B VND</td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-status-sold/20 text-status-sold text-sm">
+                                        <span class="w-2 h-2 rounded-full bg-status-sold"></span> Sold
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">Customer Y</td>
+                                <td class="px-6 py-4 text-center">
+                                    <button class="text-twenty-muted px-3 py-1 rounded text-sm cursor-not-allowed opacity-50">
+                                        Sold
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+
+                <!-- Tab Content: Properties (Full List) -->
+                <div id="content-properties" class="tab-content hidden">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-4">
+                            <h2 class="text-lg font-semibold">All Properties</h2>
+                            <span class="text-twenty-muted">500 total</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="relative">
+                                <i class="ti ti-search absolute left-3 top-1/2 -translate-y-1/2 text-twenty-muted"></i>
+                                <input type="text" placeholder="Search plots..." class="bg-twenty-surface border border-twenty-border rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:border-blue-500 w-64">
+                            </div>
+                            <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                                <option>All Status</option>
+                                <option>Available</option>
+                                <option>Reserved</option>
+                                <option>Sold</option>
+                            </select>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                                <i class="ti ti-plus"></i> Add Property
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4">
+                        <!-- Property Cards -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="h-32 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300&h=200&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="font-medium">A-001</div>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-status-available/20 text-status-available">Available</span>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-2">Block A · 120m²</div>
+                                <div class="font-medium text-blue-400">2.5B VND</div>
+                            </div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="h-32 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=300&h=200&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="font-medium">A-002</div>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-status-reserved/20 text-status-reserved">Reserved</span>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-2">Block A · 150m²</div>
+                                <div class="font-medium text-blue-400">3.0B VND</div>
+                            </div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="h-32 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&h=200&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="font-medium">A-003</div>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-status-deposit/20 text-status-deposit">Deposit</span>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-2">Block A · 120m²</div>
+                                <div class="font-medium text-blue-400">2.5B VND</div>
+                            </div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="h-32 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=300&h=200&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="font-medium">A-004</div>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-status-sold/20 text-status-sold">Sold</span>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-2">Block A · 180m²</div>
+                                <div class="font-medium text-blue-400">4.0B VND</div>
+                            </div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="h-32 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=300&h=200&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="font-medium">B-001</div>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-status-available/20 text-status-available">Available</span>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-2">Block B · 200m²</div>
+                                <div class="font-medium text-blue-400">5.0B VND</div>
+                            </div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="h-32 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=300&h=200&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="font-medium">B-002</div>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-status-available/20 text-status-available">Available</span>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-2">Block B · 150m²</div>
+                                <div class="font-medium text-blue-400">3.8B VND</div>
+                            </div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="h-32 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=300&h=200&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="font-medium">B-003</div>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-status-reserved/20 text-status-reserved">Reserved</span>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-2">Block B · 180m²</div>
+                                <div class="font-medium text-blue-400">4.5B VND</div>
+                            </div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="h-32 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=300&h=200&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="font-medium">C-001</div>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-status-available/20 text-status-available">Available</span>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-2">Block C · 220m²</div>
+                                <div class="font-medium text-blue-400">5.5B VND</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <div class="text-sm text-twenty-muted">Showing 1-8 of 500 properties</div>
+                        <div class="flex items-center gap-2">
+                            <button class="px-3 py-1 border border-twenty-border rounded hover:bg-twenty-border">Previous</button>
+                            <button class="px-3 py-1 bg-blue-500 text-white rounded">1</button>
+                            <button class="px-3 py-1 border border-twenty-border rounded hover:bg-twenty-border">2</button>
+                            <button class="px-3 py-1 border border-twenty-border rounded hover:bg-twenty-border">3</button>
+                            <span class="text-twenty-muted">...</span>
+                            <button class="px-3 py-1 border border-twenty-border rounded hover:bg-twenty-border">63</button>
+                            <button class="px-3 py-1 border border-twenty-border rounded hover:bg-twenty-border">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Master Plan -->
+                <div id="content-masterplan" class="tab-content hidden">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold">Master Plan</h2>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                            <i class="ti ti-upload"></i> Upload New
+                        </button>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=800&fit=crop" alt="Master Plan" class="w-full rounded-lg">
+                            <div class="absolute top-4 right-4 flex gap-2">
+                                <button class="bg-white/90 text-black px-3 py-2 rounded-lg flex items-center gap-2 hover:bg-white transition">
+                                    <i class="ti ti-zoom-in"></i> Zoom
+                                </button>
+                                <button class="bg-white/90 text-black px-3 py-2 rounded-lg flex items-center gap-2 hover:bg-white transition">
+                                    <i class="ti ti-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex items-center gap-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-4 h-4 bg-status-available rounded"></div>
+                                <span class="text-sm">Available (245)</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-4 h-4 bg-status-reserved rounded"></div>
+                                <span class="text-sm">Reserved (35)</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-4 h-4 bg-status-deposit rounded"></div>
+                                <span class="text-sm">Deposit (40)</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-4 h-4 bg-status-sold rounded"></div>
+                                <span class="text-sm">Sold (180)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Files -->
+                <div id="content-files" class="tab-content hidden">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold">Project Files</h2>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                            <i class="ti ti-upload"></i> Upload Files
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4">
+                        <!-- File Cards -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4 hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-3">
+                                <i class="ti ti-file-type-pdf text-2xl text-red-400"></i>
+                            </div>
+                            <div class="font-medium truncate">Brochure_SunriseCity.pdf</div>
+                            <div class="text-sm text-twenty-muted">2.5 MB · Dec 1, 2025</div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4 hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3">
+                                <i class="ti ti-file-type-doc text-2xl text-blue-400"></i>
+                            </div>
+                            <div class="font-medium truncate">Contract_Template.docx</div>
+                            <div class="text-sm text-twenty-muted">156 KB · Nov 28, 2025</div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4 hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-3">
+                                <i class="ti ti-file-spreadsheet text-2xl text-green-400"></i>
+                            </div>
+                            <div class="font-medium truncate">Price_List_2025.xlsx</div>
+                            <div class="text-sm text-twenty-muted">89 KB · Dec 5, 2025</div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4 hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-3">
+                                <i class="ti ti-photo text-2xl text-purple-400"></i>
+                            </div>
+                            <div class="font-medium truncate">MasterPlan_HD.png</div>
+                            <div class="text-sm text-twenty-muted">8.2 MB · Nov 15, 2025</div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4 hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-3">
+                                <i class="ti ti-file-zip text-2xl text-yellow-400"></i>
+                            </div>
+                            <div class="font-medium truncate">Marketing_Materials.zip</div>
+                            <div class="text-sm text-twenty-muted">45 MB · Nov 20, 2025</div>
+                        </div>
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4 hover:border-blue-500/50 transition cursor-pointer">
+                            <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-3">
+                                <i class="ti ti-video text-2xl text-cyan-400"></i>
+                            </div>
+                            <div class="font-medium truncate">Project_Overview.mp4</div>
+                            <div class="text-sm text-twenty-muted">120 MB · Oct 30, 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Activities -->
+                <div id="content-activities" class="tab-content hidden">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold">Activity Log</h2>
+                        <div class="flex items-center gap-2">
+                            <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                                <option>All Activities</option>
+                                <option>Reservations</option>
+                                <option>Sales</option>
+                                <option>Updates</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <p class="text-center text-twenty-muted py-8">
+                            <i class="ti ti-clock text-4xl mb-4 block opacity-50"></i>
+                            Activities feature coming in Epic 7 (Operations)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Detail View -->
+            <div id="property-detail" class="view hidden">
+                <!-- Hero Banner -->
+                <div class="relative h-64 rounded-xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=500&fit=crop" alt="Property A-001" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-twenty-primary/90 via-twenty-primary/40 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <!-- Breadcrumb -->
+                        <div class="flex items-center gap-2 text-sm text-twenty-muted mb-2">
+                            <a href="#" onclick="showView('projects-list')" class="hover:text-white">Projects</a>
+                            <i class="ti ti-chevron-right text-xs"></i>
+                            <a href="#" onclick="showView('project-detail')" class="hover:text-white">Sunrise City</a>
+                            <i class="ti ti-chevron-right text-xs"></i>
+                            <span class="text-white">Plot A-001</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h1 class="text-3xl font-bold">Plot A-001</h1>
+                                <div class="text-twenty-muted">Block A - Sunrise City</div>
+                            </div>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-status-available text-white text-sm font-medium">
+                                <span class="w-2 h-2 rounded-full bg-white"></span> Available
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6">
+                    <!-- Left Column - Property Details -->
+                    <div class="col-span-2">
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6 mb-6">
+                            <h2 class="text-lg font-semibold mb-4">Property Details</h2>
+
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <div class="text-sm text-twenty-muted mb-1">Area</div>
+                                    <div class="text-lg font-medium">120 m²</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-twenty-muted mb-1">Dimensions</div>
+                                    <div class="text-lg font-medium">8m × 15m</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-twenty-muted mb-1">Direction</div>
+                                    <div class="text-lg font-medium">East</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-twenty-muted mb-1">Road Width</div>
+                                    <div class="text-lg font-medium">12m</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gallery -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                            <h2 class="text-lg font-semibold mb-4">Gallery</h2>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="aspect-video bg-twenty-border rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=300&fit=crop" alt="Property" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </div>
+                                <div class="aspect-video bg-twenty-border rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop" alt="Property" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </div>
+                                <div class="aspect-video bg-twenty-border rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" alt="Property" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </div>
+                                <div class="aspect-video bg-twenty-border rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop" alt="Property" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </div>
+                                <div class="aspect-video bg-twenty-border rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop" alt="Property" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </div>
+                                <div class="aspect-video bg-twenty-border rounded-lg flex items-center justify-center border-2 border-dashed cursor-pointer hover:border-blue-500 transition">
+                                    <i class="ti ti-plus text-4xl text-twenty-muted"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Actions & Info -->
+                    <div>
+                        <!-- Price Card -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6 mb-6">
+                            <div class="text-sm text-twenty-muted mb-1">Price</div>
+                            <div class="text-3xl font-bold text-blue-400 mb-4">2,500,000,000 VND</div>
+
+                            <button onclick="openModal()" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition mb-3">
+                                <i class="ti ti-bookmark"></i> Reserve Now
+                            </button>
+
+                            <p class="text-sm text-twenty-muted text-center">
+                                Reserve for 24 hours to collect deposit
+                            </p>
+                        </div>
+
+                        <!-- Activity Timeline -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                            <h2 class="text-lg font-semibold mb-4">Recent Activity</h2>
+                            <div class="space-y-4">
+                                <div class="flex gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-status-available mt-2"></div>
+                                    <div>
+                                        <div class="text-sm">Status changed to Available</div>
+                                        <div class="text-xs text-twenty-muted">2 hours ago</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-status-reserved mt-2"></div>
+                                    <div>
+                                        <div class="text-sm">Reserved by John Doe</div>
+                                        <div class="text-xs text-twenty-muted">26 hours ago</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-blue-400 mt-2"></div>
+                                    <div>
+                                        <div class="text-sm">Property created</div>
+                                        <div class="text-xs text-twenty-muted">Jan 15, 2025</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard View -->
+            <div id="dashboard" class="view hidden">
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="ti ti-chart-bar text-2xl text-blue-400"></i>
+                    <h1 class="text-2xl font-semibold">Real Estate Dashboard</h1>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-6 gap-4 mb-6">
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Total Properties</div>
+                        <div class="text-2xl font-bold">1,000</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Available</div>
+                        <div class="text-2xl font-bold text-status-available">634</div>
+                        <div class="text-xs text-status-available">+12 today</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Reserved</div>
+                        <div class="text-2xl font-bold text-status-reserved">47</div>
+                        <div class="text-xs text-status-reserved">5 expiring</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Deposit Paid</div>
+                        <div class="text-2xl font-bold text-status-deposit">89</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Sold</div>
+                        <div class="text-2xl font-bold text-status-sold">230</div>
+                        <div class="text-xs text-status-sold">+3 this week</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">Total Value</div>
+                        <div class="text-2xl font-bold">575B</div>
+                        <div class="text-xs text-twenty-muted">this month</div>
+                    </div>
+                </div>
+
+                <!-- My Reservations -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6 mb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold">My Active Reservations</h2>
+                        <a href="#" class="text-blue-400 text-sm hover:underline">View All →</a>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-twenty-border/50 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-status-reserved/20 rounded-lg flex items-center justify-center">
+                                    <i class="ti ti-home text-status-reserved"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">A-002 - Sunrise City</div>
+                                    <div class="text-sm text-twenty-muted">3.0B VND</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="text-status-reserved text-sm font-medium">
+                                    <i class="ti ti-clock mr-1"></i> Expires in 2h 15m
+                                </div>
+                                <button class="text-twenty-muted hover:text-white px-3 py-1 rounded border border-twenty-border text-sm">
+                                    Release
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between p-3 bg-twenty-border/50 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-status-reserved/20 rounded-lg flex items-center justify-center">
+                                    <i class="ti ti-home text-status-reserved"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">B-015 - Green Hill</div>
+                                    <div class="text-sm text-twenty-muted">3.8B VND</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="text-status-available text-sm font-medium">
+                                    <i class="ti ti-clock mr-1"></i> Expires in 18h
+                                </div>
+                                <button class="text-twenty-muted hover:text-white px-3 py-1 rounded border border-twenty-border text-sm">
+                                    Release
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                    <h2 class="text-lg font-semibold mb-4">Recent Activities</h2>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-xs">L</div>
+                            <div class="flex-1">
+                                <span class="font-medium">Luis</span> reserved <span class="text-blue-400">A-002</span> in Sunrise City
+                            </div>
+                            <div class="text-twenty-muted">2 min ago</div>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-xs">J</div>
+                            <div class="flex-1">
+                                <span class="font-medium">John</span> closed deal on <span class="text-blue-400">C-012</span>
+                            </div>
+                            <div class="text-twenty-muted">1 hour ago</div>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-xs">A</div>
+                            <div class="flex-1">
+                                <span class="font-medium">Admin</span> created new project <span class="text-blue-400">Ocean View</span>
+                            </div>
+                            <div class="text-twenty-muted">3 hours ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== EPIC 3 VIEWS ========== -->
+
+            <!-- Person Form View (Customer with Real Estate Fields) -->
+            <div id="person-form" class="view hidden">
+                <div class="flex items-center gap-2 text-sm text-twenty-muted mb-4">
+                    <a href="#" class="hover:text-white">People</a>
+                    <i class="ti ti-chevron-right text-xs"></i>
+                    <span class="text-white">New Customer</span>
+                </div>
+
+                <div class="max-w-2xl">
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <h1 class="text-xl font-semibold mb-6 flex items-center gap-2">
+                            <i class="ti ti-user-plus text-blue-400"></i> Create Customer
+                        </h1>
+
+                        <!-- Basic Information -->
+                        <div class="mb-6">
+                            <h2 class="text-sm font-medium text-twenty-muted uppercase tracking-wider mb-4">Basic Information</h2>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm text-twenty-muted mb-1">First Name *</label>
+                                    <input type="text" class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" placeholder="Nguyen">
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-twenty-muted mb-1">Last Name *</label>
+                                    <input type="text" class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" placeholder="Van A">
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-twenty-muted mb-1">Email *</label>
+                                    <input type="email" class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" placeholder="nguyen.vana@email.com">
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-twenty-muted mb-1">Phone</label>
+                                    <input type="tel" class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" placeholder="0901 234 567">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Real Estate Preferences -->
+                        <div class="mb-6">
+                            <h2 class="text-sm font-medium text-twenty-muted uppercase tracking-wider mb-4 flex items-center gap-2">
+                                Real Estate Preferences
+                                <span class="bg-blue-500/20 text-blue-400 text-xs px-2 py-0.5 rounded">NEW</span>
+                            </h2>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm text-twenty-muted mb-1">Budget Range (VND)</label>
+                                    <div class="flex items-center gap-3">
+                                        <input type="text" class="flex-1 bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" placeholder="2,000,000,000">
+                                        <span class="text-twenty-muted">to</span>
+                                        <input type="text" class="flex-1 bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" placeholder="5,000,000,000">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-twenty-muted mb-1">Preferred Locations</label>
+                                    <div class="flex flex-wrap gap-2 p-3 bg-twenty-primary border border-twenty-border rounded-lg">
+                                        <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                                            District 9 <i class="ti ti-x text-xs cursor-pointer"></i>
+                                        </span>
+                                        <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                                            District 2 <i class="ti ti-x text-xs cursor-pointer"></i>
+                                        </span>
+                                        <button class="text-twenty-muted hover:text-white text-sm">+ Add</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-twenty-muted mb-1">Property Type Interest</label>
+                                    <div class="flex flex-wrap gap-3">
+                                        <label class="flex items-center gap-2 cursor-pointer">
+                                            <input type="checkbox" class="w-4 h-4 rounded border-twenty-border bg-twenty-primary text-blue-500">
+                                            <span>Land Plot</span>
+                                        </label>
+                                        <label class="flex items-center gap-2 cursor-pointer">
+                                            <input type="checkbox" checked class="w-4 h-4 rounded border-twenty-border bg-twenty-primary text-blue-500">
+                                            <span>Villa</span>
+                                        </label>
+                                        <label class="flex items-center gap-2 cursor-pointer">
+                                            <input type="checkbox" class="w-4 h-4 rounded border-twenty-border bg-twenty-primary text-blue-500">
+                                            <span>Apartment</span>
+                                        </label>
+                                        <label class="flex items-center gap-2 cursor-pointer">
+                                            <input type="checkbox" class="w-4 h-4 rounded border-twenty-border bg-twenty-primary text-blue-500">
+                                            <span>Commercial</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-twenty-muted mb-1">Lead Source</label>
+                                    <select class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500">
+                                        <option value="">Select source...</option>
+                                        <option value="walk-in">Walk-in</option>
+                                        <option value="referral" selected>Referral</option>
+                                        <option value="online">Online (Website/Facebook)</option>
+                                        <option value="event">Event</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="flex gap-3 pt-4 border-t border-twenty-border">
+                            <button class="px-6 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                                Cancel
+                            </button>
+                            <button class="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition">
+                                <i class="ti ti-check mr-2"></i> Create Customer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deal Detail View -->
+            <div id="deal-detail" class="view hidden">
+                <div class="flex items-center gap-2 text-sm text-twenty-muted mb-4">
+                    <a href="#" onclick="showView('deal-kanban')" class="hover:text-white">Opportunities</a>
+                    <i class="ti ti-chevron-right text-xs"></i>
+                    <span class="text-white">A-001 Purchase - Nguyen Van A</span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6">
+                    <!-- Left Column -->
+                    <div class="col-span-2 space-y-6">
+                        <!-- Deal Header -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h1 class="text-2xl font-bold">A-001 Purchase - Nguyen Van A</h1>
+                                    <div class="text-twenty-muted mt-1">Created Dec 1, 2025</div>
+                                </div>
+                                <div>
+                                    <select class="bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-lg px-4 py-2 font-medium">
+                                        <option value="new">🔵 NEW</option>
+                                        <option value="qualified">🔵 QUALIFIED</option>
+                                        <option value="reserved">🟡 RESERVED</option>
+                                        <option value="deposit" selected>🟠 DEPOSIT PAID</option>
+                                        <option value="contract">🟣 CONTRACT SIGNED</option>
+                                        <option value="won">🟢 WON</option>
+                                        <option value="lost">🔴 LOST</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div>
+                                    <div class="text-sm text-twenty-muted mb-1">Deal Amount</div>
+                                    <div class="text-xl font-bold text-blue-400">2,500,000,000 VND</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-twenty-muted mb-1">Close Date</div>
+                                    <div class="text-lg font-medium">Dec 25, 2025</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-twenty-muted mb-1">Probability</div>
+                                    <div class="text-lg font-medium">75%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Linked Property -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h2 class="text-lg font-semibold flex items-center gap-2">
+                                    <i class="ti ti-home text-blue-400"></i> Linked Property
+                                </h2>
+                                <button class="text-sm text-blue-400 hover:underline">Change</button>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-twenty-border/30 rounded-lg">
+                                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=200&h=200&fit=crop" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-medium text-lg">Plot A-001</div>
+                                    <div class="text-twenty-muted">Sunrise City - Block A</div>
+                                    <div class="text-sm text-twenty-muted mt-1">120 m² · 2.5B VND</div>
+                                    <div class="mt-2">
+                                        <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-orange-500/20 text-orange-400 text-sm">
+                                            <span class="w-2 h-2 rounded-full bg-orange-400"></span> DEPOSIT_PAID
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm">
+                                <i class="ti ti-refresh mr-2"></i>
+                                <span>Property status syncs with deal stage automatically</span>
+                            </div>
+                        </div>
+
+                        <!-- Timeline -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                            <h2 class="text-lg font-semibold mb-4">Timeline</h2>
+                            <div class="space-y-4">
+                                <div class="flex gap-4">
+                                    <div class="w-2 h-2 rounded-full bg-orange-400 mt-2"></div>
+                                    <div>
+                                        <div class="font-medium">Stage changed to DEPOSIT_PAID</div>
+                                        <div class="text-sm text-twenty-muted">Dec 8, 2025 at 3:45 PM by Luis</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-2 h-2 rounded-full bg-yellow-400 mt-2"></div>
+                                    <div>
+                                        <div class="font-medium">Stage changed to RESERVED</div>
+                                        <div class="text-sm text-twenty-muted">Dec 5, 2025 at 10:30 AM by Luis</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-2 h-2 rounded-full bg-blue-400 mt-2"></div>
+                                    <div>
+                                        <div class="font-medium">Deal created</div>
+                                        <div class="text-sm text-twenty-muted">Dec 1, 2025 at 2:15 PM by Luis</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="space-y-6">
+                        <!-- Customer -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h2 class="text-lg font-semibold flex items-center gap-2">
+                                    <i class="ti ti-user text-blue-400"></i> Customer
+                                </h2>
+                                <button class="text-sm text-blue-400 hover:underline">View</button>
+                            </div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-lg font-bold">N</div>
+                                <div>
+                                    <div class="font-medium">Nguyen Van A</div>
+                                    <div class="text-sm text-twenty-muted">Customer</div>
+                                </div>
+                            </div>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex items-center gap-2">
+                                    <i class="ti ti-phone text-twenty-muted"></i>
+                                    <span>0901 234 567</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="ti ti-mail text-twenty-muted"></i>
+                                    <span>nguyen.vana@email.com</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="ti ti-currency-dollar text-twenty-muted"></i>
+                                    <span>Budget: 2-5B VND</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="ti ti-map-pin text-twenty-muted"></i>
+                                    <span>Preference: District 9, District 2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sales Agent -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                            <h2 class="text-lg font-semibold mb-4">Sales Agent</h2>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold">L</div>
+                                <div>
+                                    <div class="font-medium">Luis Phan</div>
+                                    <div class="text-sm text-twenty-muted">Sales Team A</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                            <h2 class="text-lg font-semibold mb-4">Quick Actions</h2>
+                            <div class="space-y-2">
+                                <button class="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-left transition">
+                                    <i class="ti ti-file-plus mr-2"></i> Create Contract
+                                </button>
+                                <button class="w-full px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-left transition">
+                                    <i class="ti ti-mail mr-2"></i> Send Email
+                                </button>
+                                <button class="w-full px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-left transition">
+                                    <i class="ti ti-calendar mr-2"></i> Schedule Meeting
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deal Kanban View -->
+            <div id="deal-kanban" class="view hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-target text-2xl text-blue-400"></i>
+                        <h1 class="text-2xl font-semibold">Opportunities</h1>
+                        <span class="text-twenty-muted ml-2">28 deals</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                            <i class="ti ti-table mr-2"></i> Table
+                        </button>
+                        <button class="px-4 py-2 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-lg">
+                            <i class="ti ti-layout-kanban mr-2"></i> Kanban
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                            <i class="ti ti-plus"></i> New Deal
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Kanban Board -->
+                <div class="flex gap-4 overflow-x-auto pb-6">
+                    <!-- NEW Column -->
+                    <div class="flex-shrink-0 w-72">
+                        <div class="bg-gray-500/20 rounded-t-lg px-4 py-3 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-gray-400"></div>
+                                <span class="font-medium">NEW</span>
+                            </div>
+                            <span class="text-twenty-muted text-sm">3</span>
+                        </div>
+                        <div class="space-y-3 p-3 bg-twenty-surface/50 rounded-b-lg min-h-[400px]">
+                            <div class="bg-twenty-surface border border-twenty-border rounded-lg p-4 cursor-pointer hover:border-blue-500/50 transition" onclick="showView('deal-detail')">
+                                <div class="font-medium mb-2">A-015 Purchase</div>
+                                <div class="text-lg font-bold text-blue-400 mb-2">2.5B VND</div>
+                                <div class="flex items-center gap-2 text-sm text-twenty-muted">
+                                    <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs text-white">T</div>
+                                    <span>Tran Thi B</span>
+                                </div>
+                                <div class="mt-2 text-xs text-twenty-muted flex items-center gap-1">
+                                    <i class="ti ti-home"></i> A-015 Sunrise
+                                </div>
+                            </div>
+                            <div class="bg-twenty-surface border border-twenty-border rounded-lg p-4 cursor-pointer hover:border-blue-500/50 transition">
+                                <div class="font-medium mb-2">A-020 Purchase</div>
+                                <div class="text-lg font-bold text-blue-400 mb-2">1.8B VND</div>
+                                <div class="flex items-center gap-2 text-sm text-twenty-muted">
+                                    <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-xs text-white">L</div>
+                                    <span>Le Van C</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QUALIFIED Column -->
+                    <div class="flex-shrink-0 w-72">
+                        <div class="bg-blue-500/20 rounded-t-lg px-4 py-3 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-blue-400"></div>
+                                <span class="font-medium">QUALIFIED</span>
+                            </div>
+                            <span class="text-twenty-muted text-sm">2</span>
+                        </div>
+                        <div class="space-y-3 p-3 bg-twenty-surface/50 rounded-b-lg min-h-[400px]">
+                            <div class="bg-twenty-surface border border-twenty-border rounded-lg p-4 cursor-pointer hover:border-blue-500/50 transition">
+                                <div class="font-medium mb-2">B-003 Purchase</div>
+                                <div class="text-lg font-bold text-blue-400 mb-2">3.8B VND</div>
+                                <div class="flex items-center gap-2 text-sm text-twenty-muted">
+                                    <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-xs text-white">P</div>
+                                    <span>Pham Van D</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RESERVED Column -->
+                    <div class="flex-shrink-0 w-72">
+                        <div class="bg-yellow-500/20 rounded-t-lg px-4 py-3 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                <span class="font-medium">RESERVED</span>
+                            </div>
+                            <span class="text-twenty-muted text-sm">5</span>
+                        </div>
+                        <div class="space-y-3 p-3 bg-twenty-surface/50 rounded-b-lg min-h-[400px]">
+                            <div class="bg-twenty-surface border border-twenty-border rounded-lg p-4 cursor-pointer hover:border-blue-500/50 transition">
+                                <div class="font-medium mb-2">A-001 Purchase</div>
+                                <div class="text-lg font-bold text-blue-400 mb-2">2.5B VND</div>
+                                <div class="flex items-center gap-2 text-sm text-twenty-muted">
+                                    <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-xs text-white">N</div>
+                                    <span>Nguyen Van A</span>
+                                </div>
+                                <div class="mt-2 text-xs text-status-reserved flex items-center gap-1">
+                                    <i class="ti ti-clock"></i> 18h remaining
+                                </div>
+                            </div>
+                            <div class="bg-twenty-surface border border-twenty-border rounded-lg p-4 cursor-pointer hover:border-blue-500/50 transition">
+                                <div class="font-medium mb-2">B-005 Purchase</div>
+                                <div class="text-lg font-bold text-blue-400 mb-2">3.5B VND</div>
+                                <div class="flex items-center gap-2 text-sm text-twenty-muted">
+                                    <div class="w-6 h-6 bg-pink-500 rounded-full flex items-center justify-center text-xs text-white">V</div>
+                                    <span>Vo Thi E</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DEPOSIT PAID Column -->
+                    <div class="flex-shrink-0 w-72">
+                        <div class="bg-orange-500/20 rounded-t-lg px-4 py-3 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-orange-400"></div>
+                                <span class="font-medium">DEPOSIT PAID</span>
+                            </div>
+                            <span class="text-twenty-muted text-sm">4</span>
+                        </div>
+                        <div class="space-y-3 p-3 bg-twenty-surface/50 rounded-b-lg min-h-[400px]">
+                            <div class="bg-twenty-surface border border-twenty-border rounded-lg p-4 cursor-pointer hover:border-blue-500/50 transition">
+                                <div class="font-medium mb-2">A-002 Purchase</div>
+                                <div class="text-lg font-bold text-blue-400 mb-2">3.0B VND</div>
+                                <div class="flex items-center gap-2 text-sm text-twenty-muted">
+                                    <div class="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center text-xs text-white">D</div>
+                                    <span>Dang Van F</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTRACT SIGNED Column -->
+                    <div class="flex-shrink-0 w-72">
+                        <div class="bg-purple-500/20 rounded-t-lg px-4 py-3 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-purple-400"></div>
+                                <span class="font-medium">CONTRACT</span>
+                            </div>
+                            <span class="text-twenty-muted text-sm">2</span>
+                        </div>
+                        <div class="space-y-3 p-3 bg-twenty-surface/50 rounded-b-lg min-h-[400px]">
+                            <div class="bg-twenty-surface border border-twenty-border rounded-lg p-4 cursor-pointer hover:border-blue-500/50 transition">
+                                <div class="font-medium mb-2">C-010 Purchase</div>
+                                <div class="text-lg font-bold text-blue-400 mb-2">5.5B VND</div>
+                                <div class="flex items-center gap-2 text-sm text-twenty-muted">
+                                    <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-xs text-white">H</div>
+                                    <span>Hoang Van G</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WON Column -->
+                    <div class="flex-shrink-0 w-72">
+                        <div class="bg-green-500/20 rounded-t-lg px-4 py-3 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                <span class="font-medium">WON</span>
+                            </div>
+                            <span class="text-twenty-muted text-sm">12</span>
+                        </div>
+                        <div class="space-y-3 p-3 bg-twenty-surface/50 rounded-b-lg min-h-[400px]">
+                            <div class="bg-twenty-surface border border-twenty-border rounded-lg p-4 cursor-pointer hover:border-blue-500/50 transition">
+                                <div class="font-medium mb-2">A-005 Purchase</div>
+                                <div class="text-lg font-bold text-blue-400 mb-2">2.5B VND</div>
+                                <div class="flex items-center gap-2 text-sm text-twenty-muted">
+                                    <div class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs text-white">M</div>
+                                    <span>Mai Thi H</span>
+                                </div>
+                                <div class="mt-2 text-xs text-status-available flex items-center gap-1">
+                                    <i class="ti ti-check"></i> Completed
+                                </div>
+                            </div>
+                            <div class="bg-twenty-surface border border-twenty-border rounded-lg p-4 cursor-pointer hover:border-blue-500/50 transition">
+                                <div class="font-medium mb-2">B-001 Purchase</div>
+                                <div class="text-lg font-bold text-blue-400 mb-2">4.0B VND</div>
+                                <div class="flex items-center gap-2 text-sm text-twenty-muted">
+                                    <div class="w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center text-xs text-white">K</div>
+                                    <span>Kim Van I</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== EPIC 4 VIEWS ========== -->
+
+            <!-- Sales Dashboard View (Personal) -->
+            <div id="sales-dashboard" class="view hidden">
+                <div class="mb-6">
+                    <h1 class="text-2xl font-semibold mb-2">Good morning, Luis! 👋</h1>
+                    <div class="text-twenty-muted">Here's your performance at a glance</div>
+                </div>
+
+                <!-- Top KPIs -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 rounded-xl p-6">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="ti ti-currency-dollar text-3xl text-blue-400"></i>
+                            <div class="text-sm text-twenty-muted uppercase">This Month</div>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">45.5B VND</div>
+                        <div class="text-sm text-green-400">↑ +15% vs last month</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-500/20 to-orange-600/10 border border-orange-500/30 rounded-xl p-6">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="ti ti-target text-3xl text-orange-400"></i>
+                            <div class="text-sm text-twenty-muted uppercase">Target</div>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">50B VND</div>
+                        <div class="text-sm text-twenty-muted">4.5B to go</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-500/30 rounded-xl p-6">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="ti ti-chart-line text-3xl text-green-400"></i>
+                            <div class="text-sm text-twenty-muted uppercase">Achievement</div>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">91%</div>
+                        <div class="w-full bg-twenty-border rounded-full h-2 mt-2">
+                            <div class="bg-green-400 h-2 rounded-full" style="width: 91%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ti ti-trophy text-2xl text-yellow-400"></i>
+                            <div class="text-sm text-twenty-muted">Deals Closed</div>
+                        </div>
+                        <div class="text-2xl font-bold mb-1">12 deals</div>
+                        <div class="text-sm text-green-400">+3 this week</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ti ti-cash text-2xl text-blue-400"></i>
+                            <div class="text-sm text-twenty-muted">Commission</div>
+                        </div>
+                        <div class="text-2xl font-bold mb-1">2.275B VND</div>
+                        <div class="text-sm text-twenty-muted">(pending: 500M)</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ti ti-clock text-2xl text-purple-400"></i>
+                            <div class="text-sm text-twenty-muted">Avg. Close Time</div>
+                        </div>
+                        <div class="text-2xl font-bold mb-1">18 days</div>
+                        <div class="text-sm text-orange-400">Target: 14 days</div>
+                    </div>
+                </div>
+
+                <!-- Leads & Tasks -->
+                <div class="grid grid-cols-2 gap-6 mb-6">
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <h2 class="text-lg font-semibold mb-4">📝 Active Leads</h2>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-twenty-muted">New</span>
+                                <span class="font-medium">8</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-twenty-muted">Following up</span>
+                                <span class="font-medium">15</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-twenty-muted">Qualified</span>
+                                <span class="font-medium text-green-400">5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <h2 class="text-lg font-semibold mb-4">🔥 Urgent Tasks</h2>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2 text-sm">
+                                <span class="text-red-400">⚠️</span>
+                                <span>2 reservations expiring today</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <span class="text-orange-400">📞</span>
+                                <span>3 follow-ups overdue</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <span class="text-green-400">✅</span>
+                                <span>1 contract ready to sign</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pipeline Health -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold">Pipeline Health</h2>
+                        <button onclick="showView('deal-kanban')" class="text-blue-400 text-sm hover:underline">View Full →</button>
+                    </div>
+                    <div class="flex gap-2 mb-4">
+                        <div class="flex-1">
+                            <div class="text-xs text-twenty-muted mb-1">NEW (3)</div>
+                            <div class="h-20 bg-gray-500/20 rounded"></div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-twenty-muted mb-1">QUALIFIED (5)</div>
+                            <div class="h-32 bg-blue-500/20 rounded"></div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-twenty-muted mb-1">RESERVED (8)</div>
+                            <div class="h-40 bg-yellow-500/20 rounded"></div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-twenty-muted mb-1">DEPOSIT (4)</div>
+                            <div class="h-28 bg-orange-500/20 rounded"></div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-twenty-muted mb-1">WON (12)</div>
+                            <div class="h-36 bg-green-500/20 rounded"></div>
+                        </div>
+                    </div>
+                    <div class="text-sm">
+                        <span class="text-twenty-muted">Conversion: NEW → WON =</span>
+                        <span class="font-medium text-green-400"> 35%</span>
+                        <span class="text-twenty-muted"> (Team avg: 28%)</span>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold">Recent Activities</h2>
+                        <button class="text-blue-400 text-sm hover:underline">View All →</button>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-sm">
+                            <div class="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">🎉</div>
+                            <div class="flex-1">You closed Deal A-015 - 2.5B VND</div>
+                            <div class="text-twenty-muted">2 hours ago</div>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <div class="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center">📝</div>
+                            <div class="flex-1">New lead assigned: Nguyen Van X</div>
+                            <div class="text-twenty-muted">3 hours ago</div>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <div class="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">⏰</div>
+                            <div class="flex-1">Reservation A-008 expiring in 4 hours</div>
+                            <div class="text-twenty-muted">Today, 10:00 AM</div>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center">💵</div>
+                            <div class="flex-1">Commission approved: 500M VND</div>
+                            <div class="text-twenty-muted">Yesterday</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Filter View (Enhanced) -->
+            <div id="property-filter" class="view hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-home text-2xl text-blue-400"></i>
+                        <h1 class="text-2xl font-semibold">Find Properties</h1>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button class="px-4 py-2 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-lg">
+                            <i class="ti ti-layout-grid mr-2"></i> Grid
+                        </button>
+                        <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                            <i class="ti ti-map mr-2"></i> Map
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Advanced Filter Panel -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6 mb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold flex items-center gap-2">
+                            <i class="ti ti-adjustments text-blue-400"></i> Advanced Filter
+                        </h2>
+                        <button class="text-sm text-blue-400 hover:underline">Reset All</button>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-6">
+                        <div>
+                            <label class="block text-sm text-twenty-muted mb-2">Status</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" checked class="w-4 h-4 rounded">
+                                    <span class="text-sm">Available</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="w-4 h-4 rounded">
+                                    <span class="text-sm">Reserved</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="w-4 h-4 rounded">
+                                    <span class="text-sm">Deposit Paid</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm text-twenty-muted mb-2">Project</label>
+                            <select class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2">
+                                <option>All Projects</option>
+                                <option>Sunrise City</option>
+                                <option>Green Hill Garden</option>
+                                <option>Ocean View Resort</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm text-twenty-muted mb-2">Price Range (VND)</label>
+                            <div class="space-y-2">
+                                <input type="text" placeholder="Min" class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 text-sm">
+                                <input type="text" placeholder="Max" class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm text-twenty-muted mb-2">Area (m²)</label>
+                            <div class="space-y-2">
+                                <input type="text" placeholder="Min" class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 text-sm">
+                                <input type="text" placeholder="Max" class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex items-center gap-4">
+                        <button class="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition">
+                            Apply Filter (245 found)
+                        </button>
+                        <span class="text-sm text-twenty-muted">Showing 245 available properties</span>
+                    </div>
+                </div>
+
+                <!-- Property Grid -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition">
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <div class="font-medium">A-001</div>
+                                    <div class="text-sm text-twenty-muted">Sunrise City</div>
+                                </div>
+                                <span class="px-2 py-0.5 text-xs rounded-full bg-status-available/20 text-status-available">Available</span>
+                            </div>
+                            <div class="text-sm text-twenty-muted mb-2">120 m²</div>
+                            <div class="font-medium text-blue-400 mb-3">2.5B VND</div>
+                            <div class="flex gap-2">
+                                <button onclick="showView('property-detail')" class="flex-1 px-3 py-1.5 border border-twenty-border rounded text-sm hover:bg-twenty-border transition">
+                                    Details
+                                </button>
+                                <button onclick="openModal()" class="flex-1 px-3 py-1.5 bg-blue-500 hover:bg-blue-600 rounded text-sm transition">
+                                    Reserve
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat similar cards... -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition">
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <div class="font-medium">A-010</div>
+                                    <div class="text-sm text-twenty-muted">Sunrise City</div>
+                                </div>
+                                <span class="px-2 py-0.5 text-xs rounded-full bg-status-available/20 text-status-available">Available</span>
+                            </div>
+                            <div class="text-sm text-twenty-muted mb-2">150 m²</div>
+                            <div class="font-medium text-blue-400 mb-3">3.0B VND</div>
+                            <div class="flex gap-2">
+                                <button class="flex-1 px-3 py-1.5 border border-twenty-border rounded text-sm hover:bg-twenty-border transition">
+                                    Details
+                                </button>
+                                <button onclick="openModal()" class="flex-1 px-3 py-1.5 bg-blue-500 hover:bg-blue-600 rounded text-sm transition">
+                                    Reserve
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden hover:border-blue-500/50 transition group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition">
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <div class="font-medium">B-005</div>
+                                    <div class="text-sm text-twenty-muted">Green Hill</div>
+                                </div>
+                                <span class="px-2 py-0.5 text-xs rounded-full bg-status-available/20 text-status-available">Available</span>
+                            </div>
+                            <div class="text-sm text-twenty-muted mb-2">180 m²</div>
+                            <div class="font-medium text-blue-400 mb-3">3.8B VND</div>
+                            <div class="flex gap-2">
+                                <button class="flex-1 px-3 py-1.5 border border-twenty-border rounded text-sm hover:bg-twenty-border transition">
+                                    Details
+                                </button>
+                                <button onclick="openModal()" class="flex-1 px-3 py-1.5 bg-blue-500 hover:bg-blue-600 rounded text-sm transition">
+                                    Reserve
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Commissions View -->
+            <div id="commissions" class="view hidden">
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="ti ti-cash text-2xl text-blue-400"></i>
+                    <h1 class="text-2xl font-semibold">My Commissions</h1>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">Total Earned</div>
+                        <div class="text-3xl font-bold mb-1">8.5B VND</div>
+                        <div class="text-sm text-twenty-muted">(Lifetime)</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 border border-yellow-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">Pending</div>
+                        <div class="text-3xl font-bold mb-1">2.5B VND</div>
+                        <div class="text-sm text-twenty-muted">(Awaiting approval)</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">Paid This Month</div>
+                        <div class="text-3xl font-bold mb-1">1.2B VND</div>
+                        <div class="text-sm text-twenty-muted">(3 payments)</div>
+                    </div>
+                </div>
+
+                <!-- Filter -->
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-sm text-twenty-muted">Filter:</span>
+                    <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                        <option>All Status</option>
+                        <option>Pending</option>
+                        <option>Approved</option>
+                        <option>Paid</option>
+                    </select>
+                </div>
+
+                <!-- Commissions Table -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-twenty-sidebar border-b border-twenty-border">
+                            <tr>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Deal</th>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Property</th>
+                                <th class="text-right px-6 py-4 text-sm font-medium text-twenty-muted">Deal Value</th>
+                                <th class="text-center px-6 py-4 text-sm font-medium text-twenty-muted">Rate</th>
+                                <th class="text-right px-6 py-4 text-sm font-medium text-twenty-muted">Commission</th>
+                                <th class="text-center px-6 py-4 text-sm font-medium text-twenty-muted">Status</th>
+                                <th class="text-left px-6 py-4 text-sm font-medium text-twenty-muted">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-twenty-border">
+                            <tr class="hover:bg-twenty-border/50">
+                                <td class="px-6 py-4">
+                                    <div class="font-medium">A-015 Purchase</div>
+                                    <div class="text-sm text-twenty-muted">Nguyen Van A</div>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">A-015 Sunrise</td>
+                                <td class="px-6 py-4 text-right font-medium">2.5B VND</td>
+                                <td class="px-6 py-4 text-center">5%</td>
+                                <td class="px-6 py-4 text-right font-medium text-blue-400">125M VND</td>
+                                <td class="px-6 py-4 text-center">
+                                    <span class="px-3 py-1 rounded-full bg-status-reserved/20 text-status-reserved text-sm">
+                                        PENDING
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">Dec 8, 2025</td>
+                            </tr>
+                            <tr class="hover:bg-twenty-border/50">
+                                <td class="px-6 py-4">
+                                    <div class="font-medium">B-003 Purchase</div>
+                                    <div class="text-sm text-twenty-muted">Tran Thi B</div>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">B-003 Green Hill</td>
+                                <td class="px-6 py-4 text-right font-medium">3.8B VND</td>
+                                <td class="px-6 py-4 text-center">5%</td>
+                                <td class="px-6 py-4 text-right font-medium text-blue-400">190M VND</td>
+                                <td class="px-6 py-4 text-center">
+                                    <span class="px-3 py-1 rounded-full bg-status-available/20 text-status-available text-sm">
+                                        APPROVED
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">Dec 5, 2025</td>
+                            </tr>
+                            <tr class="hover:bg-twenty-border/50">
+                                <td class="px-6 py-4">
+                                    <div class="font-medium">A-005 Purchase</div>
+                                    <div class="text-sm text-twenty-muted">Le Van C</div>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">A-005 Sunrise</td>
+                                <td class="px-6 py-4 text-right font-medium">2.5B VND</td>
+                                <td class="px-6 py-4 text-center">5%</td>
+                                <td class="px-6 py-4 text-right font-medium text-blue-400">125M VND</td>
+                                <td class="px-6 py-4 text-center">
+                                    <span class="px-3 py-1 rounded-full bg-status-deposit/20 text-status-deposit text-sm">
+                                        PAID
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-twenty-muted">Dec 1, 2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Commission Calculation Info -->
+                <div class="mt-6 bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                    <h3 class="font-semibold mb-2">Commission Calculation:</h3>
+                    <div class="text-sm text-twenty-muted">
+                        Deal Value × Commission Rate = Commission Amount<br>
+                        <span class="font-mono">2,500,000,000 × 5% = 125,000,000 VND</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Leads View -->
+            <div id="leads" class="view hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-user-check text-2xl text-blue-400"></i>
+                        <h1 class="text-2xl font-semibold">My Leads</h1>
+                    </div>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                        <i class="ti ti-plus"></i> Add Lead
+                    </button>
+                </div>
+
+                <!-- Lead Stats -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">🆕 New</div>
+                        <div class="text-2xl font-bold">8</div>
+                        <div class="text-xs text-twenty-muted">Needs first contact</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">📞 Following Up</div>
+                        <div class="text-2xl font-bold">15</div>
+                        <div class="text-xs text-twenty-muted">In conversation</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-4">
+                        <div class="text-sm text-twenty-muted mb-1">✅ Qualified</div>
+                        <div class="text-2xl font-bold text-green-400">5</div>
+                        <div class="text-xs text-twenty-muted">Ready for deals</div>
+                    </div>
+                </div>
+
+                <!-- Filter & Sort -->
+                <div class="flex items-center gap-4 mb-4">
+                    <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                        <option>All Sources</option>
+                        <option>Walk-in</option>
+                        <option>Referral</option>
+                        <option>Online</option>
+                    </select>
+                    <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                        <option>All Priorities</option>
+                        <option>Urgent</option>
+                        <option>High</option>
+                        <option>Medium</option>
+                    </select>
+                    <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                        <option>Sort by SLA</option>
+                        <option>Sort by Date</option>
+                        <option>Sort by Budget</option>
+                    </select>
+                </div>
+
+                <!-- NEW Leads -->
+                <div class="mb-6">
+                    <div class="bg-twenty-surface/50 px-4 py-2 rounded-t-lg border border-twenty-border">
+                        <h3 class="font-medium">Status: 🆕 NEW</h3>
+                    </div>
+                    <div class="space-y-4 p-4 bg-twenty-surface border border-t-0 border-twenty-border rounded-b-lg">
+                        <!-- Lead Card -->
+                        <div class="bg-twenty-primary border border-twenty-border rounded-lg p-4">
+                            <div class="flex items-start justify-between mb-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-lg font-bold">N</div>
+                                    <div>
+                                        <div class="font-medium">Nguyen Van X</div>
+                                        <div class="flex items-center gap-3 text-sm text-twenty-muted">
+                                            <span>📞 0901 123 456</span>
+                                            <span>✉️ nguyenx@email.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium">🔴 URGENT</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-sm mb-3">
+                                <span class="text-twenty-muted">💰 Budget: 2-3B VND</span>
+                                <span class="text-twenty-muted">📍 District 9</span>
+                                <span class="text-twenty-muted">🔗 Source: Online (Facebook)</span>
+                            </div>
+                            <div class="p-3 bg-red-500/10 border border-red-500/20 rounded mb-3 text-sm">
+                                <div class="flex items-center gap-2">
+                                    <i class="ti ti-clock text-red-400"></i>
+                                    <span>SLA: <span class="font-medium text-red-400">1h 30m remaining</span> (First contact required)</span>
+                                </div>
+                                <div class="text-red-400 mt-1">⚠️ No contact made yet</div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-sm transition">
+                                    <i class="ti ti-phone mr-1"></i> Call
+                                </button>
+                                <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                    <i class="ti ti-mail mr-1"></i> Email
+                                </button>
+                                <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                    <i class="ti ti-message mr-1"></i> Note
+                                </button>
+                                <button class="px-4 py-2 border border-green-500/30 bg-green-500/10 hover:bg-green-500/20 text-green-400 rounded-lg text-sm transition">
+                                    <i class="ti ti-check mr-1"></i> Mark Contacted
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FOLLOWING UP Leads -->
+                <div>
+                    <div class="bg-twenty-surface/50 px-4 py-2 rounded-t-lg border border-twenty-border">
+                        <h3 class="font-medium">Status: 📞 FOLLOWING UP</h3>
+                    </div>
+                    <div class="space-y-4 p-4 bg-twenty-surface border border-t-0 border-twenty-border rounded-b-lg">
+                        <!-- Lead Card -->
+                        <div class="bg-twenty-primary border border-twenty-border rounded-lg p-4">
+                            <div class="flex items-start justify-between mb-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-lg font-bold">T</div>
+                                    <div>
+                                        <div class="font-medium">Tran Van Z</div>
+                                        <div class="flex items-center gap-3 text-sm text-twenty-muted">
+                                            <span>📞 0903 345 678</span>
+                                            <span>✉️ tranz@email.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm font-medium">🟢 LOW</span>
+                            </div>
+                            <div class="p-3 bg-twenty-border/50 rounded mb-3 text-sm">
+                                <div class="font-medium mb-1">📝 Last contact: Dec 8, 2025 (Called)</div>
+                                <div class="text-twenty-muted">"Interested in Green Hill, will call back tomorrow"</div>
+                            </div>
+                            <div class="text-sm text-twenty-muted mb-3">
+                                📅 Next follow-up: Dec 10, 2025
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-sm transition">
+                                    <i class="ti ti-phone mr-1"></i> Call
+                                </button>
+                                <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                    <i class="ti ti-mail mr-1"></i> Email
+                                </button>
+                                <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                    <i class="ti ti-message mr-1"></i> Add Note
+                                </button>
+                                <button class="px-4 py-2 border border-green-500/30 bg-green-500/10 hover:bg-green-500/20 text-green-400 rounded-lg text-sm transition">
+                                    <i class="ti ti-target mr-1"></i> Create Deal
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== EPIC 5 VIEWS ========== -->
+
+            <!-- Commission Approval Queue (Finance) -->
+            <div id="approval-queue" class="view hidden">
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="ti ti-check-circle text-2xl text-blue-400"></i>
+                    <h1 class="text-2xl font-semibold">Commission Approval Queue</h1>
+                    <span class="text-sm text-twenty-muted ml-auto">Finance Team</span>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 border border-yellow-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">⏳ Pending</div>
+                        <div class="text-3xl font-bold mb-1">12</div>
+                        <div class="text-sm text-twenty-muted">Requires Action · 6.5B VND</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">✅ Approved</div>
+                        <div class="text-3xl font-bold mb-1">8</div>
+                        <div class="text-sm text-twenty-muted">Awaiting Payment · 4.2B VND</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">💵 Paid</div>
+                        <div class="text-3xl font-bold mb-1">45</div>
+                        <div class="text-sm text-twenty-muted">This Month · 22.5B VND</div>
+                    </div>
+                </div>
+
+                <!-- Filter & Export -->
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-sm text-twenty-muted">Filter:</span>
+                    <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                        <option>All Status</option>
+                        <option selected>Pending</option>
+                        <option>Approved</option>
+                        <option>Paid</option>
+                    </select>
+                    <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                        <option>All Agents</option>
+                        <option>Luis Phan</option>
+                        <option>John Doe</option>
+                    </select>
+                    <div class="ml-auto"></div>
+                    <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                        <i class="ti ti-download mr-2"></i> Export CSV
+                    </button>
+                </div>
+
+                <!-- Pending Commissions -->
+                <div class="space-y-4">
+                    <!-- Commission Card 1 -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="flex items-start gap-4">
+                            <input type="checkbox" class="w-5 h-5 mt-1 rounded">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="text-lg font-medium">#C-2025-0123</span>
+                                    <span class="px-3 py-1 rounded-full bg-status-reserved/20 text-status-reserved text-sm">⏳ PENDING</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div>
+                                        <div class="text-sm text-twenty-muted">Deal</div>
+                                        <div class="font-medium">A-015 Purchase - Nguyen Van A</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-twenty-muted">Agent</div>
+                                        <div class="font-medium">Luis Phan (Sales Team A)</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-twenty-muted">Deal Value</div>
+                                        <div class="font-medium">2,500,000,000 VND</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-twenty-muted">Commission (5%)</div>
+                                        <div class="font-medium text-blue-400">125,000,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-4">
+                                    Created: Dec 8, 2025 · Auto-calculated on Deal Won
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-4 py-2 bg-green-500 hover:bg-green-600 rounded-lg text-sm transition">
+                                        <i class="ti ti-check mr-1"></i> Approve
+                                    </button>
+                                    <button class="px-4 py-2 bg-red-500/20 text-red-400 border border-red-500/30 hover:bg-red-500/30 rounded-lg text-sm transition">
+                                        <i class="ti ti-x mr-1"></i> Reject
+                                    </button>
+                                    <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                        <i class="ti ti-eye mr-1"></i> Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Commission Card 2 -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="flex items-start gap-4">
+                            <input type="checkbox" class="w-5 h-5 mt-1 rounded">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="text-lg font-medium">#C-2025-0124</span>
+                                    <span class="px-3 py-1 rounded-full bg-status-reserved/20 text-status-reserved text-sm">⏳ PENDING</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div>
+                                        <div class="text-sm text-twenty-muted">Deal</div>
+                                        <div class="font-medium">B-003 Purchase - Tran Thi B</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-twenty-muted">Agent</div>
+                                        <div class="font-medium">John Doe (Sales Team B)</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-twenty-muted">Deal Value</div>
+                                        <div class="font-medium">3,800,000,000 VND</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-twenty-muted">Commission (5%)</div>
+                                        <div class="font-medium text-blue-400">190,000,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-twenty-muted mb-4">
+                                    Created: Dec 7, 2025 · Auto-calculated on Deal Won
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-4 py-2 bg-green-500 hover:bg-green-600 rounded-lg text-sm transition">
+                                        <i class="ti ti-check mr-1"></i> Approve
+                                    </button>
+                                    <button class="px-4 py-2 bg-red-500/20 text-red-400 border border-red-500/30 hover:bg-red-500/30 rounded-lg text-sm transition">
+                                        <i class="ti ti-x mr-1"></i> Reject
+                                    </button>
+                                    <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                        <i class="ti ti-eye mr-1"></i> Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bulk Actions -->
+                <div class="mt-6 flex items-center gap-4 p-4 bg-twenty-surface border border-twenty-border rounded-xl">
+                    <button class="text-sm text-blue-400 hover:underline">Select All</button>
+                    <button class="px-4 py-2 bg-green-500 hover:bg-green-600 rounded-lg text-sm transition">
+                        Approve Selected (2)
+                    </button>
+                    <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                        Export Selected
+                    </button>
+                </div>
+            </div>
+
+            <!-- Commission Reports Dashboard -->
+            <div id="comm-reports" class="view hidden">
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="ti ti-chart-bar text-2xl text-blue-400"></i>
+                    <h1 class="text-2xl font-semibold">Commission Reports</h1>
+                </div>
+
+                <!-- Period Filter -->
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-sm text-twenty-muted">Period:</span>
+                    <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                        <option>This Month</option>
+                        <option>Last Month</option>
+                        <option>This Quarter</option>
+                        <option>This Year</option>
+                    </select>
+                    <select class="bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2">
+                        <option>All Projects</option>
+                        <option>Sunrise City</option>
+                        <option>Green Hill</option>
+                    </select>
+                    <div class="ml-auto"></div>
+                    <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                        <i class="ti ti-download mr-2"></i> Export
+                    </button>
+                </div>
+
+                <!-- Summary Stats -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">Total Paid</div>
+                        <div class="text-3xl font-bold mb-1">22.5B VND</div>
+                        <div class="text-sm text-twenty-muted">45 commissions</div>
+                        </div>
+                    <div class="bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 border border-yellow-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">Total Pending</div>
+                        <div class="text-3xl font-bold mb-1">6.5B VND</div>
+                        <div class="text-sm text-twenty-muted">12 commissions</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">Total Approved</div>
+                        <div class="text-3xl font-bold mb-1">4.2B VND</div>
+                        <div class="text-sm text-twenty-muted">8 commissions</div>
+                    </div>
+                </div>
+
+                <!-- Commission by Agent -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6 mb-6">
+                    <h2 class="text-lg font-semibold mb-4">Commission by Agent (This Month)</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium">Luis Phan</span>
+                                <span class="text-blue-400">2.275B VND (12 deals)</span>
+                            </div>
+                            <div class="w-full bg-twenty-border rounded-full h-3">
+                                <div class="bg-blue-500 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium">John Doe</span>
+                                <span class="text-blue-400">1.525B VND (8 deals)</span>
+                            </div>
+                            <div class="w-full bg-twenty-border rounded-full h-3">
+                                <div class="bg-blue-500 h-3 rounded-full" style="width: 57%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium">Jane Smith</span>
+                                <span class="text-blue-400">980M VND (5 deals)</span>
+                            </div>
+                            <div class="w-full bg-twenty-border rounded-full h-3">
+                                <div class="bg-blue-500 h-3 rounded-full" style="width: 37%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trend Chart -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                    <h2 class="text-lg font-semibold mb-4">Commission Trend (Last 6 Months)</h2>
+                    <div class="h-64 flex items-end justify-between gap-2">
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 40%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Jul</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 50%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Aug</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 65%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Sep</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 75%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Oct</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 85%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Nov</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500 rounded-t" style="height: 100%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Dec</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== EPIC 6 VIEWS ========== -->
+
+            <!-- Assignment Dashboard -->
+            <div id="assignment-dash" class="view hidden">
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="ti ti-users text-2xl text-blue-400"></i>
+                    <h1 class="text-2xl font-semibold">Lead Distribution Dashboard</h1>
+                    <span class="text-sm text-twenty-muted ml-auto">Sales Manager</span>
+                </div>
+
+                <!-- Today Stats -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">Leads Today</div>
+                        <div class="text-3xl font-bold mb-1">28 leads</div>
+                        <div class="text-sm text-green-400">+5 vs yesterday</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">SLA Compliance</div>
+                        <div class="text-3xl font-bold mb-1">92%</div>
+                        <div class="text-sm text-twenty-muted">Target: 95%</div>
+                    </div>
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">Avg Response Time</div>
+                        <div class="text-3xl font-bold mb-1">1h 45m</div>
+                        <div class="text-sm text-green-400">Target: 2h</div>
+                    </div>
+                </div>
+
+                <!-- Workload Distribution -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6 mb-6">
+                    <h2 class="text-lg font-semibold mb-4">Workload Distribution (This Week)</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="border-b border-twenty-border">
+                                <tr>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-twenty-muted">Agent</th>
+                                    <th class="text-center py-3 px-4 text-sm font-medium text-twenty-muted">Assigned</th>
+                                    <th class="text-center py-3 px-4 text-sm font-medium text-twenty-muted">Following</th>
+                                    <th class="text-center py-3 px-4 text-sm font-medium text-twenty-muted">Qualified</th>
+                                    <th class="text-center py-3 px-4 text-sm font-medium text-twenty-muted">SLA %</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-twenty-border">
+                                <tr>
+                                    <td class="py-3 px-4 font-medium">Luis Phan</td>
+                                    <td class="py-3 px-4 text-center">8</td>
+                                    <td class="py-3 px-4 text-center">15</td>
+                                    <td class="py-3 px-4 text-center">5</td>
+                                    <td class="py-3 px-4 text-center text-green-400">95% ✅</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-medium">John Doe</td>
+                                    <td class="py-3 px-4 text-center">6</td>
+                                    <td class="py-3 px-4 text-center">12</td>
+                                    <td class="py-3 px-4 text-center">4</td>
+                                    <td class="py-3 px-4 text-center text-green-400">90% ✅</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-medium">Jane Smith</td>
+                                    <td class="py-3 px-4 text-center">5</td>
+                                    <td class="py-3 px-4 text-center">10</td>
+                                    <td class="py-3 px-4 text-center">3</td>
+                                    <td class="py-3 px-4 text-center text-orange-400">88% ⚠️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-medium">Mike Johnson</td>
+                                    <td class="py-3 px-4 text-center">4</td>
+                                    <td class="py-3 px-4 text-center">8</td>
+                                    <td class="py-3 px-4 text-center">2</td>
+                                    <td class="py-3 px-4 text-center text-green-400">92% ✅</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg text-sm">
+                        Balance Score: 92/100 (Good) · ⚠️ Jane Smith approaching capacity
+                    </div>
+                </div>
+
+                <!-- Manual Override -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                    <h2 class="text-lg font-semibold mb-4">Manual Override</h2>
+                    <div class="flex items-center gap-4">
+                        <div class="flex-1">
+                            <label class="block text-sm text-twenty-muted mb-2">Lead</label>
+                            <input type="text" value="Nguyen Van X → Currently: Luis Phan" readonly class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2">
+                        </div>
+                        <div class="flex-1">
+                            <label class="block text-sm text-twenty-muted mb-2">Reassign to</label>
+                            <select class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2">
+                                <option>John Doe</option>
+                                <option>Jane Smith</option>
+                                <option>Mike Johnson</option>
+                            </select>
+                        </div>
+                        <div class="self-end">
+                            <button class="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg transition">
+                                Apply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment Rules -->
+            <div id="assign-rules" class="view hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-settings text-2xl text-blue-400"></i>
+                        <h1 class="text-2xl font-semibold">Lead Assignment Rules</h1>
+                    </div>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                        <i class="ti ti-plus"></i> Add New Rule
+                    </button>
+                </div>
+
+                <!-- Rules List -->
+                <div class="space-y-4">
+                    <!-- Rule 1 -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">Rule #1: Round Robin (Default)</h3>
+                                <div class="text-sm text-twenty-muted">Priority: 1 (Highest)</div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm">Active</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="text-twenty-muted">Applies to: All incoming leads</div>
+                            <div class="text-twenty-muted">Algorithm:</div>
+                            <div class="ml-4 space-y-1">
+                                <div>✓ Distribute evenly across all available agents</div>
+                                <div>✓ Check agent availability status</div>
+                                <div>✓ Skip agents at capacity (>25 active leads)</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                Edit Rule
+                            </button>
+                            <button class="px-4 py-2 border border-red-500/30 bg-red-500/10 text-red-400 hover:bg-red-500/20 rounded-lg text-sm transition">
+                                Disable
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Rule 2 -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">Rule #2: Location Match</h3>
+                                <div class="text-sm text-twenty-muted">Priority: 2</div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm">Active</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="text-twenty-muted">Applies to: Leads with specified location preference</div>
+                            <div class="text-twenty-muted">Matching Logic:</div>
+                            <div class="ml-4 space-y-1">
+                                <div>IF lead.preferredLocation IN agent.expertise</div>
+                                <div>THEN assign to matching agent</div>
+                            </div>
+                            <div class="text-twenty-muted mt-2">Agent Expertise:</div>
+                            <div class="ml-4 space-y-1">
+                                <div>• Luis Phan: District 9, District 2</div>
+                                <div>• John Doe: Vung Tau, District 7</div>
+                                <div>• Jane Smith: District 1, District 3</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                Edit Rule
+                            </button>
+                            <button class="px-4 py-2 border border-red-500/30 bg-red-500/10 text-red-400 hover:bg-red-500/20 rounded-lg text-sm transition">
+                                Disable
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Rule 3 -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">Rule #3: VIP Customer</h3>
+                                <div class="text-sm text-twenty-muted">Priority: 0 (Override all)</div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm">Active</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="text-twenty-muted">Applies to: Leads with budget > 10B VND</div>
+                            <div class="text-twenty-muted">Assignment:</div>
+                            <div class="ml-4 space-y-1">
+                                <div>Assign to senior agents only:</div>
+                                <div>• Luis Phan</div>
+                                <div>• John Doe</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                Edit Rule
+                            </button>
+                            <button class="px-4 py-2 border border-red-500/30 bg-red-500/10 text-red-400 hover:bg-red-500/20 rounded-lg text-sm transition">
+                                Disable
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== EPIC 7 VIEWS ========== -->
+
+            <!-- Interactive Plot Map -->
+            <div id="plot-map" class="view hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-map text-2xl text-blue-400"></i>
+                        <h1 class="text-2xl font-semibold">Sunrise City - Master Plan</h1>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                            <i class="ti ti-zoom-in mr-2"></i> Zoom In
+                        </button>
+                        <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                            <i class="ti ti-zoom-out mr-2"></i> Zoom Out
+                        </button>
+                        <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                            <i class="ti ti-printer mr-2"></i> Print
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filter -->
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-sm text-twenty-muted">Filter:</span>
+                    <label class="flex items-center gap-2">
+                        <input type="checkbox" checked class="w-4 h-4 rounded">
+                        <span class="text-sm">🟢 Available (245)</span>
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="checkbox" checked class="w-4 h-4 rounded">
+                        <span class="text-sm">🟡 Reserved (35)</span>
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="checkbox" class="w-4 h-4 rounded">
+                        <span class="text-sm">🟠 Deposit (40)</span>
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="checkbox" class="w-4 h-4 rounded">
+                        <span class="text-sm">🔴 Sold (180)</span>
+                    </label>
+                </div>
+
+                <!-- Map Grid -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6 mb-6">
+                    <div class="grid grid-cols-5 gap-2 mb-6">
+                        <!-- Block A -->
+                        <div class="bg-status-available/20 border border-status-available/40 rounded p-3 hover:border-status-available transition cursor-pointer">
+                            <div class="font-medium text-sm mb-1">A-001</div>
+                            <div class="text-xs text-twenty-muted">120m²</div>
+                            <div class="text-xs font-medium text-blue-400">2.5B</div>
+                        </div>
+                        <div class="bg-status-reserved/20 border border-status-reserved/40 rounded p-3 hover:border-status-reserved transition cursor-pointer">
+                            <div class="font-medium text-sm mb-1">A-002</div>
+                            <div class="text-xs text-twenty-muted">150m²</div>
+                            <div class="text-xs font-medium text-blue-400">3.0B</div>
+                        </div>
+                        <div class="bg-status-deposit/20 border border-status-deposit/40 rounded p-3 hover:border-status-deposit transition cursor-pointer">
+                            <div class="font-medium text-sm mb-1">A-003</div>
+                            <div class="text-xs text-twenty-muted">120m²</div>
+                            <div class="text-xs font-medium text-blue-400">2.5B</div>
+                        </div>
+                        <div class="bg-status-sold/20 border border-status-sold/40 rounded p-3 hover:border-status-sold transition cursor-pointer">
+                            <div class="font-medium text-sm mb-1">A-004</div>
+                            <div class="text-xs text-twenty-muted">180m²</div>
+                            <div class="text-xs font-medium text-blue-400">4.0B</div>
+                        </div>
+                        <div class="bg-status-available/20 border border-status-available/40 rounded p-3 hover:border-status-available transition cursor-pointer">
+                            <div class="font-medium text-sm mb-1">A-005</div>
+                            <div class="text-xs text-twenty-muted">150m²</div>
+                            <div class="text-xs font-medium text-blue-400">3.0B</div>
+                        </div>
+                    </div>
+                    <div class="text-sm text-twenty-muted text-center">
+                        Hover to view details · Click for full information
+                    </div>
+                </div>
+
+                <!-- Selected Plot Info -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold">Selected: A-001 (Hover Preview)</h3>
+                        <div class="flex gap-2">
+                            <button onclick="showView('property-detail')" class="px-4 py-2 border border-twenty-border hover:bg-twenty-border rounded-lg text-sm transition">
+                                View Details
+                            </button>
+                            <button onclick="openModal()" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-sm transition">
+                                Reserve
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 text-sm">
+                        <div>
+                            <div class="text-twenty-muted mb-1">Plot</div>
+                            <div class="font-medium">A-001</div>
+                        </div>
+                        <div>
+                            <div class="text-twenty-muted mb-1">Block</div>
+                            <div class="font-medium">A</div>
+                        </div>
+                        <div>
+                            <div class="text-twenty-muted mb-1">Status</div>
+                            <div class="font-medium text-status-available">🟢 Available</div>
+                        </div>
+                        <div>
+                            <div class="text-twenty-muted mb-1">Area</div>
+                            <div class="font-medium">120 m²</div>
+                        </div>
+                        <div>
+                            <div class="text-twenty-muted mb-1">Price</div>
+                            <div class="font-medium text-blue-400">2,500,000,000 VND</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Executive Dashboard -->
+            <div id="exec-dashboard" class="view hidden">
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="ti ti-chart-line text-2xl text-blue-400"></i>
+                    <h1 class="text-2xl font-semibold">Executive Dashboard</h1>
+                    <span class="text-sm text-twenty-muted ml-auto">Dec 2025 Overview</span>
+                </div>
+
+                <!-- Top KPIs -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">💰 Revenue MTD</div>
+                        <div class="text-3xl font-bold mb-1">125.5B VND</div>
+                        <div class="text-sm text-twenty-muted">Target: 150B (84%)</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">🏆 Deals Closed</div>
+                        <div class="text-3xl font-bold mb-1">48 deals</div>
+                        <div class="text-sm text-twenty-muted">Target: 50 (96%)</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-500/20 to-purple-600/10 border border-purple-500/30 rounded-xl p-6">
+                        <div class="text-sm text-twenty-muted uppercase mb-2">📈 Growth Rate</div>
+                        <div class="text-3xl font-bold mb-1">+22%</div>
+                        <div class="text-sm text-twenty-muted">vs Last Month</div>
+                    </div>
+                </div>
+
+                <!-- Project Performance & Team Leaderboard -->
+                <div class="grid grid-cols-2 gap-6 mb-6">
+                    <!-- Project Performance -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <h2 class="text-lg font-semibold mb-4">Project Performance (This Month)</h2>
+                        <table class="w-full text-sm">
+                            <thead class="border-b border-twenty-border">
+                                <tr>
+                                    <th class="text-left py-2 text-twenty-muted">Project</th>
+                                    <th class="text-center py-2 text-twenty-muted">Sales</th>
+                                    <th class="text-right py-2 text-twenty-muted">Revenue</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-twenty-border">
+                                <tr>
+                                    <td class="py-3">Sunrise City</td>
+                                    <td class="text-center">22</td>
+                                    <td class="text-right text-blue-400">55.0B VND</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3">Green Hill</td>
+                                    <td class="text-center">15</td>
+                                    <td class="text-right text-blue-400">45.5B VND</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3">Ocean View</td>
+                                    <td class="text-center">11</td>
+                                    <td class="text-right text-blue-400">25.0B VND</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Sales Team Leaderboard -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <h2 class="text-lg font-semibold mb-4">Sales Team Leaderboard</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="text-2xl">🥇</div>
+                                <div class="flex-1">
+                                    <div class="font-medium">Luis Phan</div>
+                                    <div class="text-sm text-twenty-muted">12 deals · 2.275B VND</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="text-2xl">🥈</div>
+                                <div class="flex-1">
+                                    <div class="font-medium">John Doe</div>
+                                    <div class="text-sm text-twenty-muted">8 deals · 1.525B VND</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="text-2xl">🥉</div>
+                                <div class="flex-1">
+                                    <div class="font-medium">Jane Smith</div>
+                                    <div class="text-sm text-twenty-muted">5 deals · 980M VND</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Trend -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                    <h2 class="text-lg font-semibold mb-4">Revenue Trend (Last 12 Months)</h2>
+                    <div class="h-64 flex items-end justify-between gap-2">
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 30%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Jan</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 35%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Feb</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 45%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Mar</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 50%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Apr</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 55%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">May</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 60%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Jun</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 70%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Jul</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 75%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Aug</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 80%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Sep</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 85%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Oct</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500/30 rounded-t" style="height: 90%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Nov</div>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="w-full bg-blue-500 rounded-t" style="height: 100%"></div>
+                            <div class="text-xs text-twenty-muted mt-2">Dec</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report Builder -->
+            <div id="report-builder" class="view hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-chart-dots text-2xl text-blue-400"></i>
+                        <h1 class="text-2xl font-semibold">Custom Report Builder</h1>
+                    </div>
+                    <div class="flex gap-2">
+                        <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                            <i class="ti ti-device-floppy mr-2"></i> Save
+                        </button>
+                        <button class="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg transition">
+                            <i class="ti ti-player-play mr-2"></i> Run
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Report Name -->
+                <div class="mb-6">
+                    <label class="block text-sm text-twenty-muted mb-2">Report Name</label>
+                    <input type="text" value="Monthly Sales Performance" class="w-full bg-twenty-surface border border-twenty-border rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500">
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 mb-6">
+                    <!-- Select Metrics -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <h2 class="font-semibold mb-4">1. Select Metrics</h2>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" checked class="w-4 h-4 rounded">
+                                <span class="text-sm">Total Revenue</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" checked class="w-4 h-4 rounded">
+                                <span class="text-sm">Number of Deals</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" checked class="w-4 h-4 rounded">
+                                <span class="text-sm">Average Deal Size</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" class="w-4 h-4 rounded">
+                                <span class="text-sm">Commission Paid</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" class="w-4 h-4 rounded">
+                                <span class="text-sm">Conversion Rate</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Dimensions -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <h2 class="font-semibold mb-4">2. Dimensions</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm text-twenty-muted mb-2">Group By</label>
+                                <select class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2">
+                                    <option>Sales Agent</option>
+                                    <option>Project</option>
+                                    <option>Property Type</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm text-twenty-muted mb-2">Breakdown</label>
+                                <select class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2">
+                                    <option>Project</option>
+                                    <option>Month</option>
+                                    <option>Status</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 mb-6">
+                    <!-- Filters -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <h2 class="font-semibold mb-4">3. Filters</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm text-twenty-muted mb-2">Date Range</label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <input type="date" value="2025-12-01" class="bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 text-sm">
+                                    <input type="date" value="2025-12-31" class="bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2 text-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm text-twenty-muted mb-2">Project</label>
+                                <select class="w-full bg-twenty-primary border border-twenty-border rounded-lg px-4 py-2">
+                                    <option>All Projects</option>
+                                    <option>Sunrise City</option>
+                                    <option>Green Hill</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visualization -->
+                    <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6">
+                        <h2 class="font-semibold mb-4">4. Visualization</h2>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="viz" class="w-4 h-4">
+                                <span class="text-sm">Table</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="viz" class="w-4 h-4">
+                                <span class="text-sm">Bar Chart</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="viz" checked class="w-4 h-4">
+                                <span class="text-sm">Line Chart</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="viz" class="w-4 h-4">
+                                <span class="text-sm">Pie Chart</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview -->
+                <div class="bg-twenty-surface border border-twenty-border rounded-xl p-6 mb-6">
+                    <h2 class="font-semibold mb-4">Preview</h2>
+                    <div class="h-64 flex items-center justify-center text-twenty-muted">
+                        Click "Run" to generate report preview
+                    </div>
+                </div>
+
+                <!-- Export Options -->
+                <div class="flex gap-2">
+                    <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                        <i class="ti ti-download mr-2"></i> Export CSV
+                    </button>
+                    <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                        <i class="ti ti-file-type-pdf mr-2"></i> Export PDF
+                    </button>
+                    <button class="px-4 py-2 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                        <i class="ti ti-mail mr-2"></i> Schedule Email
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Reservation Modal -->
+    <div id="reservation-modal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+        <div class="bg-twenty-surface border border-twenty-border rounded-2xl w-full max-w-md p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-semibold flex items-center gap-2">
+                    <i class="ti ti-home text-blue-400"></i> Reserve Property
+                </h2>
+                <button onclick="closeModal()" class="text-twenty-muted hover:text-white">
+                    <i class="ti ti-x text-xl"></i>
+                </button>
+            </div>
+
+            <div class="bg-twenty-border/50 rounded-lg p-4 mb-6">
+                <div class="font-medium mb-1">Plot A-001 - Sunrise City</div>
+                <div class="text-xl font-bold text-blue-400">2,500,000,000 VND</div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 bg-status-reserved/10 border border-status-reserved/20 rounded-lg mb-6">
+                <i class="ti ti-clock text-status-reserved text-xl"></i>
+                <div>
+                    <div class="font-medium">Reservation expires in 24 hours</div>
+                    <div class="text-sm text-twenty-muted">Dec 10, 2025 at 9:15 PM</div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm text-twenty-muted mb-2">Customer Notes (optional)</label>
+                <textarea class="w-full bg-twenty-primary border border-twenty-border rounded-lg p-3 focus:outline-none focus:border-blue-500 resize-none" rows="3" placeholder="Add notes about the customer..."></textarea>
+            </div>
+
+            <div class="flex items-center gap-2 p-3 bg-twenty-border/50 rounded-lg mb-6 text-sm">
+                <i class="ti ti-alert-circle text-status-reserved"></i>
+                <span>After 24 hours, this reservation will be automatically released if deposit is not collected.</span>
+            </div>
+
+            <div class="flex gap-3">
+                <button onclick="closeModal()" class="flex-1 px-4 py-3 border border-twenty-border rounded-lg hover:bg-twenty-border transition">
+                    Cancel
+                </button>
+                <button onclick="confirmReservation()" class="flex-1 px-4 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition">
+                    <i class="ti ti-check mr-2"></i> Confirm
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="success-toast" class="hidden fixed bottom-6 right-6 bg-status-available text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3 z-50">
+        <i class="ti ti-check text-xl"></i>
+        <span class="font-medium">Property reserved successfully!</span>
+    </div>
+
+    <script>
+        function showView(viewId) {
+            document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+            document.getElementById(viewId).classList.remove('hidden');
+        }
+
+        function showProjectTab(tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+            // Show selected tab content
+            document.getElementById('content-' + tabId).classList.remove('hidden');
+            // Update tab styles
+            document.querySelectorAll('.project-tab').forEach(t => {
+                t.classList.remove('tab-active');
+                t.classList.add('text-twenty-muted');
+            });
+            document.getElementById('tab-' + tabId).classList.add('tab-active');
+            document.getElementById('tab-' + tabId).classList.remove('text-twenty-muted');
+        }
+
+        function openModal() {
+            document.getElementById('reservation-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('reservation-modal').classList.add('hidden');
+        }
+
+        function confirmReservation() {
+            closeModal();
+            const toast = document.getElementById('success-toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 3000);
+        }
+
+        // Close modal on backdrop click
+        document.getElementById('reservation-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+</body>
+</html>

@@ -80,6 +80,16 @@ msgstr ". El cambio se aplicará el {beautifiedRenewDate}."
 msgid "· {objectFilterDropdownSearchInput}"
 msgstr "· {objectFilterDropdownSearchInput}"
 
+#. js-lingui-id: 1YtWT6
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "(Highest)"
+msgstr ""
+
+#. js-lingui-id: h4Mppl
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "(Override all)"
+msgstr ""
+
 #. js-lingui-id: ZBGbuw
 #: src/modules/workflow/workflow-steps/components/WorkflowRunStepOutputDetail.tsx
 #: src/modules/workflow/workflow-steps/components/WorkflowRunStepInputDetail.tsx
@@ -296,6 +306,36 @@ msgstr "{workspaceMemberName} dejará de estar asignado al siguiente rol:"
 msgid "••••••••"
 msgstr "••••••••"
 
+#. js-lingui-id: j7WtAm
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "+84 90 123 4567"
+msgstr ""
+
+#. js-lingui-id: GAytD+
+#: src/pages/real-estate/AssignmentRulesPage.tsx
+msgid "⚙️ Lead Assignment Rules"
+msgstr ""
+
+#. js-lingui-id: PduIvi
+#: src/pages/real-estate/CommissionApprovalPage.tsx
+msgid "💰 Commission Approval Queue"
+msgstr ""
+
+#. js-lingui-id: UAtzK7
+#: src/pages/real-estate/CommissionReportsPage.tsx
+msgid "📊 Commission Reports"
+msgstr ""
+
+#. js-lingui-id: fJN9vc
+#: src/pages/real-estate/LeadDistributionPage.tsx
+msgid "📊 Lead Distribution Dashboard"
+msgstr ""
+
+#. js-lingui-id: Ogg3mg
+#: src/pages/real-estate/PlotMapPage.tsx
+msgid "🗺️ Interactive Plot Map"
+msgstr ""
+
 #. js-lingui-id: tEdOxj
 #: src/pages/settings/accounts/SettingsAccountsConfigurationStepEmail.tsx
 #: src/pages/settings/accounts/SettingsAccountsConfigurationStepEmail.tsx
@@ -322,6 +362,16 @@ msgstr "1. Tipo"
 #: src/pages/onboarding/internal/ChooseYourPlanContent.tsx
 msgid "10,000 workflow node executions"
 msgstr "10.000 ejecuciones de nodos de workflow"
+
+#. js-lingui-id: RXNErT
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "100"
+msgstr ""
+
+#. js-lingui-id: OLSQH+
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "1000000000"
+msgstr ""
 
 #. js-lingui-id: bM5lnW
 #: src/modules/settings/experience/components/DateTimeSettingsTimeFormatSelect.tsx
@@ -373,6 +423,16 @@ msgstr "El método de 2FA ha sido eliminado con éxito."
 #: src/modules/settings/two-factor-authentication/components/DeleteTwoFactorAuthenticationMethod.tsx
 msgid "2FA Method Reset"
 msgstr "Restablecer el método de 2FA"
+
+#. js-lingui-id: WmMlz2
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "300"
+msgstr ""
+
+#. js-lingui-id: jJ2GIf
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "5000000000"
+msgstr ""
 
 #. js-lingui-id: keUlu+
 #: src/modules/workflow/components/OverrideWorkflowDraftConfirmationModal.tsx
@@ -508,6 +568,7 @@ msgstr "Acción"
 #: src/modules/settings/roles/role-permissions/permission-flags/components/SettingsRolePermissionsSettingsTableHeader.tsx
 #: src/modules/settings/roles/role-permissions/objects-permissions/components/SettingsRolePermissionsObjectsTableHeader.tsx
 #: src/modules/settings/roles/role-permissions/object-level-permissions/object-form/components/SettingsRolePermissionsObjectLevelObjectFormObjectLevelTableHeader.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
 msgid "Actions"
 msgstr "Acciones"
 
@@ -537,8 +598,10 @@ msgstr "Activar workflow"
 
 #. js-lingui-id: F6pfE9
 #: src/pages/settings/SettingsProfile.tsx
+#: src/pages/real-estate/MyLeadsPage.tsx
 #: src/modules/settings/domains/components/SettingsWorkspaceDomainCard.tsx
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminQueueJobsTable.tsx
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
 msgid "Active"
 msgstr "Activo"
 
@@ -547,6 +610,36 @@ msgstr "Activo"
 #: src/pages/settings/developers/api-keys/SettingsApiKeys.tsx
 msgid "Active API keys created by you or your team."
 msgstr "Claves API activas creadas por usted o su equipo."
+
+#. js-lingui-id: 9UXirw
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Active Deals:"
+msgstr ""
+
+#. js-lingui-id: usPXcv
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Active Leads"
+msgstr ""
+
+#. js-lingui-id: 3rO6fD
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Active Pipeline"
+msgstr ""
+
+#. js-lingui-id: 39ohdf
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Activities"
+msgstr ""
+
+#. js-lingui-id: 6aFZXJ
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Activities feature coming in Epic 7 (Operations)"
+msgstr ""
+
+#. js-lingui-id: kS4xpx
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Activity Timeline"
+msgstr ""
 
 #. js-lingui-id: m16xKo
 #: src/pages/settings/ai/components/SettingsAgentEvalsTab.tsx
@@ -558,6 +651,11 @@ msgstr "Añadir"
 #: src/modules/settings/data-model/fields/forms/select/components/AddSelectOptionMenuItem.tsx
 msgid "Add \"{trimmedName}\" to options"
 msgstr "Agregar \"{trimmedName}\" a las opciones"
+
+#. js-lingui-id: O3NGSN
+#: src/pages/real-estate/CustomerFormPage.tsx
+msgid "Add a new customer to the system"
+msgstr ""
 
 #. js-lingui-id: m3/V2n
 #: src/modules/action-menu/actions/record-actions/constants/WorkflowActionsConfig.tsx
@@ -638,6 +736,11 @@ msgstr "Agregar nuevo"
 #: src/modules/object-record/record-table/components/RecordTableNoRecordGroupAddNew.tsx
 msgid "Add New"
 msgstr "Agregar nuevo"
+
+#. js-lingui-id: OpIptY
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Add New Rule"
+msgstr ""
 
 #. js-lingui-id: erHjaG
 #: src/modules/workflow/workflow-diagram/components/WorkflowDiagramRightClickCommandMenu.tsx
@@ -775,6 +878,16 @@ msgstr "Añadido {beautifyPastDateRelative}"
 msgid "Added to blocklist"
 msgstr "Añadido a la lista de bloqueo"
 
+#. js-lingui-id: Ra/HSD
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Additional information about the customer..."
+msgstr ""
+
+#. js-lingui-id: 4Cp2Bu
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Additional Notes"
+msgstr ""
+
 #. js-lingui-id: hW/fMg
 #: src/modules/settings/data-model/fields/forms/address/constants/DefaultSelectionAddressWithMessages.ts
 msgid "Address 1"
@@ -859,6 +972,8 @@ msgstr ""
 #: src/pages/settings/ai/SettingsAgentForm.tsx
 #: src/pages/settings/ai/SettingsAgentForm.tsx
 #: src/modules/workflow/workflow-steps/workflow-actions/ai-agent-action/hooks/useWorkflowAiAgentPermissionActions.ts
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
 msgid "Agent"
 msgstr "Agente"
 
@@ -876,6 +991,16 @@ msgstr "Agente no encontrado"
 #: src/modules/settings/roles/components/SettingsRolesList.tsx
 msgid "Agent roles"
 msgstr "Roles de Agente"
+
+#. js-lingui-id: kObdkn
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Agent will be notified via email and in-app"
+msgstr ""
+
+#. js-lingui-id: pMJABf
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Agent:"
+msgstr ""
 
 #. js-lingui-id: 8Uv5e6
 #: src/pages/settings/ai/SettingsAI.tsx
@@ -932,10 +1057,17 @@ msgstr ""
 msgid "AI Response Schema"
 msgstr "Esquema de respuesta de IA"
 
+#. js-lingui-id: MSpmdK
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Algorithm:"
+msgstr ""
+
 #. js-lingui-id: N40H+G
 #: src/modules/settings/roles/role-permissions/object-level-permissions/field-permissions/components/SettingsRolePermissionsObjectLevelObjectFieldPermissionTableAllHeaderRow.tsx
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelUpdateFieldsValueForObject.tsx
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelSeeFieldsValueForObject.tsx
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
 #: src/modules/object-record/record-board/record-board-column/utils/getAggregateOperationShortLabel.ts
 #: src/modules/activities/timeline-activities/components/TimelineCard.tsx
 #: src/modules/activities/notes/components/NotesCard.tsx
@@ -952,6 +1084,11 @@ msgstr "Todos ({relationRecordsCount})"
 #: src/modules/settings/roles/role-permissions/permission-flags/components/SettingsRolePermissionsToolSection.tsx
 msgid "All Actions Access"
 msgstr "Acceso a todas las acciones"
+
+#. js-lingui-id: Lw8/SA
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "All Agents"
+msgstr ""
 
 #. js-lingui-id: dJn2LR
 #: src/modules/settings/accounts/components/SettingsAccountsRowDropdownMenu.tsx
@@ -978,10 +1115,30 @@ msgstr "Todas las líneas"
 msgid "All Objects"
 msgstr "Todos los objetos"
 
+#. js-lingui-id: Z9w/hz
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "All on track"
+msgstr ""
+
+#. js-lingui-id: P0NCDw
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "All Projects"
+msgstr ""
+
 #. js-lingui-id: Hm90t3
 #: src/modules/settings/roles/components/SettingsRolesList.tsx
 msgid "All roles"
 msgstr "Todas las funciones"
+
+#. js-lingui-id: qwHj/3
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "All Status"
+msgstr ""
+
+#. js-lingui-id: SYU2tJ
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "All Teams"
+msgstr ""
 
 #. js-lingui-id: XuuWVF
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelObjectPicker.tsx
@@ -1062,6 +1219,16 @@ msgstr "Permitir la carga de archivos y archivos adjuntos"
 #: src/modules/settings/security/components/SettingsSecurityAuthProvidersOptionsList.tsx
 msgid "Allow users to sign in with an email and password."
 msgstr "Permitir que los usuarios inicien sesión con un correo electrónico y una contraseña."
+
+#. js-lingui-id: hehnjM
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Amount"
+msgstr ""
+
+#. js-lingui-id: xy7GSW
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Amount:"
+msgstr ""
 
 #. js-lingui-id: Vw8l6h
 #: src/modules/workflow/workflow-steps/workflow-actions/http-request-action/components/HttpRequestExecutionResult.tsx
@@ -1279,6 +1446,36 @@ msgstr ""
 msgid "Applications"
 msgstr "Aplicaciones"
 
+#. js-lingui-id: 48Qm4L
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Applies to:"
+msgstr ""
+
+#. js-lingui-id: DB8zMK
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Apply"
+msgstr ""
+
+#. js-lingui-id: Z7ZXbT
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Approve"
+msgstr ""
+
+#. js-lingui-id: CfJArU
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Approve Selected"
+msgstr ""
+
+#. js-lingui-id: 7kb4LU
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Approved"
+msgstr ""
+
 #. js-lingui-id: UDlRcx
 #: src/modules/settings/security/components/approvedAccessDomains/SettingsSecurityApprovedAccessDomainValidationEffect.tsx
 msgid "Approved access domain validated"
@@ -1328,6 +1525,18 @@ msgstr ""
 #: src/modules/spreadsheet-import/provider/components/SpreadsheetImport.tsx
 msgid "Are you sure? Your current information will not be saved."
 msgstr "¿Estás seguro? Tu información actual no será guardada."
+
+#. js-lingui-id: ofldSs
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Area"
+msgstr ""
+
+#. js-lingui-id: /Fvr4x
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Area:"
+msgstr ""
 
 #. js-lingui-id: cybVUo
 #: src/modules/settings/members/components/MemberInfosTab.tsx
@@ -1394,10 +1603,20 @@ msgstr "Asignable a Claves API"
 msgid "Assignable to Workspace Members"
 msgstr ""
 
+#. js-lingui-id: lXGdbb
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Assigned"
+msgstr ""
+
 #. js-lingui-id: 7qh2Hx
 #: src/modules/settings/roles/role-assignment/components/SettingsRoleAssignmentTable.tsx
 msgid "Assigned {roleTargetDisplayName}"
 msgstr "Asignado {roleTargetDisplayName}"
+
+#. js-lingui-id: SGe1BR
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Assigned Agent"
+msgstr ""
 
 #. js-lingui-id: lxQ+5m
 #: src/modules/settings/roles/components/SettingsRolesTableHeader.tsx
@@ -1408,6 +1627,11 @@ msgstr "Asignado a"
 #: src/modules/settings/roles/role/components/SettingsRole.tsx
 msgid "Assignment"
 msgstr "Asignación"
+
+#. js-lingui-id: mXMAMb
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Assignment Rules"
+msgstr ""
 
 #. js-lingui-id: d/bvvp
 #: src/pages/settings/ai/SettingsAgentTurnDetail.tsx
@@ -1546,6 +1770,15 @@ msgstr "Disponibilidad"
 
 #. js-lingui-id: csDS2L
 #: src/modules/settings/data-model/new-object/components/SettingsAvailableStandardObjectsSection.tsx
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectsTable.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
 msgid "Available"
 msgstr "Disponible"
 
@@ -1555,12 +1788,33 @@ msgstr "Disponible"
 msgid "Average"
 msgstr "Promedio"
 
+#. js-lingui-id: YZFnMb
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Avg Days to Close:"
+msgstr ""
+
+#. js-lingui-id: X+6iDz
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Avg Response Time"
+msgstr ""
+
+#. js-lingui-id: pK9URz
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Avg:"
+msgstr ""
+
+#. js-lingui-id: ioG+xt
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Awaiting Payment"
+msgstr ""
+
 #. js-lingui-id: li9In6
 #: src/modules/command-menu/pages/page-layout/constants/settings/ChartConfigurationSettingLabels.ts
 msgid "Axis name"
 msgstr "Nombre del eje"
 
 #. js-lingui-id: iH8pgl
+#: src/pages/real-estate/CustomerFormPage.tsx
 #: src/pages/onboarding/BookCall.tsx
 #: src/modules/spreadsheet-import/components/StepNavigationButton.tsx
 #: src/modules/auth/sign-in-up/components/internal/SignInUpTwoFactorAuthenticationVerification.tsx
@@ -1571,6 +1825,27 @@ msgstr "Regresar"
 #: src/pages/not-found/NotFound.tsx
 msgid "Back to content"
 msgstr "Volver al contenido"
+
+#. js-lingui-id: kwMYyY
+#: src/pages/real-estate/DealDetailPage.tsx
+#: src/pages/real-estate/DealDetailPage.tsx
+msgid "Back to Deals"
+msgstr ""
+
+#. js-lingui-id: lRGUJi
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Back to Project"
+msgstr ""
+
+#. js-lingui-id: 2CTKOa
+#: src/pages/real-estate/ProjectDetailPage.tsx
+msgid "Back to Projects"
+msgstr ""
+
+#. js-lingui-id: D0swv1
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Balance Score:"
+msgstr ""
 
 #. js-lingui-id: NgFKo1
 #: src/modules/workflow/workflow-trigger/utils/cron-to-human/descriptors/getMonthsDescription.ts
@@ -1604,6 +1879,21 @@ msgstr "Facturación"
 #: src/modules/billing/components/SettingsBillingSubscriptionInfo.tsx
 msgid "Billing interval"
 msgstr "Intervalo de facturación"
+
+#. js-lingui-id: CJkEfx
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Block"
+msgstr ""
+
+#. js-lingui-id: 9mRTyg
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Block:"
+msgstr ""
 
 #. js-lingui-id: K1172m
 #: src/modules/settings/accounts/components/SettingsAccountsBlocklistSection.tsx
@@ -1639,6 +1929,11 @@ msgstr "Ambos"
 #: src/modules/workflow/workflow-steps/workflow-actions/ai-agent-action/components/WorkflowOutputSchemaBuilder.tsx
 msgid "Brief explanation of this output field"
 msgstr "Breve explicación de este campo de salida"
+
+#. js-lingui-id: j72KJ/
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Budget Range"
+msgstr ""
 
 #. js-lingui-id: VkwIHa
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -1740,6 +2035,11 @@ msgstr "Vista del calendario"
 msgid "Calendars"
 msgstr "Calendarios"
 
+#. js-lingui-id: +ESaYF
+#: src/modules/real-estate/components/NotificationsPanel.tsx
+msgid "Call Now"
+msgstr ""
+
 #. js-lingui-id: msssZq
 #: src/modules/settings/data-model/objects/forms/components/SettingsDataModelObjectAboutForm.tsx
 msgid "Can't change API names for standard objects"
@@ -1760,6 +2060,9 @@ msgstr "¿No puedes escanear? Copia el"
 #: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/MatchColumnsStep.tsx
 #: src/modules/spreadsheet-import/provider/components/SpreadsheetImport.tsx
 #: src/modules/settings/components/SaveAndCancelButtons/CancelButton.tsx
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
 #: src/modules/action-menu/actions/record-actions/constants/DashboardActionsConfig.tsx
 msgid "Cancel"
 msgstr "Cancelar"
@@ -1859,6 +2162,11 @@ msgstr "Cambiar contraseña"
 #: src/pages/onboarding/internal/ChooseYourPlanContent.tsx
 msgid "Change Plan"
 msgstr "Cambiar plan"
+
+#. js-lingui-id: dghb8Y
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Change Stage"
+msgstr ""
 
 #. js-lingui-id: EYSFEW
 #: src/pages/settings/domains/SettingsDomain.tsx
@@ -2095,6 +2403,59 @@ msgstr "Comas y punto - {commasAndDotExample}"
 msgid "Comment"
 msgstr ""
 
+#. js-lingui-id: +qgAQ8
+#: src/modules/real-estate/components/DealDetail.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Commission"
+msgstr ""
+
+#. js-lingui-id: KAh/Q7
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Commission Approval"
+msgstr ""
+
+#. js-lingui-id: ESdIji
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Commission Breakdown"
+msgstr ""
+
+#. js-lingui-id: Cel28r
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Commission by Agent (This Month)"
+msgstr ""
+
+#. js-lingui-id: Axdx/t
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Commission rate mismatch"
+msgstr ""
+
+#. js-lingui-id: 5IFBml
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Commission Reports"
+msgstr ""
+
+#. js-lingui-id: 9qLVnR
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Commission Trend (Last 6 Months)"
+msgstr ""
+
+#. js-lingui-id: AHsz1w
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Commission:"
+msgstr ""
+
+#. js-lingui-id: Yr4Bbm
+#: src/modules/real-estate/components/CommissionReports.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "commissions"
+msgstr ""
+
+#. js-lingui-id: R27TOY
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Commissions"
+msgstr ""
+
 #. js-lingui-id: NM9bMd
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutContent.tsx
 msgid "Compact view"
@@ -2104,6 +2465,11 @@ msgstr "Vista compacta"
 #: src/modules/action-menu/actions/record-actions/constants/DefaultRecordActionsConfig.tsx
 msgid "Companies"
 msgstr "Empresas"
+
+#. js-lingui-id: OOlWkx
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Complete the booking form"
+msgstr ""
 
 #. js-lingui-id: 2PsTzL
 #: src/modules/workflow/workflow-diagram/utils/generateNodesAndEdgesForIteratorNode.ts
@@ -2120,6 +2486,11 @@ msgstr "Completado"
 #: src/pages/settings/admin-panel/SettingsAdminQueueDetail.tsx
 msgid "Completed jobs kept for {completedDuration}, failed jobs kept for {failedDuration} (max {maxCount} each)"
 msgstr "Trabajos completados guardados por {completedDuration}, trabajos fallidos guardados por {failedDuration} (máximo {maxCount} cada uno)"
+
+#. js-lingui-id: kPZOR2
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Completed This Month"
+msgstr ""
 
 #. js-lingui-id: 0CuAor
 #: src/modules/workflow/workflow-steps/workflow-actions/filter-action/components/WorkflowEditActionFilterBody.tsx
@@ -2158,6 +2529,11 @@ msgstr "Configura y personaliza tus preferencias de calendario."
 #: src/pages/settings/domains/SettingsDomains.tsx
 msgid "Configure and verify domains for emailing from this workspace."
 msgstr "Configurar y verificar dominios para enviar correos electrónicos desde este espacio de trabajo."
+
+#. js-lingui-id: RQwHMD
+#: src/pages/real-estate/AssignmentRulesPage.tsx
+msgid "Configure automatic lead distribution rules and priorities"
+msgstr ""
 
 #. js-lingui-id: 6MDr1S
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
@@ -2234,6 +2610,11 @@ msgstr "¿Confirmar eliminación del rol {roleName}? Esto no se puede deshacer. 
 msgid "Confirm downgrade"
 msgstr "Confirmar degradación"
 
+#. js-lingui-id: dlzSET
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Confirm Reservation"
+msgstr ""
+
 #. js-lingui-id: 28b8wO
 #: src/modules/settings/members/components/MemberPermissionsTab.tsx
 msgid "Confirm role update"
@@ -2300,6 +2681,11 @@ msgstr ""
 msgid "Contact auto-creation"
 msgstr "Creación automática de contactos"
 
+#. js-lingui-id: xDRw4L
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "Contacted"
+msgstr ""
+
 #. js-lingui-id: /5mghO
 #: src/modules/object-record/object-filter-dropdown/utils/getOperandLabel.ts
 msgid "Contains"
@@ -2344,6 +2730,11 @@ msgstr "Continuar con Microsoft"
 #: src/modules/settings/roles/role-settings/components/SettingsRoleApplicability.tsx
 msgid "Control which types of entities this role can be assigned to"
 msgstr "Controla a qué tipos de entidades se puede asignar este rol"
+
+#. js-lingui-id: RUdLIE
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Conversion Rate:"
+msgstr ""
 
 #. js-lingui-id: FxVG/l
 #: src/hooks/useCopyToClipboard.tsx
@@ -2512,6 +2903,11 @@ msgstr "Crear clave API"
 msgid "Create custom view"
 msgstr "Crear vista personalizada"
 
+#. js-lingui-id: oJxnEs
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Create Customer"
+msgstr ""
+
 #. js-lingui-id: QWedEU
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownCalendarFieldsContent.tsx
 msgid "Create date field"
@@ -2601,9 +2997,20 @@ msgstr "Crea tu espacio de trabajo"
 msgid "Create, edit, and delete workspace views"
 msgstr "Crear, editar y eliminar vistas del espacio de trabajo"
 
+#. js-lingui-id: d+F6q9
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Created"
+msgstr ""
+
 #. js-lingui-id: 4fBuqE
 #: src/modules/command-menu/components/CommandMenuRecordInfo.tsx
 msgid "Created {beautifiedCreatedAt}"
+msgstr ""
+
+#. js-lingui-id: jd2xdp
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Created Date"
 msgstr ""
 
 #. js-lingui-id: fR16ki
@@ -2710,6 +3117,21 @@ msgstr "Dominio personalizado actualizado"
 msgid "Custom objects"
 msgstr "Objetos personalizados"
 
+#. js-lingui-id: UsVf1t
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Customer ID"
+msgstr ""
+
+#. js-lingui-id: EBcSB5
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Customer Information"
+msgstr ""
+
+#. js-lingui-id: NihQNk
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Customers"
+msgstr ""
+
 #. js-lingui-id: qt+EaC
 #: src/modules/settings/data-model/object-details/components/tabs/ObjectFields.tsx
 msgid "Customise the fields available in the {objectLabelSingular} views."
@@ -2755,6 +3177,11 @@ msgstr "Personalice la seguridad de su espacio de trabajo"
 msgid "Czech"
 msgstr "Checo"
 
+#. js-lingui-id: dsH9kw
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "d left"
+msgstr ""
+
 #. js-lingui-id: Zz6Cxn
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
 #: src/pages/settings/data-model/SettingsObjectFieldEdit.tsx
@@ -2778,6 +3205,12 @@ msgstr "Danés"
 #: src/modules/ui/navigation/navigation-drawer/components/MultiWorkspaceDropdown/internal/MultiWorkspaceDropdownThemesComponents.tsx
 msgid "Dark"
 msgstr "Oscuro"
+
+#. js-lingui-id: 7p5kLi
+#: src/pages/real-estate/DashboardPage.tsx
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Dashboard"
+msgstr ""
 
 #. js-lingui-id: w6iIMm
 #: src/modules/action-menu/actions/record-actions/constants/DefaultRecordActionsConfig.tsx
@@ -2919,6 +3352,8 @@ msgstr "Día de la semana"
 
 #. js-lingui-id: J/Upwb
 #: src/utils/date-utils.ts
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
 #: src/modules/command-menu/pages/page-layout/utils/getDateGranularityPluralLabel.ts
 #: src/modules/command-menu/pages/page-layout/utils/getDateGranularityPluralLabel.ts
 msgid "days"
@@ -2971,6 +3406,70 @@ msgstr "Desactivar workflow"
 #: src/modules/settings/data-model/fields/forms/components/text/constants/TextDataModelSelectOptions.ts
 msgid "Deactivated"
 msgstr "Desactivado"
+
+#. js-lingui-id: 3jX0AP
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Deal"
+msgstr ""
+
+#. js-lingui-id: rZzTat
+#: src/pages/real-estate/DealDetailPage.tsx
+msgid "Deal not found"
+msgstr ""
+
+#. js-lingui-id: VdlpHk
+#: src/pages/real-estate/DealKanbanPage.tsx
+msgid "Deal Pipeline"
+msgstr ""
+
+#. js-lingui-id: tWuHmV
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Deal Success Rate"
+msgstr ""
+
+#. js-lingui-id: Nlv6u9
+#: src/modules/real-estate/components/DealDetail.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Deal Value"
+msgstr ""
+
+#. js-lingui-id: SjtHHu
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Deal value incorrect"
+msgstr ""
+
+#. js-lingui-id: /ThG4Y
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Deal Value:"
+msgstr ""
+
+#. js-lingui-id: G/fm+W
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "deals"
+msgstr ""
+
+#. js-lingui-id: ZlGycp
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Deals"
+msgstr ""
+
+#. js-lingui-id: tIIxWQ
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Deals Closed"
+msgstr ""
+
+#. js-lingui-id: pVW5Mu
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "deals in progress"
+msgstr ""
+
+#. js-lingui-id: tibqbA
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Dec 2025 Overview"
+msgstr ""
 
 #. js-lingui-id: dPDEh6
 #: src/modules/settings/data-model/fields/forms/address/components/SettingsDataModelFieldAddressForm.tsx
@@ -3227,6 +3726,19 @@ msgstr "Registros eliminados"
 msgid "Deleting this method will remove it permanently from your account."
 msgstr "Eliminar este método lo eliminará permanentemente de tu cuenta."
 
+#. js-lingui-id: kj3M8S
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Deposit"
+msgstr ""
+
+#. js-lingui-id: inVGGF
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Deposit Paid"
+msgstr ""
+
 #. js-lingui-id: Cko536
 #: src/modules/workflow/workflow-steps/workflow-actions/find-records-action/components/WorkflowFindRecordsSorts.tsx
 #: src/modules/object-record/object-sort-dropdown/components/ObjectSortDropdownButton.tsx
@@ -3259,6 +3771,11 @@ msgstr "Descripción"
 msgid "Description of the application"
 msgstr "Descripción de la aplicación"
 
+#. js-lingui-id: vYgeDk
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Deselect All"
+msgstr ""
+
 #. js-lingui-id: +ow7t4
 #: src/modules/settings/roles/role-permissions/object-level-permissions/utils/objectPermissionKeyToHumanReadableText.ts
 msgid "destroy"
@@ -3284,6 +3801,16 @@ msgstr "Destruir registros"
 #: src/modules/settings/roles/role-permissions/objects-permissions/components/SettingsRolePermissionsObjectsSection.tsx
 msgid "Destroy Records on All Objects"
 msgstr "Destruir registros en todos los objetos"
+
+#. js-lingui-id: URmyfc
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Details"
+msgstr ""
+
+#. js-lingui-id: cO9+2L
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Disable"
+msgstr ""
 
 #. js-lingui-id: zAg2B9
 #: src/modules/action-menu/actions/record-actions/constants/WorkflowActionsConfig.tsx
@@ -3315,6 +3842,11 @@ msgstr "Formato de visualización"
 #: src/modules/settings/data-model/fields/forms/components/text/SettingsDataModelFieldTextForm.tsx
 msgid "Display text on multiple lines"
 msgstr "Mostrar texto en varias líneas"
+
+#. js-lingui-id: sKaCXP
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "District 9, District 2, Vung Tau"
+msgstr ""
 
 #. js-lingui-id: RDL+lZ
 #: src/modules/settings/emailing-domains/components/SettingsEmailingDomainVerificationRecords.tsx
@@ -3498,6 +4030,12 @@ msgstr "Editar {objectLabelPlural}"
 msgid "Edit Account"
 msgstr "Editar Cuenta"
 
+#. js-lingui-id: +jEDxY
+#: src/pages/real-estate/CustomerFormPage.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Edit Customer"
+msgstr ""
+
 #. js-lingui-id: GpnfNN
 #: src/modules/action-menu/actions/record-actions/constants/DashboardActionsConfig.tsx
 msgid "Edit Dashboard"
@@ -3507,6 +4045,11 @@ msgstr "Editar Tablero"
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useSettingsRolePermissionFlagConfig.ts
 msgid "Edit data structure and fields"
 msgstr "Editar estructura de datos y campos"
+
+#. js-lingui-id: cHP3MP
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Edit Deal"
+msgstr ""
 
 #. js-lingui-id: 9QCQIc
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownHiddenRecordGroupsContent.tsx
@@ -3549,6 +4092,11 @@ msgstr "Editar Perfil"
 msgid "Edit Records on All Objects"
 msgstr "Editar registros en todos los objetos"
 
+#. js-lingui-id: vfzxmF
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Edit Rule"
+msgstr ""
+
 #. js-lingui-id: 6o1M/Q
 #: src/pages/settings/domains/SettingsDomains.tsx
 msgid "Edit your subdomain name or set a custom domain."
@@ -3576,6 +4124,11 @@ msgstr "Octavo"
 #: src/modules/settings/admin-panel/components/SettingsAdminGeneral.tsx
 msgid "Email"
 msgstr "Correo electrónico"
+
+#. js-lingui-id: ybBmjS
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Email *"
+msgstr ""
 
 #. js-lingui-id: hzKQCy
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
@@ -3637,6 +4190,11 @@ msgstr "¡Enlace de verificación de correo electrónico reenviado!"
 #: src/modules/auth/components/VerifyEmailEffect.tsx
 msgid "Email verified."
 msgstr "Correo electrónico verificado."
+
+#. js-lingui-id: BopPj6
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "email@example.com"
+msgstr ""
 
 #. js-lingui-id: VI2hiF
 #: src/modules/settings/accounts/components/SettingsAccountsBlocklistTable.tsx
@@ -3726,6 +4284,11 @@ msgstr "Bandeja de entrada vacía"
 msgid "Empty Object"
 msgstr "Objeto vacío"
 
+#. js-lingui-id: PaQ3df
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Enable"
+msgstr ""
+
 #. js-lingui-id: q11Dk2
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useSettingsRolePermissionFlagConfig.ts
 msgid "Enable bypass options"
@@ -3786,6 +4349,11 @@ msgstr "Introducir un elemento"
 #: src/modules/workflow/workflow-steps/workflow-actions/iterator-action/components/WorkflowEditActionIterator.tsx
 msgid "Enter array of items or variable expression"
 msgstr "Ingrese un arreglo de elementos o expresión de variable"
+
+#. js-lingui-id: S2M5mH
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Enter customer name"
+msgstr ""
 
 #. js-lingui-id: 9/30HU
 #: src/modules/settings/data-model/fields/forms/date/utils/getDisplayFormatSelectDescription.tsx
@@ -4111,6 +4679,11 @@ msgstr "Excluir correos electrónicos no profesionales"
 msgid "Exclude the following people and domains from my email sync. Internal conversations will not be imported"
 msgstr "Excluir las siguientes personas y dominios de mi sincronización de correo electrónico. Las conversaciones internas no se importarán"
 
+#. js-lingui-id: 4YP+0y
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Executive Dashboard"
+msgstr ""
+
 #. js-lingui-id: fV7V51
 #: src/pages/settings/data-model/SettingsObjects.tsx
 msgid "Existing objects"
@@ -4179,6 +4752,7 @@ msgid "Expired"
 msgstr "Expirado"
 
 #. js-lingui-id: KnN1Tu
+#: src/pages/real-estate/PropertyDetailPage.tsx
 #: src/modules/settings/roles/role-assignment/components/SettingsRoleAssignmentTable.tsx
 msgid "Expires"
 msgstr "Expira"
@@ -4194,6 +4768,7 @@ msgid "Expires in {dateDiff}"
 msgstr "Expira en {dateDiff}"
 
 #. js-lingui-id: GS+Mus
+#: src/modules/real-estate/components/CommissionReports.tsx
 #: src/modules/object-record/record-index/export/hooks/useRecordIndexExportRecords.ts
 #: src/modules/action-menu/mock/action-menu-actions.mock.tsx
 #: src/modules/action-menu/mock/action-menu-actions.mock.tsx
@@ -4209,6 +4784,7 @@ msgstr "Exportar"
 
 #. js-lingui-id: 2KAI4N
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useActionRolePermissionFlagConfig.ts
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
 msgid "Export CSV"
 msgstr "Exportar CSV"
 
@@ -4289,6 +4865,11 @@ msgstr "Expresión"
 #: src/modules/billing/components/SettingsBillingCreditsSection.tsx
 msgid "Extra Credits Used"
 msgstr "Créditos Extra Usados"
+
+#. js-lingui-id: hDQb8e
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Facebook Ads"
+msgstr ""
 
 #. js-lingui-id: 7Bj3x9
 #: src/pages/settings/emailing-domains/utils/getEmailingDomainStatusText.ts
@@ -4489,6 +5070,11 @@ msgstr "Quinto"
 msgid "File \"{fileName}\" exceeds {maxUploadSize}"
 msgstr "El archivo \"{fileName}\" supera {maxUploadSize}"
 
+#. js-lingui-id: sER+bs
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Files"
+msgstr ""
+
 #. js-lingui-id: o7J4JM
 #: src/pages/settings/data-model/SettingsObjectTable.tsx
 #: src/pages/settings/data-model/SettingsObjectFieldTable.tsx
@@ -4503,10 +5089,26 @@ msgstr "El archivo \"{fileName}\" supera {maxUploadSize}"
 msgid "Filter"
 msgstr "Filtro"
 
+#. js-lingui-id: QVItqh
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Filter by status:"
+msgstr ""
+
 #. js-lingui-id: cSev+j
 #: src/modules/settings/developers/components/SettingsDevelopersWebhookForm.tsx
 msgid "Filters"
 msgstr "Filtros"
+
+#. js-lingui-id: H1Ggii
+#: src/pages/real-estate/CommissionApprovalPage.tsx
+msgid "Finance Team - Review and approve commissions"
+msgstr ""
+
+#. js-lingui-id: pWJv6B
+#: src/pages/real-estate/PropertyFilterPage.tsx
+msgid "Find the perfect property with advanced filters"
+msgstr ""
 
 #. js-lingui-id: JmZ/+d
 #: src/pages/onboarding/InviteTeam.tsx
@@ -4574,6 +5176,11 @@ msgstr "Flujo"
 msgid "Folders"
 msgstr "Carpetas"
 
+#. js-lingui-id: y6sq5j
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Following"
+msgstr ""
+
 #. js-lingui-id: glx6on
 #: src/modules/auth/sign-in-up/components/SignInUpWorkspaceScopeForm.tsx
 msgid "Forgot your password?"
@@ -4598,6 +5205,11 @@ msgstr "Formato: [Minuto] [Hora] [Día del mes] [Mes] [Día de la semana]"
 #: src/pages/settings/profile/appearance/components/SettingsExperience.tsx
 msgid "Formats"
 msgstr "Formatos"
+
+#. js-lingui-id: FZ86GH
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "found"
+msgstr ""
 
 #. js-lingui-id: 1hxId5
 #: src/modules/workflow/workflow-trigger/utils/cron-to-human/descriptors/getDayOfWeekDescription.ts
@@ -4624,6 +5236,11 @@ msgstr "de {startDay} a {endDay}"
 #: src/pages/onboarding/internal/ChooseYourPlanContent.tsx
 msgid "Full access"
 msgstr "Acceso total"
+
+#. js-lingui-id: 2xcL6v
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Full Name *"
+msgstr ""
 
 #. js-lingui-id: tkr79G
 #: src/utils/title-utils.ts
@@ -4724,11 +5341,21 @@ msgstr "Ir a Tareas"
 msgid "Go to Workflows"
 msgstr "Ir a Flujos de Trabajo"
 
+#. js-lingui-id: OEEQKT
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Good"
+msgstr ""
+
 #. js-lingui-id: eoe8BR
 #: src/modules/settings/security/components/SettingsSecurityAuthProvidersOptionsList.tsx
 #: src/modules/settings/security/components/SettingsSecurityAuthBypassOptionsList.tsx
 msgid "Google"
 msgstr "Google"
+
+#. js-lingui-id: bdsj2R
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Google Ads"
+msgstr ""
 
 #. js-lingui-id: 6eo66Q
 #: src/modules/settings/workspace/components/ToggleImpersonate.tsx
@@ -4783,6 +5410,21 @@ msgstr "Agrupar por"
 #: src/modules/object-record/record-group/components/RecordGroupReorderConfirmationModal.tsx
 msgid "Group sorting"
 msgstr "Agrupar ordenamiento"
+
+#. js-lingui-id: gaFUUl
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Growth Rate"
+msgstr ""
+
+#. js-lingui-id: sxbsRQ
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "h left"
+msgstr ""
+
+#. js-lingui-id: bo8lug
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "h overdue"
+msgstr ""
 
 #. js-lingui-id: eKiSkN
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -4976,6 +5618,11 @@ msgstr "XML de Metadatos del Proveedor de Identidad"
 msgid "If this is unexpected, please verify your settings."
 msgstr "Si esto es inesperado, por favor verifique su configuración."
 
+#. js-lingui-id: KtDvT0
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "If you fail to complete these steps within 24 hours, the reservation will be automatically released."
+msgstr ""
+
 #. js-lingui-id: j843N3
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
 msgid "If you’ve lost this key, you can regenerate it, but be aware that any script using this key will need to be updated. Please type\"{confirmationValue}\" to confirm."
@@ -5084,6 +5731,11 @@ msgstr "Importar registros"
 msgid "Import workflows"
 msgstr "Importar workflows"
 
+#. js-lingui-id: WALK/f
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Important Information"
+msgstr ""
+
 #. js-lingui-id: RqSvT0
 #: src/modules/settings/accounts/components/SettingsAccountsConnectedAccountsRowRightContainer.tsx
 msgid "Importing"
@@ -5102,6 +5754,7 @@ msgstr "En {dateDiff}"
 #. js-lingui-id: NoNwIX
 #: src/pages/settings/data-model/SettingsObjectFieldTable.tsx
 #: src/modules/settings/domains/components/SettingsWorkspaceDomainCard.tsx
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
 msgid "Inactive"
 msgstr "Inactivo"
 
@@ -5269,6 +5922,11 @@ msgstr "Código de verificación inválido. Por favor intenta de nuevo."
 #: src/modules/auth/sign-in-up/hooks/useHandleResetPassword.ts
 msgid "Invalid workspace"
 msgstr "Espacio de trabajo no válido"
+
+#. js-lingui-id: ZrsGjm
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Inventory"
+msgstr ""
 
 #. js-lingui-id: ZR1dJ4
 #: src/modules/ui/navigation/navigation-drawer/components/MultiWorkspaceDropdown/internal/components/WorkspacesForSignUp.tsx
@@ -5549,10 +6207,20 @@ msgstr "Últimas 4 Horas (del más antiguo → al más nuevo)"
 msgid "Last 7 Days (oldest → newest)"
 msgstr "Últimos 7 Días (del más antiguo → al más nuevo)"
 
+#. js-lingui-id: v6C37A
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "Last Contact"
+msgstr ""
+
 #. js-lingui-id: P4FGJG
 #: src/modules/activities/emails/components/EmailThreadHeader.tsx
 msgid "Last message {lastMessageSentAtFormatted}"
 msgstr "Último mensaje {lastMessageSentAtFormatted}"
+
+#. js-lingui-id: +Q+hTF
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Last Month"
+msgstr ""
 
 #. js-lingui-id: 1ZaQUH
 #: src/modules/settings/members/components/MemberNameFields.tsx
@@ -5575,6 +6243,11 @@ msgstr "El último pago falló. Por favor, contacte a su administrador."
 #: src/modules/information-banner/components/billing/InformationBannerFailPaymentInfo.tsx
 msgid "Last payment failed. Please update your billing details."
 msgstr "El último pago falló. Por favor, actualice sus datos de facturación."
+
+#. js-lingui-id: K7P0jz
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Last Updated"
+msgstr ""
 
 #. js-lingui-id: wL3cK8
 #: src/modules/object-record/record-board/record-board-column/utils/getAggregateOperationShortLabel.ts
@@ -5607,6 +6280,31 @@ msgstr "Diseño"
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useSettingsRolePermissionFlagConfig.ts
 msgid "Layouts"
 msgstr "Diseños"
+
+#. js-lingui-id: tNT/Ai
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Lead Distribution"
+msgstr ""
+
+#. js-lingui-id: FdwFWw
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Lead Source"
+msgstr ""
+
+#. js-lingui-id: xb7J2t
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Lead: Nguyen Van X → Currently: Luis Phan"
+msgstr ""
+
+#. js-lingui-id: qjSQAK
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "leads"
+msgstr ""
+
+#. js-lingui-id: O41EZw
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Leads Today"
+msgstr ""
 
 #. js-lingui-id: 8QyoLb
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
@@ -5680,6 +6378,11 @@ msgstr ""
 msgid "Link copied to clipboard"
 msgstr "Enlace copiado al portapapeles"
 
+#. js-lingui-id: uzEeb4
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Linked Property"
+msgstr ""
+
 #. js-lingui-id: 82kQhK
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -5728,6 +6431,11 @@ msgstr "Cargando configuración de retención..."
 msgid "Loading..."
 msgstr "Cargando..."
 
+#. js-lingui-id: wJijgU
+#: src/modules/real-estate/components/ProjectsTable.tsx
+msgid "Location"
+msgstr ""
+
 #. js-lingui-id: FgAxTj
 #: src/pages/onboarding/internal/ChooseYourPlanContent.tsx
 #: src/modules/ui/navigation/navigation-drawer/components/MultiWorkspaceDropdown/internal/MultiWorkspaceDropdownDefaultComponents.tsx
@@ -5770,6 +6478,17 @@ msgstr "Buscar usuarios para suplantarlos."
 #: src/modules/workflow/workflow-diagram/utils/generateNodesAndEdgesForIteratorNode.ts
 msgid "loop"
 msgstr "bucle"
+
+#. js-lingui-id: QIAcg0
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "lost"
+msgstr ""
+
+#. js-lingui-id: XbuiBx
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Lost"
+msgstr ""
 
 #. js-lingui-id: MsaCqr
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
@@ -5847,6 +6566,31 @@ msgstr "Gestionar flujos de trabajo"
 msgid "Manage your internet accounts."
 msgstr "Gestione sus cuentas de internet."
 
+#. js-lingui-id: GF5szl
+#: src/pages/real-estate/MyLeadsPage.tsx
+msgid "Manage your leads and track SLA compliance"
+msgstr ""
+
+#. js-lingui-id: T9EjTw
+#: src/pages/real-estate/DealKanbanPage.tsx
+msgid "Manage your sales opportunities"
+msgstr ""
+
+#. js-lingui-id: JOdLmz
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Manual Override"
+msgstr ""
+
+#. js-lingui-id: Al8Mam
+#: src/modules/real-estate/components/NotificationsPanel.tsx
+msgid "Mark All Read"
+msgstr ""
+
+#. js-lingui-id: 218Agm
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Master Plan"
+msgstr ""
+
 #. js-lingui-id: gDLior
 #: src/modules/spreadsheet-import/steps/components/SpreadsheetImportStepperContainer.tsx
 msgid "Match Columns"
@@ -5859,15 +6603,30 @@ msgstr "Coincidencia de Columnas"
 msgid "Max"
 msgstr "Máx"
 
+#. js-lingui-id: M88WZO
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Max Area (m²)"
+msgstr ""
+
 #. js-lingui-id: HFjNu6
 #: src/modules/spreadsheet-import/steps/components/UploadStep/components/DropZone.tsx
 msgid "Max import capacity: {formatSpreadsheetMaxRecordImportCapacity} records. Otherwise, consider splitting your file or using the API."
 msgstr "Capacidad máxima de importación: {formatSpreadsheetMaxRecordImportCapacity} registros. De lo contrario, considere dividir su archivo o usar la API."
 
+#. js-lingui-id: 5+KxTU
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Max Price (VND)"
+msgstr ""
+
 #. js-lingui-id: 2ICF9k
 #: src/modules/command-menu/pages/page-layout/constants/settings/ChartConfigurationSettingLabels.ts
 msgid "Max range"
 msgstr "Rango máximo"
+
+#. js-lingui-id: mOFgdC
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Maximum"
+msgstr ""
 
 #. js-lingui-id: DBiUDH
 #: src/modules/settings/data-model/fields/forms/components/SettingsDataModelFieldMaxValuesForm.tsx
@@ -6016,10 +6775,25 @@ msgstr "Microsoft"
 msgid "Min"
 msgstr "Mín"
 
+#. js-lingui-id: njeBdn
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Min Area (m²)"
+msgstr ""
+
+#. js-lingui-id: 0HAcFL
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Min Price (VND)"
+msgstr ""
+
 #. js-lingui-id: JBisyL
 #: src/modules/command-menu/pages/page-layout/constants/settings/ChartConfigurationSettingLabels.ts
 msgid "Min range"
 msgstr "Rango mínimo"
+
+#. js-lingui-id: CW11B+
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Minimum"
+msgstr ""
 
 #. js-lingui-id: G6wJK8
 #: src/modules/workflow/workflow-trigger/components/WorkflowEditTriggerCronForm.tsx
@@ -6036,10 +6810,25 @@ msgstr "Minutos"
 msgid "Minutes between triggers"
 msgstr "Minutos entre activadores"
 
+#. js-lingui-id: /oVzHk
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Missing documentation"
+msgstr ""
+
 #. js-lingui-id: hty0d5
 #: src/pages/settings/profile/appearance/components/DateTimeSettingsCalendarStartDaySelect.tsx
 msgid "Monday"
 msgstr "Lunes"
+
+#. js-lingui-id: j0uaMA
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Monitor"
+msgstr ""
+
+#. js-lingui-id: AvZkhk
+#: src/pages/real-estate/LeadDistributionPage.tsx
+msgid "Monitor lead allocation and SLA compliance across sales team"
+msgstr ""
 
 #. js-lingui-id: 8g3Cgz
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminConnectedAccountHealthStatus.tsx
@@ -6127,6 +6916,22 @@ msgstr "debe ser un arreglo de objetos con URL y etiqueta válidos (formato: '[{
 msgid "must be an array of valid emails"
 msgstr "debe ser un arreglo de correos electrónicos válidos"
 
+#. js-lingui-id: vdARnw
+#: src/pages/real-estate/CommissionsPage.tsx
+msgid "My Commissions"
+msgstr ""
+
+#. js-lingui-id: CUIROk
+#: src/pages/real-estate/MyLeadsPage.tsx
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "My Leads"
+msgstr ""
+
+#. js-lingui-id: dr7Shy
+#: src/pages/real-estate/SalesDashboardPage.tsx
+msgid "My Sales Dashboard"
+msgstr ""
+
 #. js-lingui-id: XTGSZU
 #: src/modules/views/view-picker/components/ViewPickerListContent.tsx
 msgid "My unlisted views"
@@ -6162,6 +6967,7 @@ msgstr "Mis vistas no listadas"
 #: src/modules/settings/developers/components/SettingsApiKeysTable.tsx
 #: src/modules/settings/admin-panel/components/SettingsAdminWorkspaceContent.tsx
 #: src/modules/settings/admin-panel/components/SettingsAdminGeneral.tsx
+#: src/modules/real-estate/components/ProjectsTable.tsx
 msgid "Name"
 msgstr "Nombre"
 
@@ -6241,6 +7047,11 @@ msgstr "Navegar a la versión anterior"
 msgid "Navigate to previous workflow"
 msgstr "Navegar al flujo de trabajo anterior"
 
+#. js-lingui-id: LIA6jy
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Negotiation"
+msgstr ""
+
 #. js-lingui-id: qqeAJM
 #: src/modules/settings/developers/utils/formatExpiration.ts
 msgid "Never"
@@ -6254,6 +7065,8 @@ msgstr "Nunca expira"
 #. js-lingui-id: isRobC
 #: src/pages/settings/data-model/SettingsNewObject.tsx
 #: src/modules/settings/developers/components/SettingsDevelopersWebhookForm.tsx
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/DealKanban.tsx
 msgid "New"
 msgstr "Nuevo"
 
@@ -6291,6 +7104,13 @@ msgstr "Nuevo Dominio de Acceso Aprobado"
 #: src/modules/ai/components/AIChatThreadsList.tsx
 msgid "New chat"
 msgstr "Nuevo chat"
+
+#. js-lingui-id: cJhylo
+#: src/pages/real-estate/DealKanbanPage.tsx
+#: src/pages/real-estate/CustomerFormPage.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "New Customer"
+msgstr ""
 
 #. js-lingui-id: wqoYqp
 #: src/pages/settings/emailing-domains/SettingsNewEmailingDomain.tsx
@@ -6384,6 +7204,11 @@ msgstr "No"
 msgid "No {fieldLabel}"
 msgstr "No {fieldLabel}"
 
+#. js-lingui-id: H1svFz
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "No activities yet"
+msgstr ""
+
 #. js-lingui-id: f9b1sj
 #: src/modules/settings/roles/role-assignment/components/SettingsRoleAssignmentTable.tsx
 msgid "No agents assigned"
@@ -6427,6 +7252,11 @@ msgstr "No se detectaron cambios"
 #. js-lingui-id: wgUPZ1
 #: src/pages/settings/ai/SettingsAgentTurnDetail.tsx
 msgid "No comment"
+msgstr ""
+
+#. js-lingui-id: 1cmchq
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "No commissions found with status:"
 msgstr ""
 
 #. js-lingui-id: YFLMyY
@@ -6474,6 +7304,12 @@ msgstr "No se encontraron datos"
 #: src/modules/views/view-picker/components/ViewPickerContentCreateMode.tsx
 msgid "No Date field"
 msgstr "Sin campo de fecha"
+
+#. js-lingui-id: AOnwB3
+#. placeholder {0}: stage.label.toLowerCase()
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "No deals in {0}"
+msgstr ""
 
 #. js-lingui-id: P4KXUa
 #: src/modules/object-record/record-table/empty-state/components/RecordTableEmptyStateSoftDelete.tsx
@@ -6535,6 +7371,11 @@ msgstr "No quedan ejecuciones de workflows gratuitas. Finaliza el periodo de pru
 msgid "No free workflow executions left. Please contact your admin."
 msgstr "No quedan ejecuciones de flujo de trabajo gratuitas. Por favor, contacte a su administrador."
 
+#. js-lingui-id: PYx623
+#: src/modules/real-estate/components/PropertyGallery.tsx
+msgid "No images available"
+msgstr ""
+
 #. js-lingui-id: gIrKyO
 #: src/pages/settings/ai/components/SettingsAgentLogsTab.tsx
 msgid "No input"
@@ -6560,6 +7401,11 @@ msgstr "No se reintentó ningún trabajo{errorDetails}"
 #: src/modules/settings/admin-panel/components/SettingsAdminVersionContainer.tsx
 msgid "No latest version found"
 msgstr "No se encontró la última versión"
+
+#. js-lingui-id: TlCnp2
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "No leads found with status:"
+msgstr ""
 
 #. js-lingui-id: 5sf2dF
 #: src/pages/settings/ai/components/SettingsAgentLogsTab.tsx
@@ -6617,6 +7463,11 @@ msgstr "No se encontró ningún método de pago. Por favor, actualice sus datos 
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelSection.tsx
 msgid "No permissions have been set for individual objects."
 msgstr "No se han establecido permisos para objetos individuales."
+
+#. js-lingui-id: qN19Y/
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "No properties match your search criteria"
+msgstr ""
 
 #. js-lingui-id: ePgApM
 #: src/modules/workflow/workflow-trigger/components/WorkflowEditTriggerManual.tsx
@@ -6743,9 +7594,16 @@ msgid "Not synced"
 msgstr "No sincronizado"
 
 #. js-lingui-id: 1DBGsz
+#: src/modules/real-estate/components/DealDetail.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
 #: src/modules/action-menu/actions/record-actions/constants/DefaultRecordActionsConfig.tsx
 msgid "Notes"
 msgstr "Notas"
+
+#. js-lingui-id: iDNBZe
+#: src/modules/real-estate/components/NotificationsPanel.tsx
+msgid "Notifications"
+msgstr ""
 
 #. js-lingui-id: YwzE9K
 #: src/utils/date-utils.ts
@@ -6848,6 +7706,7 @@ msgstr "Objetos creados por la aplicación"
 
 #. js-lingui-id: BwJKBw
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminQueueJobsTable.tsx
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
 msgid "of"
 msgstr "de"
 
@@ -6900,6 +7759,11 @@ msgstr "el último día del mes"
 #: src/modules/workflow/workflow-trigger/utils/cron-to-human/descriptors/getDayOfMonthDescription.ts
 msgid "on the weekday closest to the {ordinalDay} of the month"
 msgstr "el día de semana más cercano al {ordinalDay} del mes"
+
+#. js-lingui-id: nKoOoz
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "On Track"
+msgstr ""
 
 #. js-lingui-id: qF20Rl
 #: src/modules/workflow/workflow-trigger/utils/cron-to-human/descriptors/getDayOfWeekDescription.ts
@@ -7049,6 +7913,8 @@ msgstr "Organización"
 #: src/pages/settings/admin-panel/SettingsAdminConfigVariableDetails.tsx
 #: src/pages/settings/admin-panel/SettingsAdmin.tsx
 #: src/modules/settings/hooks/useSettingsNavigationItems.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
 msgid "Other"
 msgstr "Otros"
 
@@ -7073,10 +7939,25 @@ msgstr "Nuestro equipo puede ayudarle a configurar su espacio de trabajo para qu
 msgid "Output Field {fieldNumber}"
 msgstr "Campo de salida {fieldNumber}"
 
+#. js-lingui-id: MIFURj
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "overdue"
+msgstr ""
+
+#. js-lingui-id: ddrz1m
+#: src/pages/real-estate/MyLeadsPage.tsx
+msgid "Overdue"
+msgstr ""
+
 #. js-lingui-id: in6CUw
 #: src/modules/workflow/components/OverrideWorkflowDraftConfirmationModal.tsx
 msgid "Override Draft"
 msgstr "Sobrescribir Borrador"
+
+#. js-lingui-id: 6/dCYd
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Overview"
+msgstr ""
 
 #. js-lingui-id: y3tCDg
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -7107,6 +7988,16 @@ msgstr ""
 #: src/pages/not-found/NotFound.tsx
 msgid "Page Not Found"
 msgstr "Página no encontrada"
+
+#. js-lingui-id: v4nCHK
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Paid"
+msgstr ""
 
 #. js-lingui-id: ijBN4V
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -7144,8 +8035,19 @@ msgstr "Pega el código a continuación"
 msgid "Path"
 msgstr "Ruta"
 
+#. js-lingui-id: tStC6q
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Pay the deposit (10% of property value)"
+msgstr ""
+
 #. js-lingui-id: UbRKMZ
 #: src/pages/settings/emailing-domains/utils/getEmailingDomainStatusText.ts
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
 msgid "Pending"
 msgstr "Pendiente"
 
@@ -7192,6 +8094,11 @@ msgstr "Porcentaje"
 #. js-lingui-id: /YAKmj
 #: src/modules/settings/members/components/MemberInfosTab.tsx
 msgid "Perform administrative actions or permanently delete this user"
+msgstr ""
+
+#. js-lingui-id: u1bQE4
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Performance Metrics"
 msgstr ""
 
 #. js-lingui-id: wSpwGR
@@ -7248,6 +8155,11 @@ msgstr "Permisos"
 msgid "Permissions · {objectLabelSingular}"
 msgstr "Permisos · {objectLabelSingular}"
 
+#. js-lingui-id: KndjX6
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Phone Number *"
+msgstr ""
+
 #. js-lingui-id: qlqT9z
 #: src/modules/object-record/record-field/ui/meta-types/display/components/PhonesFieldDisplay.tsx
 msgid "Phone number copied to clipboard"
@@ -7272,6 +8184,16 @@ msgstr "Foto"
 msgid "Pie Chart"
 msgstr ""
 
+#. js-lingui-id: V4oplK
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Pipeline Health"
+msgstr ""
+
+#. js-lingui-id: OzJdMx
+#: src/pages/real-estate/DealKanbanPage.tsx
+msgid "Pipeline Value"
+msgstr ""
+
 #. js-lingui-id: fQtTho
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
 msgid "Plain text paragraph"
@@ -7286,6 +8208,11 @@ msgstr "Plan"
 #: src/modules/billing/components/SettingsBillingSubscriptionInfo.tsx
 msgid "Plan switching has been cancelled."
 msgstr "El cambio de plan ha sido cancelado."
+
+#. js-lingui-id: dUh9QW
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Planning"
+msgstr ""
 
 #. js-lingui-id: VUi6Nf
 #: src/modules/workflow/workflow-trigger/components/CronExpressionHelper.tsx
@@ -7344,6 +8271,35 @@ msgstr "Por favor, escriba \"sí\" para confirmar que desea eliminar este webhoo
 msgid "Please type in your email to confirm."
 msgstr "Por favor, escriba su correo electrónico para confirmar."
 
+#. js-lingui-id: /d6QLe
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Please verify deal value and resubmit..."
+msgstr ""
+
+#. js-lingui-id: X8nAHZ
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Plot"
+msgstr ""
+
+#. js-lingui-id: bhlg5o
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Plot Map"
+msgstr ""
+
+#. js-lingui-id: blzeIc
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Plot Number"
+msgstr ""
+
+#. js-lingui-id: USgOSU
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Plot:"
+msgstr ""
+
 #. js-lingui-id: BPig2P
 #: src/modules/settings/data-model/objects/forms/components/SettingsDataModelObjectAboutForm.tsx
 msgid "Plural"
@@ -7368,6 +8324,11 @@ msgstr "Portugués - Portugal"
 #: src/modules/settings/data-model/fields/forms/address/constants/DefaultSelectionAddressWithMessages.ts
 msgid "Postcode"
 msgstr "Código postal"
+
+#. js-lingui-id: Iy+9ab
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Preferred Locations (comma-separated)"
+msgstr ""
 
 #. js-lingui-id: /v6Rp9
 #: src/pages/onboarding/CreateWorkspace.tsx
@@ -7400,10 +8361,28 @@ msgstr "Anterior"
 msgid "Previous AI Chats"
 msgstr "Chats previos de IA"
 
+#. js-lingui-id: a7u1N9
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Price"
+msgstr ""
+
+#. js-lingui-id: Dzm0Mm
+#: src/modules/real-estate/components/ProjectsTable.tsx
+msgid "Price From"
+msgstr ""
+
 #. js-lingui-id: jmc+FY
 #: src/modules/billing/components/internal/MeteredPriceSelector.tsx
 msgid "Price updated."
 msgstr "Precio actualizado."
+
+#. js-lingui-id: rcNnsQ
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Price:"
+msgstr ""
 
 #. js-lingui-id: 0Ni6nR
 #: src/modules/object-record/record-field/ui/form-types/components/FormEmailsFieldInput.tsx
@@ -7420,6 +8399,11 @@ msgstr "Priorizado"
 #: src/modules/settings/components/SettingsDnsRecordsTable.tsx
 msgid "Priority"
 msgstr "Prioridad"
+
+#. js-lingui-id: ATYgPP
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Priority:"
+msgstr ""
 
 #. js-lingui-id: LcET2C
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
@@ -7456,9 +8440,91 @@ msgstr "Perfil - Ajustes"
 msgid "Profile Picture"
 msgstr "Foto de perfil"
 
+#. js-lingui-id: e0NrBM
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Project"
+msgstr ""
+
+#. js-lingui-id: n7JQEk
+#: src/pages/real-estate/ProjectDetailPage.tsx
+msgid "Project not found"
+msgstr ""
+
+#. js-lingui-id: of08WN
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Project Performance (This Month)"
+msgstr ""
+
+#. js-lingui-id: nqW50M
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Project:"
+msgstr ""
+
+#. js-lingui-id: M9H+/G
+#: src/pages/real-estate/ProjectsListPage.tsx
+msgid "projects"
+msgstr ""
+
+#. js-lingui-id: +0B+ue
+#: src/pages/real-estate/ProjectsListPage.tsx
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Projects"
+msgstr ""
+
 #. js-lingui-id: W9uQXX
 #: src/modules/workflow/workflow-steps/workflow-actions/ai-agent-action/components/WorkflowEditActionAiAgent.tsx
 msgid "Prompt"
+msgstr ""
+
+#. js-lingui-id: Lk/Td/
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "properties"
+msgstr ""
+
+#. js-lingui-id: l/UFPv
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Properties"
+msgstr ""
+
+#. js-lingui-id: U0gHXk
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "property"
+msgstr ""
+
+#. js-lingui-id: 8B+pY5
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Property"
+msgstr ""
+
+#. js-lingui-id: UkaIoR
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Property ID:"
+msgstr ""
+
+#. js-lingui-id: yjESZJ
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Property not found"
+msgstr ""
+
+#. js-lingui-id: 5A1EuI
+#: src/pages/real-estate/PropertyFilterPage.tsx
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Property Search"
+msgstr ""
+
+#. js-lingui-id: IfdZZ2
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Property Specifications"
+msgstr ""
+
+#. js-lingui-id: clRSBi
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Property Types (comma-separated)"
+msgstr ""
+
+#. js-lingui-id: qcybNQ
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Proposal"
 msgstr ""
 
 #. js-lingui-id: GVxbU6
@@ -7503,6 +8569,13 @@ msgstr "Dominio público eliminado con éxito"
 msgid "Public Domains"
 msgstr "Dominios Públicos"
 
+#. js-lingui-id: hi3Du/
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Qualified"
+msgstr ""
+
 #. js-lingui-id: 2vudsu
 #: src/modules/command-menu/pages/page-layout/utils/getDateGranularityLabel.ts
 msgid "Quarter"
@@ -7539,6 +8612,26 @@ msgstr "Cola: {queueName}"
 msgid "Quick model for routing decisions"
 msgstr ""
 
+#. js-lingui-id: fqDzSu
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Rate"
+msgstr ""
+
+#. js-lingui-id: NIwjHh
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Real Estate"
+msgstr ""
+
+#. js-lingui-id: wfRhcS
+#: src/pages/real-estate/DashboardPage.tsx
+msgid "Real Estate Platform Analytics"
+msgstr ""
+
+#. js-lingui-id: pvhS42
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Reassign to..."
+msgstr ""
+
 #. js-lingui-id: BT7pY+
 #: src/modules/settings/profile/components/SetOrChangePassword.tsx
 msgid "Receive an email containing password set link"
@@ -7553,6 +8646,11 @@ msgstr "Recibir un correo electrónico con un enlace para actualizar la contrase
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminWorkerMetricsGraph.tsx
 msgid "Recent Events (oldest → newest)"
 msgstr "Eventos Recientes (del más antiguo → al más nuevo)"
+
+#. js-lingui-id: gkw6sL
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Recent Properties"
+msgstr ""
 
 #. js-lingui-id: gcoiFh
 #: src/modules/settings/accounts/components/SettingsAccountsRowDropdownMenu.tsx
@@ -7612,6 +8710,11 @@ msgstr "URL de redirección copiada al portapapeles"
 msgid "Redirection URI"
 msgstr "URI de Redirección"
 
+#. js-lingui-id: veQuE7
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Referral"
+msgstr ""
+
 #. js-lingui-id: vpZcGd
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
@@ -7627,6 +8730,28 @@ msgstr "Regenerar clave"
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
 msgid "Regenerate Key"
 msgstr "Regenerar clave"
+
+#. js-lingui-id: 1t/NnN
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Reject"
+msgstr ""
+
+#. js-lingui-id: nL+CtC
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Reject Commission"
+msgstr ""
+
+#. js-lingui-id: ekCRTP
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Rejected"
+msgstr ""
+
+#. js-lingui-id: x3omlS
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Rejection Reason"
+msgstr ""
 
 #. js-lingui-id: UiAJoB
 #: src/modules/settings/data-model/fields/forms/morph-relation/components/SettingsDataModelFieldRelationForm.tsx
@@ -7732,15 +8857,73 @@ msgstr "Responder"
 msgid "Reply to all"
 msgstr "Responder a todos"
 
+#. js-lingui-id: Yx0Ud8
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Requested"
+msgstr ""
+
+#. js-lingui-id: 7pPYrg
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Requires Action"
+msgstr ""
+
 #. js-lingui-id: G42SNI
 #: src/modules/auth/sign-in-up/components/EmailVerificationSent.tsx
 #: src/modules/auth/sign-in-up/components/EmailVerificationSent.tsx
 msgid "Resend email"
 msgstr "Reenviar correo electrónico"
 
+#. js-lingui-id: R1Y1se
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Reservation created successfully!"
+msgstr ""
+
+#. js-lingui-id: ijPkvv
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Reservation Period"
+msgstr ""
+
+#. js-lingui-id: ettwRv
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Reserve"
+msgstr ""
+
+#. js-lingui-id: IcOkpB
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Reserve Property"
+msgstr ""
+
+#. js-lingui-id: Uwsg2F
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Reserved"
+msgstr ""
+
+#. js-lingui-id: 9aMDRW
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Reserved by"
+msgstr ""
+
+#. js-lingui-id: 57h/z0
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Reserved By"
+msgstr ""
+
+#. js-lingui-id: M+Y3v6
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Reserved by:"
+msgstr ""
+
 #. js-lingui-id: OfhWJH
 #: src/pages/settings/admin-panel/SettingsAdminConfigVariableDetails.tsx
 #: src/modules/views/components/ViewBarDetails.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
 msgid "Reset"
 msgstr "Restablecer"
 
@@ -7852,6 +9035,21 @@ msgstr "Reintentar todos los fallidos"
 msgid "Return Value"
 msgstr "Valor de retorno"
 
+#. js-lingui-id: 8YBH95
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Revenue"
+msgstr ""
+
+#. js-lingui-id: wQF9y1
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Revenue MTD"
+msgstr ""
+
+#. js-lingui-id: 9dfpUL
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Revenue Trend (Last 12 Months)"
+msgstr ""
+
 #. js-lingui-id: GG37FL
 #: src/modules/settings/roles/role-permissions/object-level-permissions/object-form/components/SettingsRolePermissionsObjectLevelObjectFormObjectLevelTableRow.tsx
 msgid "Revoked for this object"
@@ -7919,6 +9117,11 @@ msgstr "Rumano"
 msgid "route trigger"
 msgstr "disparador de ruta"
 
+#. js-lingui-id: 4EZrJN
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Rules"
+msgstr ""
+
 #. js-lingui-id: 3JjdaA
 #: src/pages/settings/ai/components/SettingsAgentEvalsTab.tsx
 msgid "Run"
@@ -7938,6 +9141,36 @@ msgstr "Ejecutar Función"
 #: src/pages/settings/profile/appearance/components/LocalePicker.tsx
 msgid "Russian"
 msgstr "Ruso"
+
+#. js-lingui-id: mUv9U4
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Sales"
+msgstr ""
+
+#. js-lingui-id: K1aYJ+
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Sales Dashboard"
+msgstr ""
+
+#. js-lingui-id: h1+iiR
+#: src/pages/real-estate/CommissionReportsPage.tsx
+msgid "Sales performance and commission analytics"
+msgstr ""
+
+#. js-lingui-id: DXowFb
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Sales Team A"
+msgstr ""
+
+#. js-lingui-id: SlAy9V
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Sales Team B"
+msgstr ""
+
+#. js-lingui-id: mr0Ll/
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Sales Team Leaderboard"
+msgstr ""
 
 #. js-lingui-id: +5kO8P
 #: src/pages/settings/profile/appearance/components/DateTimeSettingsCalendarStartDaySelect.tsx
@@ -7991,6 +9224,7 @@ msgstr ""
 #: src/modules/sign-in-background-mock/components/SignInAppNavigationDrawerMock.tsx
 #: src/modules/settings/roles/role-assignment/components/SettingsRoleAssignmentWorkspaceMemberPickerDropdown.tsx
 #: src/modules/settings/admin-panel/components/SettingsAdminGeneral.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
 #: src/modules/object-record/object-filter-dropdown/components/ObjectFilterDropdownVectorSearchInput.tsx
 #: src/modules/object-record/object-filter-dropdown/components/ObjectFilterDropdownFilterInputHeader.tsx
 #: src/modules/navigation/components/MainNavigationDrawerFixedItems.tsx
@@ -8125,11 +9359,21 @@ msgstr "Buscar objetos"
 msgid "Search operations"
 msgstr "Buscar operaciones"
 
+#. js-lingui-id: RVZJWQ
+#: src/modules/real-estate/components/ProjectsTable.tsx
+msgid "Search projects..."
+msgstr ""
+
 #. js-lingui-id: IMeaSJ
 #: src/modules/action-menu/actions/record-agnostic-actions/constants/RecordAgnosticActionsConfig.tsx
 #: src/modules/action-menu/actions/record-agnostic-actions/constants/RecordAgnosticActionsConfig.tsx
 msgid "Search records"
 msgstr "Buscar registros"
+
+#. js-lingui-id: A06hLB
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Search Results"
+msgstr ""
 
 #. js-lingui-id: 8sgZS9
 #: src/modules/billing/components/SubscriptionPrice.tsx
@@ -8294,6 +9538,11 @@ msgstr "Seleccionar acción"
 msgid "Select Action"
 msgstr "Seleccionar acción"
 
+#. js-lingui-id: mCB6Je
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Select All"
+msgstr ""
+
 #. js-lingui-id: hVPa4O
 #: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/UnmatchColumn.tsx
 msgid "Select an option"
@@ -8329,6 +9578,11 @@ msgstr "Seleccionar fila de encabezado"
 msgid "Select one or several standard objects to activate below"
 msgstr "Seleccione uno o varios objetos estándar para activar a continuación"
 
+#. js-lingui-id: 0LtAlN
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Select reason..."
+msgstr ""
+
 #. js-lingui-id: UKCiEd
 #: src/modules/settings/admin-panel/config-variables/components/ConfigVariableOptionsDropdownContent.tsx
 msgid "Select Source"
@@ -8358,6 +9612,16 @@ msgstr "Selecciona la hoja a utilizar"
 #: src/pages/settings/profile/appearance/components/SettingsExperience.tsx
 msgid "Select your preferred language"
 msgstr "Selecciona tu idioma preferido"
+
+#. js-lingui-id: +6YAwo
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "selected"
+msgstr ""
+
+#. js-lingui-id: SVRHAR
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Selected:"
+msgstr ""
 
 #. js-lingui-id: JlFcis
 #: src/modules/ai/components/internal/SendMessageButton.tsx
@@ -8553,6 +9817,14 @@ msgstr "Mostrar solo filas con errores"
 msgid "Show value in center"
 msgstr ""
 
+#. js-lingui-id: 78iPsB
+#. placeholder {0}: 1
+#. placeholder {1}: recentProperties.length
+#. placeholder {2}: stats.totalProperties
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Showing {0}-{1} of {2} properties"
+msgstr ""
+
 #. js-lingui-id: uVg8dY
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutOpenInContent.tsx
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutContent.tsx
@@ -8615,6 +9887,31 @@ msgstr "Sexto"
 msgid "Skip"
 msgstr "Omitir"
 
+#. js-lingui-id: q4wqWs
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "SLA %"
+msgstr ""
+
+#. js-lingui-id: M6puT9
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "SLA Compliance"
+msgstr ""
+
+#. js-lingui-id: +rMEEE
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "SLA Deadline"
+msgstr ""
+
+#. js-lingui-id: 64R05X
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "SLA Performance (Last 7 Days)"
+msgstr ""
+
+#. js-lingui-id: 1KVWew
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "slots"
+msgstr ""
+
 #. js-lingui-id: Ik7fz5
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
 msgid "Small section heading"
@@ -8665,6 +9962,17 @@ msgstr "Nombre de usuario SMTP"
 msgid "smtp.example.com"
 msgstr "smtp.example.com"
 
+#. js-lingui-id: s9KGXU
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Sold"
+msgstr ""
+
 #. js-lingui-id: zfjcH5
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelUpdateFieldsValueForObject.tsx
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelSeeFieldsValueForObject.tsx
@@ -8703,6 +10011,7 @@ msgstr "Ordenar por grupo"
 
 #. js-lingui-id: wdxz7K
 #: src/modules/settings/admin-panel/config-variables/components/ConfigVariableOptionsDropdownContent.tsx
+#: src/modules/real-estate/components/MyLeads.tsx
 #: src/modules/command-menu/pages/page-layout/constants/settings/ChartConfigurationSettingLabels.ts
 msgid "Source"
 msgstr "Fuente"
@@ -8789,8 +10098,19 @@ msgstr "Estado"
 #: src/modules/settings/components/SettingsDnsRecordsTable.tsx
 #: src/modules/settings/admin-panel/components/SettingsAdminWorkspaceContent.tsx
 #: src/modules/settings/accounts/components/SettingsConnectedAccountsTableHeader.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectsTable.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
 msgid "Status"
 msgstr "Estado"
+
+#. js-lingui-id: htTcVX
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Status:"
+msgstr ""
 
 #. js-lingui-id: ygCKqB
 #: src/modules/action-menu/actions/record-actions/constants/WorkflowRunsActionsConfig.tsx
@@ -8871,6 +10191,11 @@ msgstr "El asunto, el cuerpo y los archivos adjuntos se compartirán con tu equi
 #: src/modules/auth/sign-in-up/components/internal/SignInUpTwoFactorAuthenticationVerification.tsx
 msgid "Submit"
 msgstr "Enviar"
+
+#. js-lingui-id: dqST9u
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Submit required documents"
+msgstr ""
 
 #. js-lingui-id: EDl9kS
 #: src/modules/information-banner/components/billing/InformationBannerNoBillingSubscription.tsx
@@ -9083,10 +10408,24 @@ msgstr "Configuración de la pestaña"
 msgid "Table"
 msgstr "Tabla"
 
+#. js-lingui-id: O6Z3uT
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Target:"
+msgstr ""
+
 #. js-lingui-id: GtycJ/
 #: src/modules/action-menu/actions/record-actions/constants/DefaultRecordActionsConfig.tsx
 msgid "Tasks"
 msgstr "Tareas"
+
+#. js-lingui-id: UXoFYV
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Team Avg:"
+msgstr ""
 
 #. js-lingui-id: lKXcJz
 #: src/pages/settings/emailing-domains/utils/getEmailingDomainStatusText.ts
@@ -9319,6 +10658,23 @@ msgstr "Este valor de base de datos anula la configuración del entorno."
 msgid "This is required to enable manual row reordering."
 msgstr "Esto es necesario para habilitar el reordenamiento manual de filas."
 
+#. js-lingui-id: 2Fsd9r
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "This Month"
+msgstr ""
+
+#. js-lingui-id: eCZUxU
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "This Quarter"
+msgstr ""
+
+#. js-lingui-id: gkT18t
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "This reservation will hold the property for 24 hours. During this time, you need to:"
+msgstr ""
+
 #. js-lingui-id: vbLBMd
 #: src/modules/settings/roles/role-permissions/object-level-permissions/object-form/components/SettingsRolePermissionsObjectLevelObjectFormObjectLevelTableRow.tsx
 msgid "This role can {humanReadableAction} all records"
@@ -9354,6 +10710,11 @@ msgstr "Este valor se guardará en la base de datos."
 msgid "This week"
 msgstr "Esta semana"
 
+#. js-lingui-id: FNvDMc
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "This Week"
+msgstr ""
+
 #. js-lingui-id: h4VeOo
 #: src/modules/billing/hooks/useBillingWording.ts
 msgid "This will cancel the scheduled interval change and keep your current billing interval ({currentIntervalLabel})."
@@ -9378,6 +10739,11 @@ msgstr ""
 #: src/pages/settings/admin-panel/SettingsAdminConfigVariableDetails.tsx
 msgid "This will revert the database value to environment/default value. The database override will be removed and the system will use the environment settings."
 msgstr "Esto revertirá el valor de la base de datos al valor de entorno/predeterminado. Se eliminará la anulación de la base de datos y el sistema utilizará la configuración del entorno."
+
+#. js-lingui-id: QqLJHH
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "This Year"
+msgstr ""
 
 #. js-lingui-id: 5g/sE8
 #: src/modules/action-menu/actions/record-actions/constants/WorkflowActionsConfig.tsx
@@ -9430,6 +10796,11 @@ msgstr "título"
 msgid "Today"
 msgstr "Hoy"
 
+#. js-lingui-id: vi/L28
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Today: Dec 9, 2025"
+msgstr ""
+
 #. js-lingui-id: GFxnQR
 #: src/modules/settings/accounts/components/message-folders/SettingsAccountsMessageFoldersCard.tsx
 msgid "Toggle all folders"
@@ -9450,15 +10821,74 @@ msgstr "Alternar todos los permisos de configuración"
 msgid "Tomorrow"
 msgstr "Mañana"
 
+#. js-lingui-id: ONchxy
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "total"
+msgstr ""
+
 #. js-lingui-id: 72c5Qo
+#: src/modules/real-estate/components/ProjectsTable.tsx
 #: src/modules/page-layout/widgets/graph/graphWidgetPieChart/hooks/usePieChartCenterMetricData.ts
 msgid "Total"
+msgstr ""
+
+#. js-lingui-id: iKDmkL
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Total Approved"
+msgstr ""
+
+#. js-lingui-id: DFABzc
+#: src/pages/real-estate/DealKanbanPage.tsx
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Total Commission"
+msgstr ""
+
+#. js-lingui-id: fasMia
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Total Commissions"
+msgstr ""
+
+#. js-lingui-id: WiUNvj
+#: src/pages/real-estate/DealKanbanPage.tsx
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Total Deals"
+msgstr ""
+
+#. js-lingui-id: +Lhy2n
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Total Paid"
+msgstr ""
+
+#. js-lingui-id: OEZYi/
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Total Pending"
+msgstr ""
+
+#. js-lingui-id: jcDEwl
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Total Properties"
+msgstr ""
+
+#. js-lingui-id: WwDT39
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Total Revenue"
 msgstr ""
 
 #. js-lingui-id: YT/cKI
 #: src/modules/billing/components/SettingsBillingCreditsSection.tsx
 msgid "Track your {intervalLabel} workflow credit consumption."
 msgstr "Rastrea tu consumo de créditos de flujo de trabajo {intervalLabel}."
+
+#. js-lingui-id: hgvrpi
+#: src/pages/real-estate/CommissionsPage.tsx
+msgid "Track your commission payments and status"
+msgstr ""
+
+#. js-lingui-id: da0m0G
+#: src/pages/real-estate/SalesDashboardPage.tsx
+msgid "Track your performance and earnings"
+msgstr ""
 
 #. js-lingui-id: lhkaAC
 #: src/modules/billing/components/internal/PlansTags.tsx
@@ -9632,6 +11062,12 @@ msgstr ""
 msgid "Unable to Reach Back-end"
 msgstr "Incapaz de alcanzar el Back-end"
 
+#. js-lingui-id: EbMPZJ
+#: src/modules/real-estate/components/DealKanban.tsx
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Unassigned"
+msgstr ""
+
 #. js-lingui-id: o23uCL
 #: src/modules/command-menu/pages/page-layout/utils/getChartLimitMessage.ts
 msgid "Undisplayed data: max {maxItems} {granularityLabel} per chart."
@@ -9754,6 +11190,16 @@ msgstr "actualizar"
 msgid "Update"
 msgstr "Actualizar"
 
+#. js-lingui-id: pdvCsH
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Update Customer"
+msgstr ""
+
+#. js-lingui-id: mikibv
+#: src/pages/real-estate/CustomerFormPage.tsx
+msgid "Update customer information"
+msgstr ""
+
 #. js-lingui-id: 5bRMKt
 #: src/modules/settings/members/components/MemberPermissionsTab.tsx
 msgid "Update role"
@@ -9768,6 +11214,11 @@ msgstr "Actualizar vista"
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
 msgid "Update your account's configuration. Configure any combination of IMAP, SMTP, and CalDAV as needed."
 msgstr "Actualiza la configuración de tu cuenta. Configura cualquier combinación de IMAP, SMTP y CalDAV según sea necesario."
+
+#. js-lingui-id: +b7T3G
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Updated"
+msgstr ""
 
 #. js-lingui-id: kwkhPe
 #: src/modules/billing/components/internal/MeteredPriceSelector.tsx
@@ -9978,6 +11429,7 @@ msgstr "vista"
 
 #. js-lingui-id: jpctdh
 #: src/modules/settings/data-model/object-details/components/SettingsObjectFieldDisabledActionDropdown.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
 msgid "View"
 msgstr "Vista"
 
@@ -9995,6 +11447,11 @@ msgstr ""
 #: src/modules/billing/components/SettingsBillingContent.tsx
 msgid "View billing details"
 msgstr "Ver detalles de facturación"
+
+#. js-lingui-id: SZw9tS
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "View Details"
+msgstr ""
 
 #. js-lingui-id: AdeX9A
 #: src/modules/metadata-error-handler/hooks/useMetadataErrorHandler.ts
@@ -10038,6 +11495,11 @@ msgstr ""
 msgid "View type"
 msgstr "Tipo de vista"
 
+#. js-lingui-id: +3hpTt
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Villa, Apartment, Townhouse"
+msgstr ""
+
 #. js-lingui-id: 2q/Q7x
 #: src/modules/settings/accounts/components/SettingsAccountsMessageChannelDetails.tsx
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownVisibilityContent.tsx
@@ -10062,10 +11524,25 @@ msgstr "Grupos visibles"
 msgid "Visible to you"
 msgstr "Visible para usted"
 
+#. js-lingui-id: Zkg1bB
+#: src/pages/real-estate/PlotMapPage.tsx
+msgid "Visual master plan with real-time property status"
+msgstr ""
+
 #. js-lingui-id: 6n7jtr
 #: src/modules/settings/data-model/objects/components/SettingsObjectCoverImage.tsx
 msgid "Visualize"
 msgstr "Visualizar"
+
+#. js-lingui-id: v4Q22d
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "vs Last Month"
+msgstr ""
+
+#. js-lingui-id: VDeQix
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "vs yesterday"
+msgstr ""
 
 #. js-lingui-id: uUehLT
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminQueueJobsTable.tsx
@@ -10076,6 +11553,16 @@ msgstr "Esperando"
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminQueueJobsTable.tsx
 msgid "Waiting Children"
 msgstr "Esperando a hijos"
+
+#. js-lingui-id: pUpf4U
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Walk-in"
+msgstr ""
+
+#. js-lingui-id: r6y+jM
+#: src/pages/real-estate/MyLeadsPage.tsx
+msgid "Warning"
+msgstr ""
 
 #. js-lingui-id: zFSQY3
 #: src/modules/activities/timeline-activities/rows/main-object/components/EventRowMainObject.tsx
@@ -10165,6 +11652,11 @@ msgstr "Se requiere el ID del webhook para actualizaciones"
 msgid "Webhooks"
 msgstr "Webhooks"
 
+#. js-lingui-id: On0aF2
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Website"
+msgstr ""
+
 #. js-lingui-id: zx4BuL
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutContent.tsx
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownCustomView.tsx
@@ -10204,6 +11696,27 @@ msgstr "Cuándo se desactivará la clave"
 msgid "Widget type"
 msgstr "Tipo de Widget"
 
+#. js-lingui-id: vrMCMF
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "win rate"
+msgstr ""
+
+#. js-lingui-id: WLpKqU
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "won"
+msgstr ""
+
+#. js-lingui-id: 9kZh4H
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Won"
+msgstr ""
+
+#. js-lingui-id: 41dNQO
+#: src/pages/real-estate/DealKanbanPage.tsx
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Won Deals"
+msgstr ""
+
 #. js-lingui-id: 3J7l5w
 #: src/pages/settings/admin-panel/SettingsAdminQueueDetail.tsx
 msgid "Worker"
@@ -10223,6 +11736,11 @@ msgstr "Se duplicó el Workflow con éxito"
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useSettingsRolePermissionFlagConfig.ts
 msgid "Workflows"
 msgstr "Workflows"
+
+#. js-lingui-id: ohcfC/
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Workload Distribution (This Week)"
+msgstr ""
 
 #. js-lingui-id: pmUArF
 #: src/pages/settings/SettingsWorkspace.tsx

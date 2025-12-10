@@ -47,6 +47,153 @@ Tài liệu này mô tả đầy đủ cấu trúc Epic và Story cho Nền tả
 **Phụ thuộc:** Không (epic đầu tiên)
 **Kết quả:** Có hạ tầng chạy được, sẵn sàng để build các tính năng phía trên
 
+#### Detailed Stories
+
+##### Story 1.1: Project Initialization 🚀
+**As a** Developer
+**I want** to clone and setup Twenty CRM v0.52.0
+**So that** I have a working development environment
+
+**Acceptance Criteria:**
+- ✅ Given a fresh environment, When I run the clone command, Then Twenty CRM v0.52.0 is cloned successfully
+- ✅ Given cloned repository, When I run `pnpm install`, Then all dependencies are installed without errors
+- ✅ Given dependencies installed, When I check node version, Then Node.js 20.18.0 LTS is confirmed
+
+**Tech Tasks:**
+1. Clone Twenty CRM at exact version - Ref: `architecture.md` lines 28-36
+   ```bash
+   git clone --branch v0.52.0 https://github.com/twentyhq/twenty.git
+   ```
+2. Install dependencies with pnpm 9.14.2
+3. Verify Node.js 20.18.0 LTS installed
+
+**Estimate:** 2 hours
+**Priority:** P0 (Blocking)
+
+---
+
+##### Story 1.2: Development Environment Setup 🔧
+**As a** Developer
+**I want** to configure PostgreSQL and Redis infrastructure
+**So that** the application can run locally
+
+**Acceptance Criteria:**
+- ✅ Given `.env` configured with database credentials, When I run `docker compose up -d`, Then PostgreSQL 16.4 and Redis 7.4.1 containers start successfully
+- ✅ Given infrastructure running, When I run `npx nx database:migrate twenty-server`, Then database schema is created
+- ✅ Given all services running, When I access `http://localhost:3000`, Then Twenty API responds with health check
+- ✅ Given all services running, When I access `http://localhost:3001`, Then Twenty frontend loads
+
+**Tech Tasks:**
+1. Copy `.env.example` to `.env` - Ref: `architecture.md` lines 38-43
+2. Configure PostgreSQL connection string:
+   ```
+   PG_DATABASE_URL=postgres://postgres:postgres@localhost:5432/default
+   ```
+3. Configure Redis connection:
+   ```
+   REDIS_URL=redis://localhost:6379
+   ```
+4. Start Docker containers with `docker compose -f docker-compose.dev.yml up -d`
+5. Run database migrations
+6. Start backend and frontend servers
+
+**Estimate:** 2 hours
+**Priority:** P0 (Blocking)
+
+---
+
+##### Story 1.3: Real Estate Module Structure 📦
+**As a** Developer
+**I want** to create the real-estate module skeleton
+**So that** we have a structured place for all real estate features
+
+**Acceptance Criteria:**
+- ✅ Given module file created, When imported in `app.module.ts`, Then no TypeScript compilation errors
+- ✅ Given constants defined, Then `REAL_ESTATE_OBJECT_IDS` contains unique UUIDs for each entity
+- ✅ Given empty workspace entities created, When server starts, Then Twenty metadata system recognizes new module
+- ✅ Given module structure, Then folder matches architecture source tree exactly
+
+**Tech Tasks:**
+1. Create module folder structure - Ref: `architecture.md` lines 92-121
+   ```
+   packages/twenty-server/src/modules/real-estate/
+   ├── standard-objects/
+   ├── services/
+   ├── jobs/
+   ├── resolvers/
+   ├── constants/
+   └── real-estate.module.ts
+   ```
+2. Create `real-estate.module.ts` with NestJS module decorator
+3. Create `constants/real-estate-object-ids.ts` with UUID constants
+4. Create `constants/real-estate-field-ids.ts` with field UUID constants
+5. Register module in `app.module.ts`
+6. Verify server starts without errors
+
+**Estimate:** 4 hours
+**Priority:** P0 (Blocking)
+
+---
+
+##### Story 1.4: RBAC & Authentication Configuration 🔐
+**As an** Admin
+**I want** role-based access control configured
+**So that** different user types have appropriate permissions
+
+**Acceptance Criteria:**
+- ✅ Given Admin role, When user logs in as Admin, Then full access to all modules is granted
+- ✅ Given Sales Agent role, When accessing Commission module, Then view-only access is permitted
+- ✅ Given Finance role, When accessing Property module, Then access is denied
+- ✅ Given Manager role, When accessing Reports, Then read access is granted
+- ✅ Given JWT authentication, When token expires after 7 days, Then user must re-authenticate
+
+**Tech Tasks:**
+1. Define roles in Twenty's permission system - Ref: `architecture.md` lines 653-660
+   ```
+   Admin: Full access all modules
+   Sales Agent: Read projects/properties, Reserve, Manage own leads, View own commissions
+   Finance: Read/Update commissions (approve/pay), Export CSV
+   Manager: Read all, Reports, No edit
+   ```
+2. Configure JWT token expiry to 7 days
+3. Setup automatic token refresh
+4. Test each role's permissions
+
+**Estimate:** 4 hours
+**Priority:** P1 (High)
+
+---
+
+##### Story 1.5: Deployment Pipeline Setup 🚀
+**As a** DevOps Engineer
+**I want** Docker and Dokploy configured
+**So that** we can deploy to production
+
+**Acceptance Criteria:**
+- ✅ Given Dockerfile, When built, Then image size is under 500MB
+- ✅ Given Dokploy configuration, When deployed, Then application is accessible via domain
+- ✅ Given environment secrets, When deployed, Then secrets are not exposed in container logs
+- ✅ Given deployment, When Nginx configured, Then HTTPS works with SSL certificate
+
+**Tech Tasks:**
+1. Create/verify Dockerfile for production build
+2. Configure Dokploy project - Ref: `architecture.md` lines 697-726
+3. Setup Nginx reverse proxy configuration:
+   ```
+   :443 → twenty-front:3001
+   /api → twenty-server:3000
+   ```
+4. Configure environment variables in Dokploy secrets
+5. Setup Docker volumes for PostgreSQL and Redis persistence
+6. Test deployment to staging environment
+
+**Estimate:** 4 hours
+**Priority:** P1 (High)
+
+---
+
+**Epic 1 Total:** 5 stories, ~16 hours
+
 ---
 
 ### Epic 2: Quản lý Tồn kho Bất động sản 📦

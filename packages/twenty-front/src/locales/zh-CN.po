@@ -80,6 +80,16 @@ msgstr "更改将在 {beautifiedRenewDate} 应用。"
 msgid "· {objectFilterDropdownSearchInput}"
 msgstr "· {objectFilterDropdownSearchInput}"
 
+#. js-lingui-id: 1YtWT6
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "(Highest)"
+msgstr ""
+
+#. js-lingui-id: h4Mppl
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "(Override all)"
+msgstr ""
+
 #. js-lingui-id: ZBGbuw
 #: src/modules/workflow/workflow-steps/components/WorkflowRunStepOutputDetail.tsx
 #: src/modules/workflow/workflow-steps/components/WorkflowRunStepInputDetail.tsx
@@ -296,6 +306,36 @@ msgstr "{workspaceMemberName}将不再被分配以下角色："
 msgid "••••••••"
 msgstr "••••••••"
 
+#. js-lingui-id: j7WtAm
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "+84 90 123 4567"
+msgstr ""
+
+#. js-lingui-id: GAytD+
+#: src/pages/real-estate/AssignmentRulesPage.tsx
+msgid "⚙️ Lead Assignment Rules"
+msgstr ""
+
+#. js-lingui-id: PduIvi
+#: src/pages/real-estate/CommissionApprovalPage.tsx
+msgid "💰 Commission Approval Queue"
+msgstr ""
+
+#. js-lingui-id: UAtzK7
+#: src/pages/real-estate/CommissionReportsPage.tsx
+msgid "📊 Commission Reports"
+msgstr ""
+
+#. js-lingui-id: fJN9vc
+#: src/pages/real-estate/LeadDistributionPage.tsx
+msgid "📊 Lead Distribution Dashboard"
+msgstr ""
+
+#. js-lingui-id: Ogg3mg
+#: src/pages/real-estate/PlotMapPage.tsx
+msgid "🗺️ Interactive Plot Map"
+msgstr ""
+
 #. js-lingui-id: tEdOxj
 #: src/pages/settings/accounts/SettingsAccountsConfigurationStepEmail.tsx
 #: src/pages/settings/accounts/SettingsAccountsConfigurationStepEmail.tsx
@@ -322,6 +362,16 @@ msgstr "1. 类型"
 #: src/pages/onboarding/internal/ChooseYourPlanContent.tsx
 msgid "10,000 workflow node executions"
 msgstr "10,000 次工作流节点执行"
+
+#. js-lingui-id: RXNErT
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "100"
+msgstr ""
+
+#. js-lingui-id: OLSQH+
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "1000000000"
+msgstr ""
 
 #. js-lingui-id: bM5lnW
 #: src/modules/settings/experience/components/DateTimeSettingsTimeFormatSelect.tsx
@@ -373,6 +423,16 @@ msgstr "双因素验证方法已成功删除。"
 #: src/modules/settings/two-factor-authentication/components/DeleteTwoFactorAuthenticationMethod.tsx
 msgid "2FA Method Reset"
 msgstr "双因素验证方法重置"
+
+#. js-lingui-id: WmMlz2
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "300"
+msgstr ""
+
+#. js-lingui-id: jJ2GIf
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "5000000000"
+msgstr ""
 
 #. js-lingui-id: keUlu+
 #: src/modules/workflow/components/OverrideWorkflowDraftConfirmationModal.tsx
@@ -508,6 +568,7 @@ msgstr "操作"
 #: src/modules/settings/roles/role-permissions/permission-flags/components/SettingsRolePermissionsSettingsTableHeader.tsx
 #: src/modules/settings/roles/role-permissions/objects-permissions/components/SettingsRolePermissionsObjectsTableHeader.tsx
 #: src/modules/settings/roles/role-permissions/object-level-permissions/object-form/components/SettingsRolePermissionsObjectLevelObjectFormObjectLevelTableHeader.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
 msgid "Actions"
 msgstr "操作"
 
@@ -537,8 +598,10 @@ msgstr "激活工作流"
 
 #. js-lingui-id: F6pfE9
 #: src/pages/settings/SettingsProfile.tsx
+#: src/pages/real-estate/MyLeadsPage.tsx
 #: src/modules/settings/domains/components/SettingsWorkspaceDomainCard.tsx
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminQueueJobsTable.tsx
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
 msgid "Active"
 msgstr "活跃"
 
@@ -547,6 +610,36 @@ msgstr "活跃"
 #: src/pages/settings/developers/api-keys/SettingsApiKeys.tsx
 msgid "Active API keys created by you or your team."
 msgstr "由您或您的团队创建的活跃 API 密钥。"
+
+#. js-lingui-id: 9UXirw
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Active Deals:"
+msgstr ""
+
+#. js-lingui-id: usPXcv
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Active Leads"
+msgstr ""
+
+#. js-lingui-id: 3rO6fD
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Active Pipeline"
+msgstr ""
+
+#. js-lingui-id: 39ohdf
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Activities"
+msgstr ""
+
+#. js-lingui-id: 6aFZXJ
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Activities feature coming in Epic 7 (Operations)"
+msgstr ""
+
+#. js-lingui-id: kS4xpx
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Activity Timeline"
+msgstr ""
 
 #. js-lingui-id: m16xKo
 #: src/pages/settings/ai/components/SettingsAgentEvalsTab.tsx
@@ -558,6 +651,11 @@ msgstr "添加"
 #: src/modules/settings/data-model/fields/forms/select/components/AddSelectOptionMenuItem.tsx
 msgid "Add \"{trimmedName}\" to options"
 msgstr "将 \"{trimmedName}\" 添加到选项中"
+
+#. js-lingui-id: O3NGSN
+#: src/pages/real-estate/CustomerFormPage.tsx
+msgid "Add a new customer to the system"
+msgstr ""
 
 #. js-lingui-id: m3/V2n
 #: src/modules/action-menu/actions/record-actions/constants/WorkflowActionsConfig.tsx
@@ -638,6 +736,11 @@ msgstr "添加新"
 #: src/modules/object-record/record-table/components/RecordTableNoRecordGroupAddNew.tsx
 msgid "Add New"
 msgstr "添加新"
+
+#. js-lingui-id: OpIptY
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Add New Rule"
+msgstr ""
 
 #. js-lingui-id: erHjaG
 #: src/modules/workflow/workflow-diagram/components/WorkflowDiagramRightClickCommandMenu.tsx
@@ -775,6 +878,16 @@ msgstr "已添加 {beautifyPastDateRelative}"
 msgid "Added to blocklist"
 msgstr "已添加到拦截列表"
 
+#. js-lingui-id: Ra/HSD
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Additional information about the customer..."
+msgstr ""
+
+#. js-lingui-id: 4Cp2Bu
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Additional Notes"
+msgstr ""
+
 #. js-lingui-id: hW/fMg
 #: src/modules/settings/data-model/fields/forms/address/constants/DefaultSelectionAddressWithMessages.ts
 msgid "Address 1"
@@ -859,6 +972,8 @@ msgstr ""
 #: src/pages/settings/ai/SettingsAgentForm.tsx
 #: src/pages/settings/ai/SettingsAgentForm.tsx
 #: src/modules/workflow/workflow-steps/workflow-actions/ai-agent-action/hooks/useWorkflowAiAgentPermissionActions.ts
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
 msgid "Agent"
 msgstr "代理"
 
@@ -875,6 +990,16 @@ msgstr "代理未找到"
 #. js-lingui-id: 77hGcG
 #: src/modules/settings/roles/components/SettingsRolesList.tsx
 msgid "Agent roles"
+msgstr ""
+
+#. js-lingui-id: kObdkn
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Agent will be notified via email and in-app"
+msgstr ""
+
+#. js-lingui-id: pMJABf
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Agent:"
 msgstr ""
 
 #. js-lingui-id: 8Uv5e6
@@ -932,10 +1057,17 @@ msgstr ""
 msgid "AI Response Schema"
 msgstr "AI 响应架构"
 
+#. js-lingui-id: MSpmdK
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Algorithm:"
+msgstr ""
+
 #. js-lingui-id: N40H+G
 #: src/modules/settings/roles/role-permissions/object-level-permissions/field-permissions/components/SettingsRolePermissionsObjectLevelObjectFieldPermissionTableAllHeaderRow.tsx
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelUpdateFieldsValueForObject.tsx
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelSeeFieldsValueForObject.tsx
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
 #: src/modules/object-record/record-board/record-board-column/utils/getAggregateOperationShortLabel.ts
 #: src/modules/activities/timeline-activities/components/TimelineCard.tsx
 #: src/modules/activities/notes/components/NotesCard.tsx
@@ -952,6 +1084,11 @@ msgstr "全部 ({relationRecordsCount})"
 #: src/modules/settings/roles/role-permissions/permission-flags/components/SettingsRolePermissionsToolSection.tsx
 msgid "All Actions Access"
 msgstr "所有操作权限"
+
+#. js-lingui-id: Lw8/SA
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "All Agents"
+msgstr ""
 
 #. js-lingui-id: dJn2LR
 #: src/modules/settings/accounts/components/SettingsAccountsRowDropdownMenu.tsx
@@ -978,10 +1115,30 @@ msgstr "所有行"
 msgid "All Objects"
 msgstr "所有对象"
 
+#. js-lingui-id: Z9w/hz
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "All on track"
+msgstr ""
+
+#. js-lingui-id: P0NCDw
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "All Projects"
+msgstr ""
+
 #. js-lingui-id: Hm90t3
 #: src/modules/settings/roles/components/SettingsRolesList.tsx
 msgid "All roles"
 msgstr "所有角色"
+
+#. js-lingui-id: qwHj/3
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "All Status"
+msgstr ""
+
+#. js-lingui-id: SYU2tJ
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "All Teams"
+msgstr ""
 
 #. js-lingui-id: XuuWVF
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelObjectPicker.tsx
@@ -1062,6 +1219,16 @@ msgstr "允许上传文件和附件"
 #: src/modules/settings/security/components/SettingsSecurityAuthProvidersOptionsList.tsx
 msgid "Allow users to sign in with an email and password."
 msgstr "允许用户使用电子邮件和密码登录。"
+
+#. js-lingui-id: hehnjM
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Amount"
+msgstr ""
+
+#. js-lingui-id: xy7GSW
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Amount:"
+msgstr ""
 
 #. js-lingui-id: Vw8l6h
 #: src/modules/workflow/workflow-steps/workflow-actions/http-request-action/components/HttpRequestExecutionResult.tsx
@@ -1279,6 +1446,36 @@ msgstr ""
 msgid "Applications"
 msgstr "应用程序"
 
+#. js-lingui-id: 48Qm4L
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Applies to:"
+msgstr ""
+
+#. js-lingui-id: DB8zMK
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Apply"
+msgstr ""
+
+#. js-lingui-id: Z7ZXbT
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Approve"
+msgstr ""
+
+#. js-lingui-id: CfJArU
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Approve Selected"
+msgstr ""
+
+#. js-lingui-id: 7kb4LU
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Approved"
+msgstr ""
+
 #. js-lingui-id: UDlRcx
 #: src/modules/settings/security/components/approvedAccessDomains/SettingsSecurityApprovedAccessDomainValidationEffect.tsx
 msgid "Approved access domain validated"
@@ -1328,6 +1525,18 @@ msgstr ""
 #: src/modules/spreadsheet-import/provider/components/SpreadsheetImport.tsx
 msgid "Are you sure? Your current information will not be saved."
 msgstr "确定吗？您当前的信息将不会被保存。"
+
+#. js-lingui-id: ofldSs
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Area"
+msgstr ""
+
+#. js-lingui-id: /Fvr4x
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Area:"
+msgstr ""
 
 #. js-lingui-id: cybVUo
 #: src/modules/settings/members/components/MemberInfosTab.tsx
@@ -1394,10 +1603,20 @@ msgstr "可分配给 API 密钥"
 msgid "Assignable to Workspace Members"
 msgstr ""
 
+#. js-lingui-id: lXGdbb
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Assigned"
+msgstr ""
+
 #. js-lingui-id: 7qh2Hx
 #: src/modules/settings/roles/role-assignment/components/SettingsRoleAssignmentTable.tsx
 msgid "Assigned {roleTargetDisplayName}"
 msgstr "分配了 {roleTargetDisplayName}"
+
+#. js-lingui-id: SGe1BR
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Assigned Agent"
+msgstr ""
 
 #. js-lingui-id: lxQ+5m
 #: src/modules/settings/roles/components/SettingsRolesTableHeader.tsx
@@ -1408,6 +1627,11 @@ msgstr "分配给"
 #: src/modules/settings/roles/role/components/SettingsRole.tsx
 msgid "Assignment"
 msgstr "分配"
+
+#. js-lingui-id: mXMAMb
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Assignment Rules"
+msgstr ""
 
 #. js-lingui-id: d/bvvp
 #: src/pages/settings/ai/SettingsAgentTurnDetail.tsx
@@ -1546,6 +1770,15 @@ msgstr "可用性"
 
 #. js-lingui-id: csDS2L
 #: src/modules/settings/data-model/new-object/components/SettingsAvailableStandardObjectsSection.tsx
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectsTable.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
 msgid "Available"
 msgstr "可用"
 
@@ -1555,12 +1788,33 @@ msgstr "可用"
 msgid "Average"
 msgstr "平均"
 
+#. js-lingui-id: YZFnMb
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Avg Days to Close:"
+msgstr ""
+
+#. js-lingui-id: X+6iDz
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Avg Response Time"
+msgstr ""
+
+#. js-lingui-id: pK9URz
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Avg:"
+msgstr ""
+
+#. js-lingui-id: ioG+xt
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Awaiting Payment"
+msgstr ""
+
 #. js-lingui-id: li9In6
 #: src/modules/command-menu/pages/page-layout/constants/settings/ChartConfigurationSettingLabels.ts
 msgid "Axis name"
 msgstr "轴名称"
 
 #. js-lingui-id: iH8pgl
+#: src/pages/real-estate/CustomerFormPage.tsx
 #: src/pages/onboarding/BookCall.tsx
 #: src/modules/spreadsheet-import/components/StepNavigationButton.tsx
 #: src/modules/auth/sign-in-up/components/internal/SignInUpTwoFactorAuthenticationVerification.tsx
@@ -1571,6 +1825,27 @@ msgstr "返回"
 #: src/pages/not-found/NotFound.tsx
 msgid "Back to content"
 msgstr "返回内容"
+
+#. js-lingui-id: kwMYyY
+#: src/pages/real-estate/DealDetailPage.tsx
+#: src/pages/real-estate/DealDetailPage.tsx
+msgid "Back to Deals"
+msgstr ""
+
+#. js-lingui-id: lRGUJi
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Back to Project"
+msgstr ""
+
+#. js-lingui-id: 2CTKOa
+#: src/pages/real-estate/ProjectDetailPage.tsx
+msgid "Back to Projects"
+msgstr ""
+
+#. js-lingui-id: D0swv1
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Balance Score:"
+msgstr ""
 
 #. js-lingui-id: NgFKo1
 #: src/modules/workflow/workflow-trigger/utils/cron-to-human/descriptors/getMonthsDescription.ts
@@ -1604,6 +1879,21 @@ msgstr "账单"
 #: src/modules/billing/components/SettingsBillingSubscriptionInfo.tsx
 msgid "Billing interval"
 msgstr "账单间隔"
+
+#. js-lingui-id: CJkEfx
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Block"
+msgstr ""
+
+#. js-lingui-id: 9mRTyg
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Block:"
+msgstr ""
 
 #. js-lingui-id: K1172m
 #: src/modules/settings/accounts/components/SettingsAccountsBlocklistSection.tsx
@@ -1639,6 +1929,11 @@ msgstr "两个"
 #: src/modules/workflow/workflow-steps/workflow-actions/ai-agent-action/components/WorkflowOutputSchemaBuilder.tsx
 msgid "Brief explanation of this output field"
 msgstr "对这个输出字段的简要解释"
+
+#. js-lingui-id: j72KJ/
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Budget Range"
+msgstr ""
 
 #. js-lingui-id: VkwIHa
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -1740,6 +2035,11 @@ msgstr "日历视图"
 msgid "Calendars"
 msgstr "日历"
 
+#. js-lingui-id: +ESaYF
+#: src/modules/real-estate/components/NotificationsPanel.tsx
+msgid "Call Now"
+msgstr ""
+
 #. js-lingui-id: msssZq
 #: src/modules/settings/data-model/objects/forms/components/SettingsDataModelObjectAboutForm.tsx
 msgid "Can't change API names for standard objects"
@@ -1760,6 +2060,9 @@ msgstr "无法扫描？复制"
 #: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/MatchColumnsStep.tsx
 #: src/modules/spreadsheet-import/provider/components/SpreadsheetImport.tsx
 #: src/modules/settings/components/SaveAndCancelButtons/CancelButton.tsx
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
 #: src/modules/action-menu/actions/record-actions/constants/DashboardActionsConfig.tsx
 msgid "Cancel"
 msgstr "取消"
@@ -1859,6 +2162,11 @@ msgstr "更改密码"
 #: src/pages/onboarding/internal/ChooseYourPlanContent.tsx
 msgid "Change Plan"
 msgstr "更改计划"
+
+#. js-lingui-id: dghb8Y
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Change Stage"
+msgstr ""
 
 #. js-lingui-id: EYSFEW
 #: src/pages/settings/domains/SettingsDomain.tsx
@@ -2095,6 +2403,59 @@ msgstr "逗号和点 - {commasAndDotExample}"
 msgid "Comment"
 msgstr ""
 
+#. js-lingui-id: +qgAQ8
+#: src/modules/real-estate/components/DealDetail.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Commission"
+msgstr ""
+
+#. js-lingui-id: KAh/Q7
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Commission Approval"
+msgstr ""
+
+#. js-lingui-id: ESdIji
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Commission Breakdown"
+msgstr ""
+
+#. js-lingui-id: Cel28r
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Commission by Agent (This Month)"
+msgstr ""
+
+#. js-lingui-id: Axdx/t
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Commission rate mismatch"
+msgstr ""
+
+#. js-lingui-id: 5IFBml
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Commission Reports"
+msgstr ""
+
+#. js-lingui-id: 9qLVnR
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Commission Trend (Last 6 Months)"
+msgstr ""
+
+#. js-lingui-id: AHsz1w
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Commission:"
+msgstr ""
+
+#. js-lingui-id: Yr4Bbm
+#: src/modules/real-estate/components/CommissionReports.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "commissions"
+msgstr ""
+
+#. js-lingui-id: R27TOY
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Commissions"
+msgstr ""
+
 #. js-lingui-id: NM9bMd
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutContent.tsx
 msgid "Compact view"
@@ -2104,6 +2465,11 @@ msgstr "紧凑视图"
 #: src/modules/action-menu/actions/record-actions/constants/DefaultRecordActionsConfig.tsx
 msgid "Companies"
 msgstr "公司"
+
+#. js-lingui-id: OOlWkx
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Complete the booking form"
+msgstr ""
 
 #. js-lingui-id: 2PsTzL
 #: src/modules/workflow/workflow-diagram/utils/generateNodesAndEdgesForIteratorNode.ts
@@ -2120,6 +2486,11 @@ msgstr "已完成"
 #: src/pages/settings/admin-panel/SettingsAdminQueueDetail.tsx
 msgid "Completed jobs kept for {completedDuration}, failed jobs kept for {failedDuration} (max {maxCount} each)"
 msgstr "已完成的任务保留{completedDuration}，失败的任务保留{failedDuration}（每个最多{maxCount}）"
+
+#. js-lingui-id: kPZOR2
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Completed This Month"
+msgstr ""
 
 #. js-lingui-id: 0CuAor
 #: src/modules/workflow/workflow-steps/workflow-actions/filter-action/components/WorkflowEditActionFilterBody.tsx
@@ -2158,6 +2529,11 @@ msgstr "配置和自定义日历偏好。"
 #: src/pages/settings/domains/SettingsDomains.tsx
 msgid "Configure and verify domains for emailing from this workspace."
 msgstr "配置并验证此工作区的电子邮件发送域。"
+
+#. js-lingui-id: RQwHMD
+#: src/pages/real-estate/AssignmentRulesPage.tsx
+msgid "Configure automatic lead distribution rules and priorities"
+msgstr ""
 
 #. js-lingui-id: 6MDr1S
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
@@ -2234,6 +2610,11 @@ msgstr "确认删除 {roleName} 角色？此操作无法撤销。所有成员将
 msgid "Confirm downgrade"
 msgstr "确认降级"
 
+#. js-lingui-id: dlzSET
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Confirm Reservation"
+msgstr ""
+
 #. js-lingui-id: 28b8wO
 #: src/modules/settings/members/components/MemberPermissionsTab.tsx
 msgid "Confirm role update"
@@ -2300,6 +2681,11 @@ msgstr ""
 msgid "Contact auto-creation"
 msgstr "联系人自动创建"
 
+#. js-lingui-id: xDRw4L
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "Contacted"
+msgstr ""
+
 #. js-lingui-id: /5mghO
 #: src/modules/object-record/object-filter-dropdown/utils/getOperandLabel.ts
 msgid "Contains"
@@ -2344,6 +2730,11 @@ msgstr "继续使用 Microsoft"
 #: src/modules/settings/roles/role-settings/components/SettingsRoleApplicability.tsx
 msgid "Control which types of entities this role can be assigned to"
 msgstr "控制此角色可分配的实体类型"
+
+#. js-lingui-id: RUdLIE
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Conversion Rate:"
+msgstr ""
 
 #. js-lingui-id: FxVG/l
 #: src/hooks/useCopyToClipboard.tsx
@@ -2512,6 +2903,11 @@ msgstr "创建 API 密钥"
 msgid "Create custom view"
 msgstr "创建自定义视图"
 
+#. js-lingui-id: oJxnEs
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Create Customer"
+msgstr ""
+
 #. js-lingui-id: QWedEU
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownCalendarFieldsContent.tsx
 msgid "Create date field"
@@ -2601,9 +2997,20 @@ msgstr "创建您的工作区"
 msgid "Create, edit, and delete workspace views"
 msgstr "创建、编辑和删除工作空间视图"
 
+#. js-lingui-id: d+F6q9
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Created"
+msgstr ""
+
 #. js-lingui-id: 4fBuqE
 #: src/modules/command-menu/components/CommandMenuRecordInfo.tsx
 msgid "Created {beautifiedCreatedAt}"
+msgstr ""
+
+#. js-lingui-id: jd2xdp
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Created Date"
 msgstr ""
 
 #. js-lingui-id: fR16ki
@@ -2710,6 +3117,21 @@ msgstr "自定义域已更新"
 msgid "Custom objects"
 msgstr "自定义对象"
 
+#. js-lingui-id: UsVf1t
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Customer ID"
+msgstr ""
+
+#. js-lingui-id: EBcSB5
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Customer Information"
+msgstr ""
+
+#. js-lingui-id: NihQNk
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Customers"
+msgstr ""
+
 #. js-lingui-id: qt+EaC
 #: src/modules/settings/data-model/object-details/components/tabs/ObjectFields.tsx
 msgid "Customise the fields available in the {objectLabelSingular} views."
@@ -2755,6 +3177,11 @@ msgstr "自定义工作区安全"
 msgid "Czech"
 msgstr "捷克语"
 
+#. js-lingui-id: dsH9kw
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "d left"
+msgstr ""
+
 #. js-lingui-id: Zz6Cxn
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
 #: src/pages/settings/data-model/SettingsObjectFieldEdit.tsx
@@ -2778,6 +3205,12 @@ msgstr "丹麦语"
 #: src/modules/ui/navigation/navigation-drawer/components/MultiWorkspaceDropdown/internal/MultiWorkspaceDropdownThemesComponents.tsx
 msgid "Dark"
 msgstr "深色"
+
+#. js-lingui-id: 7p5kLi
+#: src/pages/real-estate/DashboardPage.tsx
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Dashboard"
+msgstr ""
 
 #. js-lingui-id: w6iIMm
 #: src/modules/action-menu/actions/record-actions/constants/DefaultRecordActionsConfig.tsx
@@ -2919,6 +3352,8 @@ msgstr "星期几"
 
 #. js-lingui-id: J/Upwb
 #: src/utils/date-utils.ts
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
 #: src/modules/command-menu/pages/page-layout/utils/getDateGranularityPluralLabel.ts
 #: src/modules/command-menu/pages/page-layout/utils/getDateGranularityPluralLabel.ts
 msgid "days"
@@ -2971,6 +3406,70 @@ msgstr "停用工作流"
 #: src/modules/settings/data-model/fields/forms/components/text/constants/TextDataModelSelectOptions.ts
 msgid "Deactivated"
 msgstr "已停用"
+
+#. js-lingui-id: 3jX0AP
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Deal"
+msgstr ""
+
+#. js-lingui-id: rZzTat
+#: src/pages/real-estate/DealDetailPage.tsx
+msgid "Deal not found"
+msgstr ""
+
+#. js-lingui-id: VdlpHk
+#: src/pages/real-estate/DealKanbanPage.tsx
+msgid "Deal Pipeline"
+msgstr ""
+
+#. js-lingui-id: tWuHmV
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Deal Success Rate"
+msgstr ""
+
+#. js-lingui-id: Nlv6u9
+#: src/modules/real-estate/components/DealDetail.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Deal Value"
+msgstr ""
+
+#. js-lingui-id: SjtHHu
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Deal value incorrect"
+msgstr ""
+
+#. js-lingui-id: /ThG4Y
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Deal Value:"
+msgstr ""
+
+#. js-lingui-id: G/fm+W
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "deals"
+msgstr ""
+
+#. js-lingui-id: ZlGycp
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Deals"
+msgstr ""
+
+#. js-lingui-id: tIIxWQ
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Deals Closed"
+msgstr ""
+
+#. js-lingui-id: pVW5Mu
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "deals in progress"
+msgstr ""
+
+#. js-lingui-id: tibqbA
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Dec 2025 Overview"
+msgstr ""
 
 #. js-lingui-id: dPDEh6
 #: src/modules/settings/data-model/fields/forms/address/components/SettingsDataModelFieldAddressForm.tsx
@@ -3227,6 +3726,19 @@ msgstr "已删除记录"
 msgid "Deleting this method will remove it permanently from your account."
 msgstr "删除此方法将永久从您的账户中移除。"
 
+#. js-lingui-id: kj3M8S
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Deposit"
+msgstr ""
+
+#. js-lingui-id: inVGGF
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Deposit Paid"
+msgstr ""
+
 #. js-lingui-id: Cko536
 #: src/modules/workflow/workflow-steps/workflow-actions/find-records-action/components/WorkflowFindRecordsSorts.tsx
 #: src/modules/object-record/object-sort-dropdown/components/ObjectSortDropdownButton.tsx
@@ -3259,6 +3771,11 @@ msgstr "描述"
 msgid "Description of the application"
 msgstr "应用程序描述"
 
+#. js-lingui-id: vYgeDk
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Deselect All"
+msgstr ""
+
 #. js-lingui-id: +ow7t4
 #: src/modules/settings/roles/role-permissions/object-level-permissions/utils/objectPermissionKeyToHumanReadableText.ts
 msgid "destroy"
@@ -3284,6 +3801,16 @@ msgstr "销毁记录"
 #: src/modules/settings/roles/role-permissions/objects-permissions/components/SettingsRolePermissionsObjectsSection.tsx
 msgid "Destroy Records on All Objects"
 msgstr "销毁所有对象上的记录"
+
+#. js-lingui-id: URmyfc
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Details"
+msgstr ""
+
+#. js-lingui-id: cO9+2L
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Disable"
+msgstr ""
 
 #. js-lingui-id: zAg2B9
 #: src/modules/action-menu/actions/record-actions/constants/WorkflowActionsConfig.tsx
@@ -3315,6 +3842,11 @@ msgstr "显示格式"
 #: src/modules/settings/data-model/fields/forms/components/text/SettingsDataModelFieldTextForm.tsx
 msgid "Display text on multiple lines"
 msgstr "在多行上展示文本"
+
+#. js-lingui-id: sKaCXP
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "District 9, District 2, Vung Tau"
+msgstr ""
 
 #. js-lingui-id: RDL+lZ
 #: src/modules/settings/emailing-domains/components/SettingsEmailingDomainVerificationRecords.tsx
@@ -3498,6 +4030,12 @@ msgstr "编辑 {objectLabelPlural}"
 msgid "Edit Account"
 msgstr "编辑账户"
 
+#. js-lingui-id: +jEDxY
+#: src/pages/real-estate/CustomerFormPage.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Edit Customer"
+msgstr ""
+
 #. js-lingui-id: GpnfNN
 #: src/modules/action-menu/actions/record-actions/constants/DashboardActionsConfig.tsx
 msgid "Edit Dashboard"
@@ -3507,6 +4045,11 @@ msgstr "编辑仪表板"
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useSettingsRolePermissionFlagConfig.ts
 msgid "Edit data structure and fields"
 msgstr "编辑数据结构和字段"
+
+#. js-lingui-id: cHP3MP
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Edit Deal"
+msgstr ""
 
 #. js-lingui-id: 9QCQIc
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownHiddenRecordGroupsContent.tsx
@@ -3549,6 +4092,11 @@ msgstr ""
 msgid "Edit Records on All Objects"
 msgstr "编辑所有对象上的记录"
 
+#. js-lingui-id: vfzxmF
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Edit Rule"
+msgstr ""
+
 #. js-lingui-id: 6o1M/Q
 #: src/pages/settings/domains/SettingsDomains.tsx
 msgid "Edit your subdomain name or set a custom domain."
@@ -3576,6 +4124,11 @@ msgstr "第八"
 #: src/modules/settings/admin-panel/components/SettingsAdminGeneral.tsx
 msgid "Email"
 msgstr "电子邮件"
+
+#. js-lingui-id: ybBmjS
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Email *"
+msgstr ""
 
 #. js-lingui-id: hzKQCy
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
@@ -3637,6 +4190,11 @@ msgstr "电子邮件验证链接已重发！"
 #: src/modules/auth/components/VerifyEmailEffect.tsx
 msgid "Email verified."
 msgstr "电子邮件已验证。"
+
+#. js-lingui-id: BopPj6
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "email@example.com"
+msgstr ""
 
 #. js-lingui-id: VI2hiF
 #: src/modules/settings/accounts/components/SettingsAccountsBlocklistTable.tsx
@@ -3726,6 +4284,11 @@ msgstr "清空收件箱"
 msgid "Empty Object"
 msgstr "空对象"
 
+#. js-lingui-id: PaQ3df
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Enable"
+msgstr ""
+
 #. js-lingui-id: q11Dk2
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useSettingsRolePermissionFlagConfig.ts
 msgid "Enable bypass options"
@@ -3786,6 +4349,11 @@ msgstr "输入一个项目"
 #: src/modules/workflow/workflow-steps/workflow-actions/iterator-action/components/WorkflowEditActionIterator.tsx
 msgid "Enter array of items or variable expression"
 msgstr "输入项目数组或变量表达式"
+
+#. js-lingui-id: S2M5mH
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Enter customer name"
+msgstr ""
 
 #. js-lingui-id: 9/30HU
 #: src/modules/settings/data-model/fields/forms/date/utils/getDisplayFormatSelectDescription.tsx
@@ -4111,6 +4679,11 @@ msgstr "排除非专业电子邮件"
 msgid "Exclude the following people and domains from my email sync. Internal conversations will not be imported"
 msgstr "从我的电子邮件同步中排除以下人员和域名。内部对话将不会被导入"
 
+#. js-lingui-id: 4YP+0y
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Executive Dashboard"
+msgstr ""
+
 #. js-lingui-id: fV7V51
 #: src/pages/settings/data-model/SettingsObjects.tsx
 msgid "Existing objects"
@@ -4179,6 +4752,7 @@ msgid "Expired"
 msgstr "已过期"
 
 #. js-lingui-id: KnN1Tu
+#: src/pages/real-estate/PropertyDetailPage.tsx
 #: src/modules/settings/roles/role-assignment/components/SettingsRoleAssignmentTable.tsx
 msgid "Expires"
 msgstr "过期"
@@ -4194,6 +4768,7 @@ msgid "Expires in {dateDiff}"
 msgstr "在 {dateDiff} 之内过期"
 
 #. js-lingui-id: GS+Mus
+#: src/modules/real-estate/components/CommissionReports.tsx
 #: src/modules/object-record/record-index/export/hooks/useRecordIndexExportRecords.ts
 #: src/modules/action-menu/mock/action-menu-actions.mock.tsx
 #: src/modules/action-menu/mock/action-menu-actions.mock.tsx
@@ -4209,6 +4784,7 @@ msgstr "导出"
 
 #. js-lingui-id: 2KAI4N
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useActionRolePermissionFlagConfig.ts
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
 msgid "Export CSV"
 msgstr "导出CSV"
 
@@ -4289,6 +4865,11 @@ msgstr "表达式"
 #: src/modules/billing/components/SettingsBillingCreditsSection.tsx
 msgid "Extra Credits Used"
 msgstr "额外消费学分"
+
+#. js-lingui-id: hDQb8e
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Facebook Ads"
+msgstr ""
 
 #. js-lingui-id: 7Bj3x9
 #: src/pages/settings/emailing-domains/utils/getEmailingDomainStatusText.ts
@@ -4489,6 +5070,11 @@ msgstr "第五"
 msgid "File \"{fileName}\" exceeds {maxUploadSize}"
 msgstr "文件 \"{fileName}\" 超过 {maxUploadSize}"
 
+#. js-lingui-id: sER+bs
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Files"
+msgstr ""
+
 #. js-lingui-id: o7J4JM
 #: src/pages/settings/data-model/SettingsObjectTable.tsx
 #: src/pages/settings/data-model/SettingsObjectFieldTable.tsx
@@ -4503,10 +5089,26 @@ msgstr "文件 \"{fileName}\" 超过 {maxUploadSize}"
 msgid "Filter"
 msgstr "过滤"
 
+#. js-lingui-id: QVItqh
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Filter by status:"
+msgstr ""
+
 #. js-lingui-id: cSev+j
 #: src/modules/settings/developers/components/SettingsDevelopersWebhookForm.tsx
 msgid "Filters"
 msgstr "过滤器"
+
+#. js-lingui-id: H1Ggii
+#: src/pages/real-estate/CommissionApprovalPage.tsx
+msgid "Finance Team - Review and approve commissions"
+msgstr ""
+
+#. js-lingui-id: pWJv6B
+#: src/pages/real-estate/PropertyFilterPage.tsx
+msgid "Find the perfect property with advanced filters"
+msgstr ""
 
 #. js-lingui-id: JmZ/+d
 #: src/pages/onboarding/InviteTeam.tsx
@@ -4574,6 +5176,11 @@ msgstr "流程"
 msgid "Folders"
 msgstr "文件夹"
 
+#. js-lingui-id: y6sq5j
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Following"
+msgstr ""
+
 #. js-lingui-id: glx6on
 #: src/modules/auth/sign-in-up/components/SignInUpWorkspaceScopeForm.tsx
 msgid "Forgot your password?"
@@ -4598,6 +5205,11 @@ msgstr "格式：[Minute] [Hour] [Day of Month] [Month] [Day of Week]"
 #: src/pages/settings/profile/appearance/components/SettingsExperience.tsx
 msgid "Formats"
 msgstr "格式"
+
+#. js-lingui-id: FZ86GH
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "found"
+msgstr ""
 
 #. js-lingui-id: 1hxId5
 #: src/modules/workflow/workflow-trigger/utils/cron-to-human/descriptors/getDayOfWeekDescription.ts
@@ -4624,6 +5236,11 @@ msgstr "从 {startDay} 到 {endDay}"
 #: src/pages/onboarding/internal/ChooseYourPlanContent.tsx
 msgid "Full access"
 msgstr "完全访问"
+
+#. js-lingui-id: 2xcL6v
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Full Name *"
+msgstr ""
 
 #. js-lingui-id: tkr79G
 #: src/utils/title-utils.ts
@@ -4724,11 +5341,21 @@ msgstr "前往任务"
 msgid "Go to Workflows"
 msgstr "去工作流"
 
+#. js-lingui-id: OEEQKT
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Good"
+msgstr ""
+
 #. js-lingui-id: eoe8BR
 #: src/modules/settings/security/components/SettingsSecurityAuthProvidersOptionsList.tsx
 #: src/modules/settings/security/components/SettingsSecurityAuthBypassOptionsList.tsx
 msgid "Google"
 msgstr "谷歌"
+
+#. js-lingui-id: bdsj2R
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Google Ads"
+msgstr ""
 
 #. js-lingui-id: 6eo66Q
 #: src/modules/settings/workspace/components/ToggleImpersonate.tsx
@@ -4783,6 +5410,21 @@ msgstr "分组依据"
 #: src/modules/object-record/record-group/components/RecordGroupReorderConfirmationModal.tsx
 msgid "Group sorting"
 msgstr "分组排序"
+
+#. js-lingui-id: gaFUUl
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Growth Rate"
+msgstr ""
+
+#. js-lingui-id: sxbsRQ
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "h left"
+msgstr ""
+
+#. js-lingui-id: bo8lug
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "h overdue"
+msgstr ""
 
 #. js-lingui-id: eKiSkN
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -4976,6 +5618,11 @@ msgstr "身份提供商元数据 XML"
 msgid "If this is unexpected, please verify your settings."
 msgstr "如果这出乎预料，请核对您的设置。"
 
+#. js-lingui-id: KtDvT0
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "If you fail to complete these steps within 24 hours, the reservation will be automatically released."
+msgstr ""
+
 #. js-lingui-id: j843N3
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
 msgid "If you’ve lost this key, you can regenerate it, but be aware that any script using this key will need to be updated. Please type\"{confirmationValue}\" to confirm."
@@ -5084,6 +5731,11 @@ msgstr "导入记录"
 msgid "Import workflows"
 msgstr "导入工作流"
 
+#. js-lingui-id: WALK/f
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Important Information"
+msgstr ""
+
 #. js-lingui-id: RqSvT0
 #: src/modules/settings/accounts/components/SettingsAccountsConnectedAccountsRowRightContainer.tsx
 msgid "Importing"
@@ -5102,6 +5754,7 @@ msgstr "在 {dateDiff} 内"
 #. js-lingui-id: NoNwIX
 #: src/pages/settings/data-model/SettingsObjectFieldTable.tsx
 #: src/modules/settings/domains/components/SettingsWorkspaceDomainCard.tsx
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
 msgid "Inactive"
 msgstr "未激活"
 
@@ -5269,6 +5922,11 @@ msgstr "无效的验证码。请再试一次。"
 #: src/modules/auth/sign-in-up/hooks/useHandleResetPassword.ts
 msgid "Invalid workspace"
 msgstr "无效的工作空间"
+
+#. js-lingui-id: ZrsGjm
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Inventory"
+msgstr ""
 
 #. js-lingui-id: ZR1dJ4
 #: src/modules/ui/navigation/navigation-drawer/components/MultiWorkspaceDropdown/internal/components/WorkspacesForSignUp.tsx
@@ -5549,10 +6207,20 @@ msgstr "最近4小时（最旧 → 最新）"
 msgid "Last 7 Days (oldest → newest)"
 msgstr "最近7天（最旧 → 最新）"
 
+#. js-lingui-id: v6C37A
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "Last Contact"
+msgstr ""
+
 #. js-lingui-id: P4FGJG
 #: src/modules/activities/emails/components/EmailThreadHeader.tsx
 msgid "Last message {lastMessageSentAtFormatted}"
 msgstr "最后信息 {lastMessageSentAtFormatted}"
+
+#. js-lingui-id: +Q+hTF
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Last Month"
+msgstr ""
 
 #. js-lingui-id: 1ZaQUH
 #: src/modules/settings/members/components/MemberNameFields.tsx
@@ -5575,6 +6243,11 @@ msgstr "上次付款失败。请联系您的管理员。"
 #: src/modules/information-banner/components/billing/InformationBannerFailPaymentInfo.tsx
 msgid "Last payment failed. Please update your billing details."
 msgstr "上次付款失败。请更新您的账单明细。"
+
+#. js-lingui-id: K7P0jz
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Last Updated"
+msgstr ""
 
 #. js-lingui-id: wL3cK8
 #: src/modules/object-record/record-board/record-board-column/utils/getAggregateOperationShortLabel.ts
@@ -5607,6 +6280,31 @@ msgstr "布局"
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useSettingsRolePermissionFlagConfig.ts
 msgid "Layouts"
 msgstr "布局"
+
+#. js-lingui-id: tNT/Ai
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Lead Distribution"
+msgstr ""
+
+#. js-lingui-id: FdwFWw
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Lead Source"
+msgstr ""
+
+#. js-lingui-id: xb7J2t
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Lead: Nguyen Van X → Currently: Luis Phan"
+msgstr ""
+
+#. js-lingui-id: qjSQAK
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "leads"
+msgstr ""
+
+#. js-lingui-id: O41EZw
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Leads Today"
+msgstr ""
 
 #. js-lingui-id: 8QyoLb
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
@@ -5680,6 +6378,11 @@ msgstr ""
 msgid "Link copied to clipboard"
 msgstr "链接已复制到剪贴板"
 
+#. js-lingui-id: uzEeb4
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Linked Property"
+msgstr ""
+
 #. js-lingui-id: 82kQhK
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -5728,6 +6431,11 @@ msgstr "加载保留配置..."
 msgid "Loading..."
 msgstr "加载中……"
 
+#. js-lingui-id: wJijgU
+#: src/modules/real-estate/components/ProjectsTable.tsx
+msgid "Location"
+msgstr ""
+
 #. js-lingui-id: FgAxTj
 #: src/pages/onboarding/internal/ChooseYourPlanContent.tsx
 #: src/modules/ui/navigation/navigation-drawer/components/MultiWorkspaceDropdown/internal/MultiWorkspaceDropdownDefaultComponents.tsx
@@ -5770,6 +6478,17 @@ msgstr "查询用户以假装他们。"
 #: src/modules/workflow/workflow-diagram/utils/generateNodesAndEdgesForIteratorNode.ts
 msgid "loop"
 msgstr "循环"
+
+#. js-lingui-id: QIAcg0
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "lost"
+msgstr ""
+
+#. js-lingui-id: XbuiBx
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Lost"
+msgstr ""
 
 #. js-lingui-id: MsaCqr
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
@@ -5847,6 +6566,31 @@ msgstr "管理工作流"
 msgid "Manage your internet accounts."
 msgstr "管理您的互联网账户。"
 
+#. js-lingui-id: GF5szl
+#: src/pages/real-estate/MyLeadsPage.tsx
+msgid "Manage your leads and track SLA compliance"
+msgstr ""
+
+#. js-lingui-id: T9EjTw
+#: src/pages/real-estate/DealKanbanPage.tsx
+msgid "Manage your sales opportunities"
+msgstr ""
+
+#. js-lingui-id: JOdLmz
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Manual Override"
+msgstr ""
+
+#. js-lingui-id: Al8Mam
+#: src/modules/real-estate/components/NotificationsPanel.tsx
+msgid "Mark All Read"
+msgstr ""
+
+#. js-lingui-id: 218Agm
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Master Plan"
+msgstr ""
+
 #. js-lingui-id: gDLior
 #: src/modules/spreadsheet-import/steps/components/SpreadsheetImportStepperContainer.tsx
 msgid "Match Columns"
@@ -5859,15 +6603,30 @@ msgstr "匹配列"
 msgid "Max"
 msgstr "最大"
 
+#. js-lingui-id: M88WZO
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Max Area (m²)"
+msgstr ""
+
 #. js-lingui-id: HFjNu6
 #: src/modules/spreadsheet-import/steps/components/UploadStep/components/DropZone.tsx
 msgid "Max import capacity: {formatSpreadsheetMaxRecordImportCapacity} records. Otherwise, consider splitting your file or using the API."
 msgstr "最大导入容量：{formatSpreadsheetMaxRecordImportCapacity} 记录。否则，请考虑拆分您的文件或使用API。"
 
+#. js-lingui-id: 5+KxTU
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Max Price (VND)"
+msgstr ""
+
 #. js-lingui-id: 2ICF9k
 #: src/modules/command-menu/pages/page-layout/constants/settings/ChartConfigurationSettingLabels.ts
 msgid "Max range"
 msgstr "最大范围"
+
+#. js-lingui-id: mOFgdC
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Maximum"
+msgstr ""
 
 #. js-lingui-id: DBiUDH
 #: src/modules/settings/data-model/fields/forms/components/SettingsDataModelFieldMaxValuesForm.tsx
@@ -6016,10 +6775,25 @@ msgstr "微软"
 msgid "Min"
 msgstr "最小"
 
+#. js-lingui-id: njeBdn
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Min Area (m²)"
+msgstr ""
+
+#. js-lingui-id: 0HAcFL
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Min Price (VND)"
+msgstr ""
+
 #. js-lingui-id: JBisyL
 #: src/modules/command-menu/pages/page-layout/constants/settings/ChartConfigurationSettingLabels.ts
 msgid "Min range"
 msgstr "最小范围"
+
+#. js-lingui-id: CW11B+
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Minimum"
+msgstr ""
 
 #. js-lingui-id: G6wJK8
 #: src/modules/workflow/workflow-trigger/components/WorkflowEditTriggerCronForm.tsx
@@ -6036,10 +6810,25 @@ msgstr "分钟"
 msgid "Minutes between triggers"
 msgstr "触发之间的分钟数"
 
+#. js-lingui-id: /oVzHk
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Missing documentation"
+msgstr ""
+
 #. js-lingui-id: hty0d5
 #: src/pages/settings/profile/appearance/components/DateTimeSettingsCalendarStartDaySelect.tsx
 msgid "Monday"
 msgstr "星期一"
+
+#. js-lingui-id: j0uaMA
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Monitor"
+msgstr ""
+
+#. js-lingui-id: AvZkhk
+#: src/pages/real-estate/LeadDistributionPage.tsx
+msgid "Monitor lead allocation and SLA compliance across sales team"
+msgstr ""
 
 #. js-lingui-id: 8g3Cgz
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminConnectedAccountHealthStatus.tsx
@@ -6127,6 +6916,22 @@ msgstr "必须是一个包含有效 URL 和标签的对象数组（格式：'[{\
 msgid "must be an array of valid emails"
 msgstr "必须是有效电子邮件的数组"
 
+#. js-lingui-id: vdARnw
+#: src/pages/real-estate/CommissionsPage.tsx
+msgid "My Commissions"
+msgstr ""
+
+#. js-lingui-id: CUIROk
+#: src/pages/real-estate/MyLeadsPage.tsx
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "My Leads"
+msgstr ""
+
+#. js-lingui-id: dr7Shy
+#: src/pages/real-estate/SalesDashboardPage.tsx
+msgid "My Sales Dashboard"
+msgstr ""
+
 #. js-lingui-id: XTGSZU
 #: src/modules/views/view-picker/components/ViewPickerListContent.tsx
 msgid "My unlisted views"
@@ -6162,6 +6967,7 @@ msgstr "我的未列出的视图"
 #: src/modules/settings/developers/components/SettingsApiKeysTable.tsx
 #: src/modules/settings/admin-panel/components/SettingsAdminWorkspaceContent.tsx
 #: src/modules/settings/admin-panel/components/SettingsAdminGeneral.tsx
+#: src/modules/real-estate/components/ProjectsTable.tsx
 msgid "Name"
 msgstr "名称"
 
@@ -6241,6 +7047,11 @@ msgstr "导航到上一个版本"
 msgid "Navigate to previous workflow"
 msgstr "导航到上一个工作流"
 
+#. js-lingui-id: LIA6jy
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Negotiation"
+msgstr ""
+
 #. js-lingui-id: qqeAJM
 #: src/modules/settings/developers/utils/formatExpiration.ts
 msgid "Never"
@@ -6254,6 +7065,8 @@ msgstr "永不过期"
 #. js-lingui-id: isRobC
 #: src/pages/settings/data-model/SettingsNewObject.tsx
 #: src/modules/settings/developers/components/SettingsDevelopersWebhookForm.tsx
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/DealKanban.tsx
 msgid "New"
 msgstr "新"
 
@@ -6291,6 +7104,13 @@ msgstr "新批准访问域"
 #: src/modules/ai/components/AIChatThreadsList.tsx
 msgid "New chat"
 msgstr "新聊天"
+
+#. js-lingui-id: cJhylo
+#: src/pages/real-estate/DealKanbanPage.tsx
+#: src/pages/real-estate/CustomerFormPage.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "New Customer"
+msgstr ""
 
 #. js-lingui-id: wqoYqp
 #: src/pages/settings/emailing-domains/SettingsNewEmailingDomain.tsx
@@ -6384,6 +7204,11 @@ msgstr "不"
 msgid "No {fieldLabel}"
 msgstr "无 {fieldLabel}"
 
+#. js-lingui-id: H1svFz
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "No activities yet"
+msgstr ""
+
 #. js-lingui-id: f9b1sj
 #: src/modules/settings/roles/role-assignment/components/SettingsRoleAssignmentTable.tsx
 msgid "No agents assigned"
@@ -6427,6 +7252,11 @@ msgstr "未检测到变化"
 #. js-lingui-id: wgUPZ1
 #: src/pages/settings/ai/SettingsAgentTurnDetail.tsx
 msgid "No comment"
+msgstr ""
+
+#. js-lingui-id: 1cmchq
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "No commissions found with status:"
 msgstr ""
 
 #. js-lingui-id: YFLMyY
@@ -6474,6 +7304,12 @@ msgstr "未找到数据"
 #: src/modules/views/view-picker/components/ViewPickerContentCreateMode.tsx
 msgid "No Date field"
 msgstr "无日期字段"
+
+#. js-lingui-id: AOnwB3
+#. placeholder {0}: stage.label.toLowerCase()
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "No deals in {0}"
+msgstr ""
 
 #. js-lingui-id: P4KXUa
 #: src/modules/object-record/record-table/empty-state/components/RecordTableEmptyStateSoftDelete.tsx
@@ -6535,6 +7371,11 @@ msgstr "没有剩余的免费工作流执行次数。结束试用期并激活您
 msgid "No free workflow executions left. Please contact your admin."
 msgstr "无免费工作流程执行次数。请联系您的管理员。"
 
+#. js-lingui-id: PYx623
+#: src/modules/real-estate/components/PropertyGallery.tsx
+msgid "No images available"
+msgstr ""
+
 #. js-lingui-id: gIrKyO
 #: src/pages/settings/ai/components/SettingsAgentLogsTab.tsx
 msgid "No input"
@@ -6560,6 +7401,11 @@ msgstr "重试任务失败{errorDetails}"
 #: src/modules/settings/admin-panel/components/SettingsAdminVersionContainer.tsx
 msgid "No latest version found"
 msgstr "找不到最新版本"
+
+#. js-lingui-id: TlCnp2
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "No leads found with status:"
+msgstr ""
 
 #. js-lingui-id: 5sf2dF
 #: src/pages/settings/ai/components/SettingsAgentLogsTab.tsx
@@ -6617,6 +7463,11 @@ msgstr "未找到付款方式。请更新您的账单明细。"
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelSection.tsx
 msgid "No permissions have been set for individual objects."
 msgstr "尚未为个人对象设置权限。"
+
+#. js-lingui-id: qN19Y/
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "No properties match your search criteria"
+msgstr ""
 
 #. js-lingui-id: ePgApM
 #: src/modules/workflow/workflow-trigger/components/WorkflowEditTriggerManual.tsx
@@ -6743,9 +7594,16 @@ msgid "Not synced"
 msgstr "未同步"
 
 #. js-lingui-id: 1DBGsz
+#: src/modules/real-estate/components/DealDetail.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
 #: src/modules/action-menu/actions/record-actions/constants/DefaultRecordActionsConfig.tsx
 msgid "Notes"
 msgstr "备注"
+
+#. js-lingui-id: iDNBZe
+#: src/modules/real-estate/components/NotificationsPanel.tsx
+msgid "Notifications"
+msgstr ""
 
 #. js-lingui-id: YwzE9K
 #: src/utils/date-utils.ts
@@ -6848,6 +7706,7 @@ msgstr "由应用程序创建的对象"
 
 #. js-lingui-id: BwJKBw
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminQueueJobsTable.tsx
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
 msgid "of"
 msgstr "的"
 
@@ -6900,6 +7759,11 @@ msgstr "在每月的最后一天"
 #: src/modules/workflow/workflow-trigger/utils/cron-to-human/descriptors/getDayOfMonthDescription.ts
 msgid "on the weekday closest to the {ordinalDay} of the month"
 msgstr "在每月最接近 {ordinalDay} 的工作日"
+
+#. js-lingui-id: nKoOoz
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "On Track"
+msgstr ""
 
 #. js-lingui-id: qF20Rl
 #: src/modules/workflow/workflow-trigger/utils/cron-to-human/descriptors/getDayOfWeekDescription.ts
@@ -7049,6 +7913,8 @@ msgstr "组织"
 #: src/pages/settings/admin-panel/SettingsAdminConfigVariableDetails.tsx
 #: src/pages/settings/admin-panel/SettingsAdmin.tsx
 #: src/modules/settings/hooks/useSettingsNavigationItems.tsx
+#: src/modules/real-estate/components/CustomerForm.tsx
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
 msgid "Other"
 msgstr "其他"
 
@@ -7073,10 +7939,25 @@ msgstr "我们的团队可以帮助您设置工作空间，以符合您的特定
 msgid "Output Field {fieldNumber}"
 msgstr "输出字段 {fieldNumber}"
 
+#. js-lingui-id: MIFURj
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "overdue"
+msgstr ""
+
+#. js-lingui-id: ddrz1m
+#: src/pages/real-estate/MyLeadsPage.tsx
+msgid "Overdue"
+msgstr ""
+
 #. js-lingui-id: in6CUw
 #: src/modules/workflow/components/OverrideWorkflowDraftConfirmationModal.tsx
 msgid "Override Draft"
 msgstr "覆盖草稿"
+
+#. js-lingui-id: 6/dCYd
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Overview"
+msgstr ""
 
 #. js-lingui-id: y3tCDg
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -7107,6 +7988,16 @@ msgstr ""
 #: src/pages/not-found/NotFound.tsx
 msgid "Page Not Found"
 msgstr "页面未找到"
+
+#. js-lingui-id: v4nCHK
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Paid"
+msgstr ""
 
 #. js-lingui-id: ijBN4V
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
@@ -7144,8 +8035,19 @@ msgstr "粘贴下面的代码"
 msgid "Path"
 msgstr "路径"
 
+#. js-lingui-id: tStC6q
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Pay the deposit (10% of property value)"
+msgstr ""
+
 #. js-lingui-id: UbRKMZ
 #: src/pages/settings/emailing-domains/utils/getEmailingDomainStatusText.ts
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
 msgid "Pending"
 msgstr "待处理"
 
@@ -7192,6 +8094,11 @@ msgstr "百分比"
 #. js-lingui-id: /YAKmj
 #: src/modules/settings/members/components/MemberInfosTab.tsx
 msgid "Perform administrative actions or permanently delete this user"
+msgstr ""
+
+#. js-lingui-id: u1bQE4
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Performance Metrics"
 msgstr ""
 
 #. js-lingui-id: wSpwGR
@@ -7248,6 +8155,11 @@ msgstr "权限"
 msgid "Permissions · {objectLabelSingular}"
 msgstr "权限 · {objectLabelSingular}"
 
+#. js-lingui-id: KndjX6
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Phone Number *"
+msgstr ""
+
 #. js-lingui-id: qlqT9z
 #: src/modules/object-record/record-field/ui/meta-types/display/components/PhonesFieldDisplay.tsx
 msgid "Phone number copied to clipboard"
@@ -7272,6 +8184,16 @@ msgstr "图片"
 msgid "Pie Chart"
 msgstr ""
 
+#. js-lingui-id: V4oplK
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Pipeline Health"
+msgstr ""
+
+#. js-lingui-id: OzJdMx
+#: src/pages/real-estate/DealKanbanPage.tsx
+msgid "Pipeline Value"
+msgstr ""
+
 #. js-lingui-id: fQtTho
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
 msgid "Plain text paragraph"
@@ -7286,6 +8208,11 @@ msgstr "计划"
 #: src/modules/billing/components/SettingsBillingSubscriptionInfo.tsx
 msgid "Plan switching has been cancelled."
 msgstr "计划切换已取消。"
+
+#. js-lingui-id: dUh9QW
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Planning"
+msgstr ""
 
 #. js-lingui-id: VUi6Nf
 #: src/modules/workflow/workflow-trigger/components/CronExpressionHelper.tsx
@@ -7344,6 +8271,35 @@ msgstr "请输入\"yes\"以确认您要删除此 webhook。"
 msgid "Please type in your email to confirm."
 msgstr "请输入您的电子邮件进行确认。"
 
+#. js-lingui-id: /d6QLe
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Please verify deal value and resubmit..."
+msgstr ""
+
+#. js-lingui-id: X8nAHZ
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Plot"
+msgstr ""
+
+#. js-lingui-id: bhlg5o
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Plot Map"
+msgstr ""
+
+#. js-lingui-id: blzeIc
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Plot Number"
+msgstr ""
+
+#. js-lingui-id: USgOSU
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Plot:"
+msgstr ""
+
 #. js-lingui-id: BPig2P
 #: src/modules/settings/data-model/objects/forms/components/SettingsDataModelObjectAboutForm.tsx
 msgid "Plural"
@@ -7368,6 +8324,11 @@ msgstr "葡萄牙葡萄牙语"
 #: src/modules/settings/data-model/fields/forms/address/constants/DefaultSelectionAddressWithMessages.ts
 msgid "Postcode"
 msgstr "邮编"
+
+#. js-lingui-id: Iy+9ab
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Preferred Locations (comma-separated)"
+msgstr ""
 
 #. js-lingui-id: /v6Rp9
 #: src/pages/onboarding/CreateWorkspace.tsx
@@ -7400,10 +8361,28 @@ msgstr "上一个"
 msgid "Previous AI Chats"
 msgstr "历史人工智能对话"
 
+#. js-lingui-id: a7u1N9
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Price"
+msgstr ""
+
+#. js-lingui-id: Dzm0Mm
+#: src/modules/real-estate/components/ProjectsTable.tsx
+msgid "Price From"
+msgstr ""
+
 #. js-lingui-id: jmc+FY
 #: src/modules/billing/components/internal/MeteredPriceSelector.tsx
 msgid "Price updated."
 msgstr "价格已更新。"
+
+#. js-lingui-id: rcNnsQ
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Price:"
+msgstr ""
 
 #. js-lingui-id: 0Ni6nR
 #: src/modules/object-record/record-field/ui/form-types/components/FormEmailsFieldInput.tsx
@@ -7420,6 +8399,11 @@ msgstr "已优先处理"
 #: src/modules/settings/components/SettingsDnsRecordsTable.tsx
 msgid "Priority"
 msgstr "优先级"
+
+#. js-lingui-id: ATYgPP
+#: src/modules/real-estate/components/AssignmentRulesConfig.tsx
+msgid "Priority:"
+msgstr ""
 
 #. js-lingui-id: LcET2C
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
@@ -7456,9 +8440,91 @@ msgstr "个人资料 - 设置"
 msgid "Profile Picture"
 msgstr ""
 
+#. js-lingui-id: e0NrBM
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Project"
+msgstr ""
+
+#. js-lingui-id: n7JQEk
+#: src/pages/real-estate/ProjectDetailPage.tsx
+msgid "Project not found"
+msgstr ""
+
+#. js-lingui-id: of08WN
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Project Performance (This Month)"
+msgstr ""
+
+#. js-lingui-id: nqW50M
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Project:"
+msgstr ""
+
+#. js-lingui-id: M9H+/G
+#: src/pages/real-estate/ProjectsListPage.tsx
+msgid "projects"
+msgstr ""
+
+#. js-lingui-id: +0B+ue
+#: src/pages/real-estate/ProjectsListPage.tsx
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Projects"
+msgstr ""
+
 #. js-lingui-id: W9uQXX
 #: src/modules/workflow/workflow-steps/workflow-actions/ai-agent-action/components/WorkflowEditActionAiAgent.tsx
 msgid "Prompt"
+msgstr ""
+
+#. js-lingui-id: Lk/Td/
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "properties"
+msgstr ""
+
+#. js-lingui-id: l/UFPv
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+msgid "Properties"
+msgstr ""
+
+#. js-lingui-id: U0gHXk
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "property"
+msgstr ""
+
+#. js-lingui-id: 8B+pY5
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Property"
+msgstr ""
+
+#. js-lingui-id: UkaIoR
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Property ID:"
+msgstr ""
+
+#. js-lingui-id: yjESZJ
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Property not found"
+msgstr ""
+
+#. js-lingui-id: 5A1EuI
+#: src/pages/real-estate/PropertyFilterPage.tsx
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Property Search"
+msgstr ""
+
+#. js-lingui-id: IfdZZ2
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Property Specifications"
+msgstr ""
+
+#. js-lingui-id: clRSBi
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Property Types (comma-separated)"
+msgstr ""
+
+#. js-lingui-id: qcybNQ
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Proposal"
 msgstr ""
 
 #. js-lingui-id: GVxbU6
@@ -7503,6 +8569,13 @@ msgstr "公共域删除成功"
 msgid "Public Domains"
 msgstr "公共域"
 
+#. js-lingui-id: hi3Du/
+#: src/modules/real-estate/components/MyLeads.tsx
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Qualified"
+msgstr ""
+
 #. js-lingui-id: 2vudsu
 #: src/modules/command-menu/pages/page-layout/utils/getDateGranularityLabel.ts
 msgid "Quarter"
@@ -7539,6 +8612,26 @@ msgstr "队列：{queueName}"
 msgid "Quick model for routing decisions"
 msgstr ""
 
+#. js-lingui-id: fqDzSu
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Rate"
+msgstr ""
+
+#. js-lingui-id: NIwjHh
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Real Estate"
+msgstr ""
+
+#. js-lingui-id: wfRhcS
+#: src/pages/real-estate/DashboardPage.tsx
+msgid "Real Estate Platform Analytics"
+msgstr ""
+
+#. js-lingui-id: pvhS42
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Reassign to..."
+msgstr ""
+
 #. js-lingui-id: BT7pY+
 #: src/modules/settings/profile/components/SetOrChangePassword.tsx
 msgid "Receive an email containing password set link"
@@ -7553,6 +8646,11 @@ msgstr "接收包含密码更新链接的电子邮件"
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminWorkerMetricsGraph.tsx
 msgid "Recent Events (oldest → newest)"
 msgstr "最近事件（最旧 → 最新）"
+
+#. js-lingui-id: gkw6sL
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Recent Properties"
+msgstr ""
 
 #. js-lingui-id: gcoiFh
 #: src/modules/settings/accounts/components/SettingsAccountsRowDropdownMenu.tsx
@@ -7612,6 +8710,11 @@ msgstr "重定向 URL 已复制到剪贴板"
 msgid "Redirection URI"
 msgstr "重定向 URI"
 
+#. js-lingui-id: veQuE7
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Referral"
+msgstr ""
+
 #. js-lingui-id: vpZcGd
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
@@ -7627,6 +8730,28 @@ msgstr "重新生成密钥"
 #: src/pages/settings/developers/api-keys/SettingsDevelopersApiKeyDetail.tsx
 msgid "Regenerate Key"
 msgstr "重新生成密钥"
+
+#. js-lingui-id: 1t/NnN
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Reject"
+msgstr ""
+
+#. js-lingui-id: nL+CtC
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Reject Commission"
+msgstr ""
+
+#. js-lingui-id: ekCRTP
+#: src/modules/real-estate/components/CommissionsList.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Rejected"
+msgstr ""
+
+#. js-lingui-id: x3omlS
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Rejection Reason"
+msgstr ""
 
 #. js-lingui-id: UiAJoB
 #: src/modules/settings/data-model/fields/forms/morph-relation/components/SettingsDataModelFieldRelationForm.tsx
@@ -7732,15 +8857,73 @@ msgstr "回复"
 msgid "Reply to all"
 msgstr "回复全部"
 
+#. js-lingui-id: Yx0Ud8
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Requested"
+msgstr ""
+
+#. js-lingui-id: 7pPYrg
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Requires Action"
+msgstr ""
+
 #. js-lingui-id: G42SNI
 #: src/modules/auth/sign-in-up/components/EmailVerificationSent.tsx
 #: src/modules/auth/sign-in-up/components/EmailVerificationSent.tsx
 msgid "Resend email"
 msgstr "重新发送邮件"
 
+#. js-lingui-id: R1Y1se
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Reservation created successfully!"
+msgstr ""
+
+#. js-lingui-id: ijPkvv
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Reservation Period"
+msgstr ""
+
+#. js-lingui-id: ettwRv
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Reserve"
+msgstr ""
+
+#. js-lingui-id: IcOkpB
+#: src/pages/real-estate/PropertyDetailPage.tsx
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Reserve Property"
+msgstr ""
+
+#. js-lingui-id: Uwsg2F
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Reserved"
+msgstr ""
+
+#. js-lingui-id: 9aMDRW
+#: src/pages/real-estate/PropertyDetailPage.tsx
+msgid "Reserved by"
+msgstr ""
+
+#. js-lingui-id: 57h/z0
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Reserved By"
+msgstr ""
+
+#. js-lingui-id: M+Y3v6
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Reserved by:"
+msgstr ""
+
 #. js-lingui-id: OfhWJH
 #: src/pages/settings/admin-panel/SettingsAdminConfigVariableDetails.tsx
 #: src/modules/views/components/ViewBarDetails.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
 msgid "Reset"
 msgstr "重置"
 
@@ -7852,6 +9035,21 @@ msgstr "重试所有失败任务"
 msgid "Return Value"
 msgstr "返回值"
 
+#. js-lingui-id: 8YBH95
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Revenue"
+msgstr ""
+
+#. js-lingui-id: wQF9y1
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Revenue MTD"
+msgstr ""
+
+#. js-lingui-id: 9dfpUL
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Revenue Trend (Last 12 Months)"
+msgstr ""
+
 #. js-lingui-id: GG37FL
 #: src/modules/settings/roles/role-permissions/object-level-permissions/object-form/components/SettingsRolePermissionsObjectLevelObjectFormObjectLevelTableRow.tsx
 msgid "Revoked for this object"
@@ -7919,6 +9117,11 @@ msgstr "罗马尼亚语"
 msgid "route trigger"
 msgstr "路由触发器"
 
+#. js-lingui-id: 4EZrJN
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Rules"
+msgstr ""
+
 #. js-lingui-id: 3JjdaA
 #: src/pages/settings/ai/components/SettingsAgentEvalsTab.tsx
 msgid "Run"
@@ -7938,6 +9141,36 @@ msgstr "运行函数"
 #: src/pages/settings/profile/appearance/components/LocalePicker.tsx
 msgid "Russian"
 msgstr "俄语"
+
+#. js-lingui-id: mUv9U4
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Sales"
+msgstr ""
+
+#. js-lingui-id: K1aYJ+
+#: src/modules/real-estate/components/RealEstateNavigationSection.tsx
+msgid "Sales Dashboard"
+msgstr ""
+
+#. js-lingui-id: h1+iiR
+#: src/pages/real-estate/CommissionReportsPage.tsx
+msgid "Sales performance and commission analytics"
+msgstr ""
+
+#. js-lingui-id: DXowFb
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Sales Team A"
+msgstr ""
+
+#. js-lingui-id: SlAy9V
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Sales Team B"
+msgstr ""
+
+#. js-lingui-id: mr0Ll/
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Sales Team Leaderboard"
+msgstr ""
 
 #. js-lingui-id: +5kO8P
 #: src/pages/settings/profile/appearance/components/DateTimeSettingsCalendarStartDaySelect.tsx
@@ -7991,6 +9224,7 @@ msgstr ""
 #: src/modules/sign-in-background-mock/components/SignInAppNavigationDrawerMock.tsx
 #: src/modules/settings/roles/role-assignment/components/SettingsRoleAssignmentWorkspaceMemberPickerDropdown.tsx
 #: src/modules/settings/admin-panel/components/SettingsAdminGeneral.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
 #: src/modules/object-record/object-filter-dropdown/components/ObjectFilterDropdownVectorSearchInput.tsx
 #: src/modules/object-record/object-filter-dropdown/components/ObjectFilterDropdownFilterInputHeader.tsx
 #: src/modules/navigation/components/MainNavigationDrawerFixedItems.tsx
@@ -8125,11 +9359,21 @@ msgstr "搜索对象"
 msgid "Search operations"
 msgstr "搜索操作"
 
+#. js-lingui-id: RVZJWQ
+#: src/modules/real-estate/components/ProjectsTable.tsx
+msgid "Search projects..."
+msgstr ""
+
 #. js-lingui-id: IMeaSJ
 #: src/modules/action-menu/actions/record-agnostic-actions/constants/RecordAgnosticActionsConfig.tsx
 #: src/modules/action-menu/actions/record-agnostic-actions/constants/RecordAgnosticActionsConfig.tsx
 msgid "Search records"
 msgstr "搜索记录"
+
+#. js-lingui-id: A06hLB
+#: src/modules/real-estate/components/PropertyFilter.tsx
+msgid "Search Results"
+msgstr ""
 
 #. js-lingui-id: 8sgZS9
 #: src/modules/billing/components/SubscriptionPrice.tsx
@@ -8294,6 +9538,11 @@ msgstr "选择操作"
 msgid "Select Action"
 msgstr "选择操作"
 
+#. js-lingui-id: mCB6Je
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "Select All"
+msgstr ""
+
 #. js-lingui-id: hVPa4O
 #: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/UnmatchColumn.tsx
 msgid "Select an option"
@@ -8329,6 +9578,11 @@ msgstr "选择标题行"
 msgid "Select one or several standard objects to activate below"
 msgstr "选择一个或多个标准对象以激活"
 
+#. js-lingui-id: 0LtAlN
+#: src/modules/real-estate/components/CommissionRejectModal.tsx
+msgid "Select reason..."
+msgstr ""
+
 #. js-lingui-id: UKCiEd
 #: src/modules/settings/admin-panel/config-variables/components/ConfigVariableOptionsDropdownContent.tsx
 msgid "Select Source"
@@ -8358,6 +9612,16 @@ msgstr "选择要使用的工作表"
 #: src/pages/settings/profile/appearance/components/SettingsExperience.tsx
 msgid "Select your preferred language"
 msgstr "选择您偏好的语言"
+
+#. js-lingui-id: +6YAwo
+#: src/modules/real-estate/components/CommissionApprovalQueue.tsx
+msgid "selected"
+msgstr ""
+
+#. js-lingui-id: SVRHAR
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Selected:"
+msgstr ""
 
 #. js-lingui-id: JlFcis
 #: src/modules/ai/components/internal/SendMessageButton.tsx
@@ -8553,6 +9817,14 @@ msgstr "仅显示包含错误的行"
 msgid "Show value in center"
 msgstr ""
 
+#. js-lingui-id: 78iPsB
+#. placeholder {0}: 1
+#. placeholder {1}: recentProperties.length
+#. placeholder {2}: stats.totalProperties
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Showing {0}-{1} of {2} properties"
+msgstr ""
+
 #. js-lingui-id: uVg8dY
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutOpenInContent.tsx
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutContent.tsx
@@ -8615,6 +9887,31 @@ msgstr "第六"
 msgid "Skip"
 msgstr "跳过"
 
+#. js-lingui-id: q4wqWs
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "SLA %"
+msgstr ""
+
+#. js-lingui-id: M6puT9
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "SLA Compliance"
+msgstr ""
+
+#. js-lingui-id: +rMEEE
+#: src/modules/real-estate/components/MyLeads.tsx
+msgid "SLA Deadline"
+msgstr ""
+
+#. js-lingui-id: 64R05X
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "SLA Performance (Last 7 Days)"
+msgstr ""
+
+#. js-lingui-id: 1KVWew
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "slots"
+msgstr ""
+
 #. js-lingui-id: Ik7fz5
 #: src/modules/advanced-text-editor/extensions/slash-command/DefaultSlashCommands.ts
 msgid "Small section heading"
@@ -8665,6 +9962,17 @@ msgstr "SMTP 用户名"
 msgid "smtp.example.com"
 msgstr "smtp.example.com"
 
+#. js-lingui-id: s9KGXU
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Sold"
+msgstr ""
+
 #. js-lingui-id: zfjcH5
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelUpdateFieldsValueForObject.tsx
 #: src/modules/settings/roles/role-permissions/object-level-permissions/components/SettingsRolePermissionsObjectLevelSeeFieldsValueForObject.tsx
@@ -8703,6 +10011,7 @@ msgstr "按组排序"
 
 #. js-lingui-id: wdxz7K
 #: src/modules/settings/admin-panel/config-variables/components/ConfigVariableOptionsDropdownContent.tsx
+#: src/modules/real-estate/components/MyLeads.tsx
 #: src/modules/command-menu/pages/page-layout/constants/settings/ChartConfigurationSettingLabels.ts
 msgid "Source"
 msgstr "来源"
@@ -8789,8 +10098,19 @@ msgstr "状态"
 #: src/modules/settings/components/SettingsDnsRecordsTable.tsx
 #: src/modules/settings/admin-panel/components/SettingsAdminWorkspaceContent.tsx
 #: src/modules/settings/accounts/components/SettingsConnectedAccountsTableHeader.tsx
+#: src/modules/real-estate/components/PropertyFilter.tsx
+#: src/modules/real-estate/components/ProjectsTable.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+#: src/modules/real-estate/components/CommissionsList.tsx
 msgid "Status"
 msgstr "状态"
+
+#. js-lingui-id: htTcVX
+#: src/modules/real-estate/components/ReservationModal.tsx
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "Status:"
+msgstr ""
 
 #. js-lingui-id: ygCKqB
 #: src/modules/action-menu/actions/record-actions/constants/WorkflowRunsActionsConfig.tsx
@@ -8871,6 +10191,11 @@ msgstr "主题、正文和附件将与您的团队分享。"
 #: src/modules/auth/sign-in-up/components/internal/SignInUpTwoFactorAuthenticationVerification.tsx
 msgid "Submit"
 msgstr "提交"
+
+#. js-lingui-id: dqST9u
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "Submit required documents"
+msgstr ""
 
 #. js-lingui-id: EDl9kS
 #: src/modules/information-banner/components/billing/InformationBannerNoBillingSubscription.tsx
@@ -9083,10 +10408,24 @@ msgstr "标签设置"
 msgid "Table"
 msgstr "表格"
 
+#. js-lingui-id: O6Z3uT
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Target:"
+msgstr ""
+
 #. js-lingui-id: GtycJ/
 #: src/modules/action-menu/actions/record-actions/constants/DefaultRecordActionsConfig.tsx
 msgid "Tasks"
 msgstr "任务"
+
+#. js-lingui-id: UXoFYV
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "Team Avg:"
+msgstr ""
 
 #. js-lingui-id: lKXcJz
 #: src/pages/settings/emailing-domains/utils/getEmailingDomainStatusText.ts
@@ -9317,6 +10656,23 @@ msgstr "此数据库值会覆盖环境设置。"
 msgid "This is required to enable manual row reordering."
 msgstr "这需要启用手动行重新排序。"
 
+#. js-lingui-id: 2Fsd9r
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "This Month"
+msgstr ""
+
+#. js-lingui-id: eCZUxU
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "This Quarter"
+msgstr ""
+
+#. js-lingui-id: gkT18t
+#: src/modules/real-estate/components/ReservationModal.tsx
+msgid "This reservation will hold the property for 24 hours. During this time, you need to:"
+msgstr ""
+
 #. js-lingui-id: vbLBMd
 #: src/modules/settings/roles/role-permissions/object-level-permissions/object-form/components/SettingsRolePermissionsObjectLevelObjectFormObjectLevelTableRow.tsx
 msgid "This role can {humanReadableAction} all records"
@@ -9352,6 +10708,11 @@ msgstr "此值将保存到数据库。"
 msgid "This week"
 msgstr "本周"
 
+#. js-lingui-id: FNvDMc
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "This Week"
+msgstr ""
+
 #. js-lingui-id: h4VeOo
 #: src/modules/billing/hooks/useBillingWording.ts
 msgid "This will cancel the scheduled interval change and keep your current billing interval ({currentIntervalLabel})."
@@ -9376,6 +10737,11 @@ msgstr ""
 #: src/pages/settings/admin-panel/SettingsAdminConfigVariableDetails.tsx
 msgid "This will revert the database value to environment/default value. The database override will be removed and the system will use the environment settings."
 msgstr "这将使数据库值恢复为环境/默认值。数据库覆盖将被移除，系统将使用环境设置。"
+
+#. js-lingui-id: QqLJHH
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "This Year"
+msgstr ""
 
 #. js-lingui-id: 5g/sE8
 #: src/modules/action-menu/actions/record-actions/constants/WorkflowActionsConfig.tsx
@@ -9428,6 +10794,11 @@ msgstr "标题"
 msgid "Today"
 msgstr "今天"
 
+#. js-lingui-id: vi/L28
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Today: Dec 9, 2025"
+msgstr ""
+
 #. js-lingui-id: GFxnQR
 #: src/modules/settings/accounts/components/message-folders/SettingsAccountsMessageFoldersCard.tsx
 msgid "Toggle all folders"
@@ -9448,15 +10819,74 @@ msgstr "切换所有设置权限"
 msgid "Tomorrow"
 msgstr "明天"
 
+#. js-lingui-id: ONchxy
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "total"
+msgstr ""
+
 #. js-lingui-id: 72c5Qo
+#: src/modules/real-estate/components/ProjectsTable.tsx
 #: src/modules/page-layout/widgets/graph/graphWidgetPieChart/hooks/usePieChartCenterMetricData.ts
 msgid "Total"
+msgstr ""
+
+#. js-lingui-id: iKDmkL
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Total Approved"
+msgstr ""
+
+#. js-lingui-id: DFABzc
+#: src/pages/real-estate/DealKanbanPage.tsx
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Total Commission"
+msgstr ""
+
+#. js-lingui-id: fasMia
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Total Commissions"
+msgstr ""
+
+#. js-lingui-id: WiUNvj
+#: src/pages/real-estate/DealKanbanPage.tsx
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Total Deals"
+msgstr ""
+
+#. js-lingui-id: +Lhy2n
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Total Paid"
+msgstr ""
+
+#. js-lingui-id: OEZYi/
+#: src/modules/real-estate/components/CommissionReports.tsx
+msgid "Total Pending"
+msgstr ""
+
+#. js-lingui-id: jcDEwl
+#: src/modules/real-estate/components/ProjectDetailTabs.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
+msgid "Total Properties"
+msgstr ""
+
+#. js-lingui-id: WwDT39
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Total Revenue"
 msgstr ""
 
 #. js-lingui-id: YT/cKI
 #: src/modules/billing/components/SettingsBillingCreditsSection.tsx
 msgid "Track your {intervalLabel} workflow credit consumption."
 msgstr "追踪您的{intervalLabel}工作流程积分消耗。"
+
+#. js-lingui-id: hgvrpi
+#: src/pages/real-estate/CommissionsPage.tsx
+msgid "Track your commission payments and status"
+msgstr ""
+
+#. js-lingui-id: da0m0G
+#: src/pages/real-estate/SalesDashboardPage.tsx
+msgid "Track your performance and earnings"
+msgstr ""
 
 #. js-lingui-id: lhkaAC
 #: src/modules/billing/components/internal/PlansTags.tsx
@@ -9630,6 +11060,12 @@ msgstr ""
 msgid "Unable to Reach Back-end"
 msgstr "无法访问后端"
 
+#. js-lingui-id: EbMPZJ
+#: src/modules/real-estate/components/DealKanban.tsx
+#: src/modules/real-estate/components/DealDetail.tsx
+msgid "Unassigned"
+msgstr ""
+
 #. js-lingui-id: o23uCL
 #: src/modules/command-menu/pages/page-layout/utils/getChartLimitMessage.ts
 msgid "Undisplayed data: max {maxItems} {granularityLabel} per chart."
@@ -9752,6 +11188,16 @@ msgstr "更新"
 msgid "Update"
 msgstr "更新"
 
+#. js-lingui-id: pdvCsH
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Update Customer"
+msgstr ""
+
+#. js-lingui-id: mikibv
+#: src/pages/real-estate/CustomerFormPage.tsx
+msgid "Update customer information"
+msgstr ""
+
 #. js-lingui-id: 5bRMKt
 #: src/modules/settings/members/components/MemberPermissionsTab.tsx
 msgid "Update role"
@@ -9766,6 +11212,11 @@ msgstr "更新视图"
 #: src/modules/settings/accounts/components/SettingsAccountsConnectionForm.tsx
 msgid "Update your account's configuration. Configure any combination of IMAP, SMTP, and CalDAV as needed."
 msgstr "更新您的账户配置。根据需要配置 IMAP、SMTP 和 CalDAV 的任意组合。"
+
+#. js-lingui-id: +b7T3G
+#: src/modules/real-estate/components/CommissionsList.tsx
+msgid "Updated"
+msgstr ""
 
 #. js-lingui-id: kwkhPe
 #: src/modules/billing/components/internal/MeteredPriceSelector.tsx
@@ -9976,6 +11427,7 @@ msgstr "视图"
 
 #. js-lingui-id: jpctdh
 #: src/modules/settings/data-model/object-details/components/SettingsObjectFieldDisabledActionDropdown.tsx
+#: src/modules/real-estate/components/DashboardStats.tsx
 msgid "View"
 msgstr "视图"
 
@@ -9993,6 +11445,11 @@ msgstr ""
 #: src/modules/billing/components/SettingsBillingContent.tsx
 msgid "View billing details"
 msgstr "查看账单详情"
+
+#. js-lingui-id: SZw9tS
+#: src/modules/real-estate/components/InteractivePlotMap.tsx
+msgid "View Details"
+msgstr ""
 
 #. js-lingui-id: AdeX9A
 #: src/modules/metadata-error-handler/hooks/useMetadataErrorHandler.ts
@@ -10036,6 +11493,11 @@ msgstr ""
 msgid "View type"
 msgstr "视图类型"
 
+#. js-lingui-id: +3hpTt
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Villa, Apartment, Townhouse"
+msgstr ""
+
 #. js-lingui-id: 2q/Q7x
 #: src/modules/settings/accounts/components/SettingsAccountsMessageChannelDetails.tsx
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownVisibilityContent.tsx
@@ -10060,10 +11522,25 @@ msgstr "可见组"
 msgid "Visible to you"
 msgstr "对您可见"
 
+#. js-lingui-id: Zkg1bB
+#: src/pages/real-estate/PlotMapPage.tsx
+msgid "Visual master plan with real-time property status"
+msgstr ""
+
 #. js-lingui-id: 6n7jtr
 #: src/modules/settings/data-model/objects/components/SettingsObjectCoverImage.tsx
 msgid "Visualize"
 msgstr "可视化"
+
+#. js-lingui-id: v4Q22d
+#: src/modules/real-estate/components/ExecutiveDashboard.tsx
+msgid "vs Last Month"
+msgstr ""
+
+#. js-lingui-id: VDeQix
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "vs yesterday"
+msgstr ""
 
 #. js-lingui-id: uUehLT
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminQueueJobsTable.tsx
@@ -10074,6 +11551,16 @@ msgstr "等待中"
 #: src/modules/settings/admin-panel/health-status/components/SettingsAdminQueueJobsTable.tsx
 msgid "Waiting Children"
 msgstr "等待子任务"
+
+#. js-lingui-id: pUpf4U
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Walk-in"
+msgstr ""
+
+#. js-lingui-id: r6y+jM
+#: src/pages/real-estate/MyLeadsPage.tsx
+msgid "Warning"
+msgstr ""
 
 #. js-lingui-id: zFSQY3
 #: src/modules/activities/timeline-activities/rows/main-object/components/EventRowMainObject.tsx
@@ -10163,6 +11650,11 @@ msgstr "更新时需要 Webhook ID"
 msgid "Webhooks"
 msgstr "Webhooks"
 
+#. js-lingui-id: On0aF2
+#: src/modules/real-estate/components/CustomerForm.tsx
+msgid "Website"
+msgstr ""
+
 #. js-lingui-id: zx4BuL
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutContent.tsx
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownCustomView.tsx
@@ -10202,6 +11694,27 @@ msgstr "密钥何时会被禁用"
 msgid "Widget type"
 msgstr "组件类型"
 
+#. js-lingui-id: vrMCMF
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "win rate"
+msgstr ""
+
+#. js-lingui-id: WLpKqU
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "won"
+msgstr ""
+
+#. js-lingui-id: 9kZh4H
+#: src/modules/real-estate/components/DealKanban.tsx
+msgid "Won"
+msgstr ""
+
+#. js-lingui-id: 41dNQO
+#: src/pages/real-estate/DealKanbanPage.tsx
+#: src/modules/real-estate/components/SalesDashboardSimple.tsx
+msgid "Won Deals"
+msgstr ""
+
 #. js-lingui-id: 3J7l5w
 #: src/pages/settings/admin-panel/SettingsAdminQueueDetail.tsx
 msgid "Worker"
@@ -10221,6 +11734,11 @@ msgstr ""
 #: src/modules/settings/roles/role-permissions/permission-flags/hooks/useSettingsRolePermissionFlagConfig.ts
 msgid "Workflows"
 msgstr "工作流"
+
+#. js-lingui-id: ohcfC/
+#: src/modules/real-estate/components/LeadDistributionDashboard.tsx
+msgid "Workload Distribution (This Week)"
+msgstr ""
 
 #. js-lingui-id: pmUArF
 #: src/pages/settings/SettingsWorkspace.tsx

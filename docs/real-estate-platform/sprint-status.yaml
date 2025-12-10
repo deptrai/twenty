@@ -1,0 +1,149 @@
+# generated: 09-12-2025 19:30
+# project: Real Estate Sales Distribution Platform
+# project_key: real-estate-platform
+# tracking_system: file-system
+# story_location: "{project-root}/docs/stories"
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic exists in epic file but not contexted
+#   - contexted: Next epic tech context created by *epic-tech-context (required)
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - drafted: Story file created in stories folder by *create-story
+#   - ready-for-dev: Draft approved and story context created by *story-ready
+#   - in-progress: Developer actively working on implementation by *dev-story
+#   - review: Implementation complete, ready for review by *code-review
+#   - done: Story completed by *story-done
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - completed: Retrospective has been done by *retrospective
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epics should be 'contexted' before stories can be 'drafted'
+# - SM typically drafts next story ONLY after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', dev reviews, then Dev moves to 'done'
+
+generated: 09-12-2025 19:30
+project: Real Estate Sales Distribution Platform
+project_key: real-estate-platform
+tracking_system: file-system
+story_location: "{project-root}/docs/stories"
+
+development_status:
+  # ============================================
+  # Epic 1: Nền tảng & Khởi tạo hệ thống (Foundation)
+  # Phase: MVP | Priority: P0 | Stories: 5 | Estimate: 16h
+  # ============================================
+  epic-1: contexted
+  1-1-project-initialization: ready-for-dev
+  1-2-development-environment-setup: drafted
+  1-3-real-estate-module-structure: drafted
+  1-4-rbac-authentication-configuration: drafted
+  1-5-deployment-pipeline-setup: drafted
+  epic-1-retrospective: optional
+
+  # ============================================
+  # Epic 2: Quản lý Tồn kho Bất động sản (Inventory)
+  # Phase: MVP | Priority: P0 | Stories: 7 | Estimate: 55 SP
+  # Dependencies: Epic 1
+  # ============================================
+  epic-2: contexted
+  2-1-project-entity-crud: drafted
+  2-2-property-entity-crud: drafted
+  2-3-reservation-system: drafted
+  2-4-auto-release-job: drafted
+  2-5-double-booking-prevention: drafted
+  2-6-dashboard-widgets: drafted
+  2-7-file-gallery: drafted
+  epic-2-retrospective: optional
+
+  # ============================================
+  # Epic 3: Quản lý Khách hàng & Giao dịch (Deals)
+  # Phase: MVP | Priority: P0 | Stories: 5 | Estimate: 34 SP
+  # Dependencies: Epic 2
+  # ============================================
+  epic-3: contexted
+  3-1-contact-extension: drafted
+  3-2-deal-entity: drafted
+  3-3-auto-create-deal-on-deposit: drafted
+  3-4-deal-pipeline-kanban: drafted
+  3-5-deal-property-status-sync: drafted
+  epic-3-retrospective: optional
+
+  # ============================================
+  # Epic 4: Công cụ cho Sales Agent (Sales Tools)
+  # Phase: MVP | Priority: P1 | Stories: 6 | Estimate: 31 SP
+  # Dependencies: Epic 2, 3, 5
+  # ============================================
+  epic-4: contexted
+  4-1-user-extensions: drafted
+  4-2-sales-dashboard: drafted
+  4-3-performance-widgets: drafted
+  4-4-my-reserved-properties: drafted
+  4-5-commission-tracking-view: drafted
+  4-6-leaderboard-widget: drafted
+  epic-4-retrospective: optional
+
+  # ============================================
+  # Epic 5: Quản lý Hoa hồng (Commission)
+  # Phase: MVP | Priority: P1 | Stories: 5 | Estimate: 37 SP
+  # Dependencies: Epic 3
+  # ============================================
+  epic-5: contexted
+  5-1-commission-entity: drafted
+  5-2-auto-calculate-on-deal-won: drafted
+  5-3-approval-workflow: drafted
+  5-4-csv-export: drafted
+  5-5-commission-reports: drafted
+  epic-5-retrospective: optional
+
+  # ============================================
+  # Epic 6: Phân phối Lead & Tự động hóa (Lead Distribution)
+  # Phase: Phase 2 | Priority: P2 | Stories: 6 | Estimate: 52 SP
+  # Dependencies: Epic 4
+  # ============================================
+  epic-6: contexted
+  6-1-lead-extension-fields: drafted
+  6-2-auto-assignment-algorithm: drafted
+  6-3-sla-tracking: drafted
+  6-4-notification-system: drafted
+  6-5-admin-assignment-dashboard: drafted
+  6-6-manual-override: drafted
+  epic-6-retrospective: optional
+
+  # ============================================
+  # Epic 7: Vận hành & Mở rộng (Operations)
+  # Phase: Phase 2-3 | Priority: P2 | Stories: 4 | Estimate: 42 SP
+  # Dependencies: All previous epics
+  # ============================================
+  epic-7: contexted
+  7-1-interactive-plot-map: drafted
+  7-2-advanced-reports: drafted
+  7-3-admin-tools: drafted
+  7-4-pilot-program-support: drafted
+  epic-7-retrospective: optional
+
+# ============================================
+# SUMMARY
+# ============================================
+# Total Epics: 7
+# Total Stories: 38
+# Epics Contexted: 7 (all tech specs created)
+# Stories In Progress: 0
+# Stories Completed: 0
+#
+# SPRINT ALLOCATION:
+# - Sprint 1 (Week 2-3): Epic 1 (32 SP)
+# - Sprint 2 (Week 4-5): Epic 2 (55 SP)
+# - Sprint 3 (Week 6-7): Epic 3 + 4 (65 SP)
+# - Sprint 4 (Week 8-9): Epic 5 + Buffer (57 SP)
+# - Sprint 5 (Week 10-11): Epic 6 (52 SP) [Phase 2]
+# - Sprint 6 (Week 12-13): Epic 7 (42 SP) [Phase 2-3]
+#
+# MVP RELEASE: End of Sprint 4 (Week 9)
+# ============================================

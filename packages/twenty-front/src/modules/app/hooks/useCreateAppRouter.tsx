@@ -9,9 +9,9 @@ import { DefaultLayout } from '@/ui/layout/page/components/DefaultLayout';
 import { AppPath } from 'twenty-shared/types';
 
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
+    createBrowserRouter,
+    createRoutesFromElements,
+    Route,
 } from 'react-router-dom';
 import { Authorize } from '~/pages/auth/Authorize';
 import { PasswordReset } from '~/pages/auth/PasswordReset';
@@ -27,6 +27,23 @@ import { CreateWorkspace } from '~/pages/onboarding/CreateWorkspace';
 import { InviteTeam } from '~/pages/onboarding/InviteTeam';
 import { PaymentSuccess } from '~/pages/onboarding/PaymentSuccess';
 import { SyncEmails } from '~/pages/onboarding/SyncEmails';
+import { AssignmentRulesPage } from '~/pages/real-estate/AssignmentRulesPage';
+import { CommissionApprovalPage } from '~/pages/real-estate/CommissionApprovalPage';
+import { CommissionReportsPage } from '~/pages/real-estate/CommissionReportsPage';
+import { CommissionsPage } from '~/pages/real-estate/CommissionsPage';
+import { CustomerFormPage } from '~/pages/real-estate/CustomerFormPage';
+import { DashboardPage } from '~/pages/real-estate/DashboardPage';
+import { DealDetailPage } from '~/pages/real-estate/DealDetailPage';
+import { DealKanbanPage } from '~/pages/real-estate/DealKanbanPage';
+import { ExecutiveDashboardPage } from '~/pages/real-estate/ExecutiveDashboardPage';
+import { LeadDistributionPage } from '~/pages/real-estate/LeadDistributionPage';
+import { MyLeadsPage } from '~/pages/real-estate/MyLeadsPage';
+import { PlotMapPage } from '~/pages/real-estate/PlotMapPage';
+import { ProjectDetailPage } from '~/pages/real-estate/ProjectDetailPage';
+import { ProjectsListPage } from '~/pages/real-estate/ProjectsListPage';
+import { PropertyDetailPage } from '~/pages/real-estate/PropertyDetailPage';
+import { PropertyFilterPage } from '~/pages/real-estate/PropertyFilterPage';
+import { SalesDashboardPage } from '~/pages/real-estate/SalesDashboardPage';
 
 export const useCreateAppRouter = (
   isFunctionSettingsEnabled?: boolean,
@@ -63,6 +80,60 @@ export const useCreateAppRouter = (
           <Route path={indexAppPath.getIndexAppPath()} element={<></>} />
           <Route path={AppPath.RecordIndexPage} element={<RecordIndexPage />} />
           <Route path={AppPath.RecordShowPage} element={<RecordShowPage />} />
+          <Route path="/real-estate/dashboard" element={<DashboardPage />} />
+          <Route path="/real-estate/projects" element={<ProjectsListPage />} />
+          <Route
+            path="/real-estate/projects/:id"
+            element={<ProjectDetailPage />}
+          />
+          <Route
+            path="/real-estate/properties/:id"
+            element={<PropertyDetailPage />}
+          />
+          <Route
+            path="/real-estate/customers/new"
+            element={<CustomerFormPage />}
+          />
+          <Route
+            path="/real-estate/customers/:id"
+            element={<CustomerFormPage />}
+          />
+          <Route path="/real-estate/deals" element={<DealKanbanPage />} />
+          <Route path="/real-estate/deals/:id" element={<DealDetailPage />} />
+          <Route
+            path="/real-estate/sales-dashboard"
+            element={<SalesDashboardPage />}
+          />
+          <Route
+            path="/real-estate/property-filter"
+            element={<PropertyFilterPage />}
+          />
+          <Route
+            path="/real-estate/commissions"
+            element={<CommissionsPage />}
+          />
+          <Route
+            path="/real-estate/commission-approval"
+            element={<CommissionApprovalPage />}
+          />
+          <Route
+            path="/real-estate/commission-reports"
+            element={<CommissionReportsPage />}
+          />
+          <Route
+            path="/real-estate/lead-distribution"
+            element={<LeadDistributionPage />}
+          />
+          <Route
+            path="/real-estate/assignment-rules"
+            element={<AssignmentRulesPage />}
+          />
+          <Route
+            path="/real-estate/executive-dashboard"
+            element={<ExecutiveDashboardPage />}
+          />
+          <Route path="/real-estate/plot-map" element={<PlotMapPage />} />
+          <Route path="/real-estate/leads" element={<MyLeadsPage />} />
           <Route
             path={AppPath.SettingsCatchAll}
             element={
